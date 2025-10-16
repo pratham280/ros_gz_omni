@@ -1,0 +1,646 @@
+<?xml version="1.0" ?>
+<sdf version='1.8'>
+  <model name='omni_drive'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.051994059902436253 -0.027153701389890799 -0.00076547910521316197 0 0 0</pose>
+        <mass>0.140011</mass>
+        <inertia>
+          <ixx>0.0001481286291789501</ixx>
+          <ixy>-5.3136816412833511e-05</ixy>
+          <ixz>-1.4979586796679931e-06</ixz>
+          <iyy>0.00022212246537655191</iyy>
+          <iyz>-7.8230326230388947e-07</iyz>
+          <izz>0.00036012358736049131</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__chassis_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__motor1_Link_collision_1'>
+        <pose>-0.10446999999999999 -0.034452999999999998 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor1_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__motor2_Link_collision_2'>
+        <pose>-0.027470999999999999 -0.034452999999999998 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor2_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__motor3_Link_collision_3'>
+        <pose>-0.065971000000000002 0.0040470999999999997 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor3_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__motor4_Link_collision_4'>
+        <pose>-0.065971000000000002 -0.072953000000000004 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor4_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__chassis_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__motor1_Link_visual_1'>
+        <pose>-0.10446999999999999 -0.034452999999999998 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor1_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__motor2_Link_visual_2'>
+        <pose>-0.027470999999999999 -0.034452999999999998 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor2_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__motor3_Link_visual_3'>
+        <pose>-0.065971000000000002 0.0040470999999999997 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor3_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__motor4_Link_visual_4'>
+        <pose>-0.065971000000000002 -0.072953000000000004 -0.00097125 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/motor4_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel1_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.13497000000000001 -0.034452999999999998 -0.017471250000000001 -1.5708 5.5511151231257827e-17 1.5708</pose>
+      <parent>base_link</parent>
+      <child>wheel1_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel1_Link'>
+      <pose relative_to='wheel1_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.045957999999999999</mass>
+        <inertia>
+          <ixx>3.8977400000000002e-06</ixx>
+          <ixy>3.61877e-21</ixy>
+          <ixz>9.655540000000001e-21</ixz>
+          <iyy>3.8977400000000002e-06</iyy>
+          <iyz>1.984385e-22</iyz>
+          <izz>6.7170999999999996e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel1_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel1_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wheel1_Link_fixed_joint_lump__rubber1_Link_collision_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber1_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='wheel1_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel1_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel1_Link_fixed_joint_lump__rubber1_Link_visual_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber1_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel2_joint' type='revolute'>
+      <pose relative_to='base_link'>0.003029 -0.034452999999999998 -0.017471250000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+      <parent>base_link</parent>
+      <child>wheel2_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel2_Link'>
+      <pose relative_to='wheel2_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.045957999999999999</mass>
+        <inertia>
+          <ixx>3.8977400000000002e-06</ixx>
+          <ixy>-1.7034299999999998e-21</ixy>
+          <ixz>-8.5954300000000004e-21</ixz>
+          <iyy>3.8977400000000002e-06</iyy>
+          <iyz>-1.6161090000000001e-22</iyz>
+          <izz>6.7170999999999996e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel2_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel2_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wheel2_Link_fixed_joint_lump__rubber2_Link_collision_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber2_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='wheel2_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel2_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel2_Link_fixed_joint_lump__rubber2_Link_visual_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber2_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel3_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.065971000000000002 0.034547099999999997 -0.017471250000000001 -1.5708 0 0</pose>
+      <parent>base_link</parent>
+      <child>wheel3_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel3_Link'>
+      <pose relative_to='wheel3_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.045957999999999999</mass>
+        <inertia>
+          <ixx>3.8977400000000002e-06</ixx>
+          <ixy>8.2017000853480001e-13</ixy>
+          <ixz>-6.4724699999999997e-21</ixz>
+          <iyy>3.8977400000000002e-06</iyy>
+          <iyz>8.6182999999999996e-21</iyz>
+          <izz>6.7170999999999996e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel3_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel3_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wheel3_Link_fixed_joint_lump__rubber3_Link_collision_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber3_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='wheel3_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel3_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel3_Link_fixed_joint_lump__rubber3_Link_visual_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber3_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel4_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.065971000000000002 -0.103453 -0.017471250000000001 1.5708 0 0</pose>
+      <parent>base_link</parent>
+      <child>wheel4_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_Link'>
+      <pose relative_to='wheel4_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.045957999999999999</mass>
+        <inertia>
+          <ixx>3.8977400000000002e-06</ixx>
+          <ixy>-9.4732399999999997e-21</ixy>
+          <ixz>2.0863699999999999e-20</ixz>
+          <iyy>3.8977400000000002e-06</iyy>
+          <iyz>9.7091000000000011e-23</iyz>
+          <izz>6.7170999999999996e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='wheel4_Link_fixed_joint_lump__rubber4_Link_collision_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber4_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='wheel4_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_Link_fixed_joint_lump__rubber4_Link_visual_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/rubber4_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0 0 0 1</diffuse>
+          <ambient>0 0 0 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <plugin filename="OmniDrive"
+      name="ros_gz_omni_gazebo::OmniDrive">
+      <front_left_joint>wheel1_joint</front_left_joint>
+      <front_right_joint>wheel3_joint</front_right_joint>
+      <back_left_joint>wheel2_joint</back_left_joint>
+      <back_right_joint>wheel4_joint</back_right_joint>
+    </plugin>
+    <frame name='motor1_joint' attached_to='chassis'>
+      <pose>-0.10446999999999999 -0.034452999999999998 -0.00097125 0 0 0</pose>
+    </frame>
+    <frame name='motor1_Link' attached_to='motor1_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber1_joint' attached_to='wheel1_Link'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber1_Link' attached_to='rubber1_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='motor2_joint' attached_to='chassis'>
+      <pose>-0.027470999999999999 -0.034452999999999998 -0.00097125 0 0 0</pose>
+    </frame>
+    <frame name='motor2_Link' attached_to='motor2_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber2_joint' attached_to='wheel2_Link'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber2_Link' attached_to='rubber2_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='motor3_joint' attached_to='chassis'>
+      <pose>-0.065971000000000002 0.0040470999999999997 -0.00097125 0 0 0</pose>
+    </frame>
+    <frame name='motor3_Link' attached_to='motor3_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber3_joint' attached_to='wheel3_Link'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber3_Link' attached_to='rubber3_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='motor4_joint' attached_to='chassis'>
+      <pose>-0.065971000000000002 -0.072953000000000004 -0.00097125 0 0 0</pose>
+    </frame>
+    <frame name='motor4_Link' attached_to='motor4_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber4_joint' attached_to='wheel4_Link'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='rubber4_Link' attached_to='rubber4_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='chassis_joint' attached_to='base_link'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='chassis' attached_to='chassis_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>
