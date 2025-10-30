@@ -48,8 +48,8 @@ def generate_launch_description():
         launch_arguments={'gz_args': PathJoinSubstitution([
             pkg_project_gazebo,
             'worlds',
-            'omni_drive.sdf'
-        ])}.items(),
+            'omni_drive.sdf',
+        ]), '--verbose' : '4'}.items(),
     )
 
     # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links

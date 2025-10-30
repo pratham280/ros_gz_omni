@@ -8,7 +8,7 @@
     ros2 topic echo /model/diff_drive/odometry
 -->
 <sdf version="1.8">
-  <world name="demo">
+  <world name="OmniDriveWorld">
     <plugin
       filename="gz-sim-physics-system"
       name="gz::sim::systems::Physics">
@@ -25,14 +25,6 @@
     <plugin
       filename="gz-sim-user-commands-system"
       name="gz::sim::systems::UserCommands">
-    </plugin>
-    <plugin
-      filename="BasicSystem"
-      name="ros_gz_omni_gazebo::BasicSystem">
-    </plugin>
-    <plugin
-      filename="FullSystem"
-      name="ros_gz_omni_gazebo::FullSystem">
     </plugin>
 
     <light name="sun" type="directional">

@@ -585,8 +585,8 @@
       name="ros_gz_omni_gazebo::OmniDrive">
       <front_left_joint>wheel1_joint</front_left_joint>
       <front_right_joint>wheel3_joint</front_right_joint>
-      <back_left_joint>wheel2_joint</back_left_joint>
-      <back_right_joint>wheel4_joint</back_right_joint>
+      <back_left_joint>wheel4_joint</back_left_joint>
+      <back_right_joint>wheel2_joint</back_right_joint>
     </plugin>
     <frame name='motor1_joint' attached_to='chassis'>
       <pose>-0.10446999999999999 -0.034452999999999998 -0.00097125 0 0 0</pose>

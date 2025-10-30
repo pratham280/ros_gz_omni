@@ -69,9 +69,11 @@ target_link_libraries(FullSystem PRIVATE
   gz-sim${GZ_SIM_VER}::gz-sim${GZ_SIM_VER})
   
   
+# Following directives similarly specify another target: 'OmniDrive'.
 add_library(OmniDrive
   SHARED
   src/OmniDrive.cc
+  src/math/OmniMath.cc
 )
 
 target_include_directories(

@@ -16,6 +16,7 @@
  */
 
 #include "ros_gz_omni_gazebo/OmniDrive.hh"
+#include "ros_gz_omni_gazebo/OmniMath.hh"
 
 #include <string>
 #include <gz/common/Console.hh>
@@ -36,11 +37,13 @@
 #include <vector>
 
 #include <gz/common/Profiler.hh>
-#include <gz/math/MecanumDriveOdometry.hh>
+// #include <gz/math/MecanumDriveOdometry.hh>
 #include <gz/math/Quaternion.hh>
 #include <gz/math/SpeedLimiter.hh>
 #include <gz/plugin/Register.hh>
 #include <gz/transport/Node.hh>
+
+// #include <gz/math/Pose3.hh>
 
 #include "gz/sim/components/CanonicalLink.hh"
 #include "gz/sim/components/JointPosition.hh"
@@ -155,7 +158,8 @@ class ros_gz_omni_gazebo::OmniDrivePrivate
   public: std::chrono::steady_clock::duration lastOdomPubTime{0};
 
   /// \brief Mecanum drive odometry.
-  public: gz::math::MecanumDriveOdometry odom;
+  public: ros_gz_omni_gazebo::OmniMath odom{10};
+  // public: gz::math::MecanumDriveOdometry odom;
 
   /// \brief Mecanum drive odometry message publisher.
   public: gz::transport::Node::Publisher odomPub;
@@ -648,7 +652,14 @@ void OmniDrivePrivate::UpdateVelocity(
     latVel = this->targetVel.linear().y();
     angVel = this->targetVel.angular().z();
   }
-
+  const double LINEAR_THRESHOLD = 0.0;
+  const double ANGULAR_THRESHOLD = 0.0;
+  if ((std::abs(linVel) < LINEAR_THRESHOLD || std::abs(linVel) > LINEAR_THRESHOLD) &&
+      (std::abs(angVel) < ANGULAR_THRESHOLD || std::abs(angVel) > ANGULAR_THRESHOLD)) {
+    linVel = 0.0;
+    latVel = 0.0;
+    angVel = 0.0;
+    }
   // Limit the target velocity if needed.
   this->limiterLin->Limit(
       linVel, this->last0Cmd.lin, this->last1Cmd.lin, _info.dt);
@@ -662,23 +673,28 @@ void OmniDrivePrivate::UpdateVelocity(
   this->last0Cmd.lin = linVel;
   this->last0Cmd.lat = latVel;
   this->last0Cmd.ang = angVel;
-
+  
   // constant used in computing target velocities
-  const double angularLength = 0.5 * (this->wheelSeparation + this->wheelbase);
+  const double angularLength = std::sqrt(
+        std::pow(this->wheelSeparation / 2.0, 2) + 
+        std::pow(this->wheelbase / 2.0, 2)
+    );
+  // const double angularLength = 0.5 * (this->wheelSeparation + this->wheelbase);
   const double invWheelRadius = 1 / this->wheelRadius;
 
   // Convert the target velocities to joint velocities.
   // These calculations are based on the following references:
   // https://robohub.org/drive-kinematics-skid-steer-and-mecanum-ros-twist-included
   // https://research.ijcaonline.org/volume113/number3/pxc3901586.pdf
-  this->frontLeftJointSpeed =
-    (-linVel - latVel - angVel * angularLength) * invWheelRadius;
-  this->frontRightJointSpeed =
-    (linVel + latVel + angVel * angularLength) * invWheelRadius;
-  this->backLeftJointSpeed =
-    (-linVel + latVel - angVel * angularLength) * invWheelRadius;
-  this->backRightJointSpeed =
-    (linVel - latVel + angVel * angularLength) * invWheelRadius;
+
+  this->frontLeftJointSpeed = (linVel - latVel - (angVel * angularLength)) * invWheelRadius;
+  this->frontRightJointSpeed = - (linVel + latVel + (angVel * angularLength)) * invWheelRadius;
+  this->backLeftJointSpeed = (linVel + latVel - (angVel * angularLength)) * invWheelRadius;
+  this->backRightJointSpeed = - (linVel - latVel + (angVel * angularLength)) * invWheelRadius;
+
+  // gzdbg << "Speed:" << this->frontLeftJointSpeed << ", " << this->frontRightJointSpeed << ", "
+  //        << this->backLeftJointSpeed << ", " << this->backRightJointSpeed << std::endl;
+  // finally motor speed of each wheel is in rad/s takes linevel, latvel, angvel ie. x, y, z 
 }
 
 //////////////////////////////////////////////////
