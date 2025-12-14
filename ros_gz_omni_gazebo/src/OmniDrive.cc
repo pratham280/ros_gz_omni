@@ -652,14 +652,14 @@ void OmniDrivePrivate::UpdateVelocity(
     latVel = this->targetVel.linear().y();
     angVel = this->targetVel.angular().z();
   }
-  const double LINEAR_THRESHOLD = 0.0;
-  const double ANGULAR_THRESHOLD = 0.0;
-  if ((std::abs(linVel) < LINEAR_THRESHOLD || std::abs(linVel) > LINEAR_THRESHOLD) &&
-      (std::abs(angVel) < ANGULAR_THRESHOLD || std::abs(angVel) > ANGULAR_THRESHOLD)) {
+
+
+  if ((std::abs(linVel) > 0.0 && std::abs(angVel) > 0.0)) {
     linVel = 0.0;
     latVel = 0.0;
     angVel = 0.0;
-    }
+  }
+
   // Limit the target velocity if needed.
   this->limiterLin->Limit(
       linVel, this->last0Cmd.lin, this->last1Cmd.lin, _info.dt);
@@ -681,19 +681,28 @@ void OmniDrivePrivate::UpdateVelocity(
     );
   // const double angularLength = 0.5 * (this->wheelSeparation + this->wheelbase);
   const double invWheelRadius = 1 / this->wheelRadius;
+  
 
   // Convert the target velocities to joint velocities.
   // These calculations are based on the following references:
   // https://robohub.org/drive-kinematics-skid-steer-and-mecanum-ros-twist-included
   // https://research.ijcaonline.org/volume113/number3/pxc3901586.pdf
+	// https://easychair.org/publications/preprint/jHj9/open
 
-  this->frontLeftJointSpeed = (linVel - latVel - (angVel * angularLength)) * invWheelRadius;
-  this->frontRightJointSpeed = - (linVel + latVel + (angVel * angularLength)) * invWheelRadius;
-  this->backLeftJointSpeed = (linVel + latVel - (angVel * angularLength)) * invWheelRadius;
-  this->backRightJointSpeed = - (linVel - latVel + (angVel * angularLength)) * invWheelRadius;
+	// https://en.cppreference.com/index.html
+	
+	double sqtwoinv = 1/std::sqrt(2);
 
-  // gzdbg << "Speed:" << this->frontLeftJointSpeed << ", " << this->frontRightJointSpeed << ", "
-  //        << this->backLeftJointSpeed << ", " << this->backRightJointSpeed << std::endl;
+	this->frontLeftJointSpeed = sqtwoinv * (linVel - latVel + (-angVel * angularLength)) * invWheelRadius;
+
+	this->frontRightJointSpeed = sqtwoinv * (-linVel - latVel + (-angVel * angularLength)) * invWheelRadius;
+
+	this->backLeftJointSpeed = sqtwoinv * (linVel + latVel + (-angVel * angularLength)) * invWheelRadius;
+
+	this->backRightJointSpeed = sqtwoinv * (-linVel + latVel + (-angVel * angularLength)) * invWheelRadius;
+
+  // gzdbg << "Speed:" << this->frontLeftJointSpeed << ", " << this->frontRightJointSpeed << ", " << this->backRightJointSpeed << ", " << this->backLeftJointSpeed << std::endl;
+
   // finally motor speed of each wheel is in rad/s takes linevel, latvel, angvel ie. x, y, z 
 }
 

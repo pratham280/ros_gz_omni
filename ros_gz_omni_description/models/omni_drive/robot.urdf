@@ -1,0 +1,2924 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/93e40c2054094fd18d479553/w/e3a23b7dc09673b21c44fc8d/e/5454c6251aef5ff9fabb9165 -->
+<robot name="omni_drive">
+  <!-- Link part_1 -->
+  <link name="part_1">
+    <inertial>
+      <origin xyz="-0.00053136 -0.000526049 0.0125" rpy="0 0 0"/>
+      <mass value="0.824729"/>
+      <inertia ixx="0.00212521" ixy="1.24365e-05" ixz="0" iyy="0.00212498" iyz="0" izz="0.00416427"/>
+    </inertial>
+    <!-- Part part_1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/part_1.stl"/>
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/part_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame omni_drive (dummy link + fixed joint) -->
+  <link name="omni_drive">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="omni_drive_frame" type="fixed">
+    <origin xyz="-0.00053136 -0.000526049 0.025" rpy="0 -0 0.785398"/>
+    <parent link="part_1"/>
+    <child link="omni_drive"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Link wheel_4 -->
+  <link name="wheel_4">
+    <inertial>
+      <origin xyz="1.83924e-10 3.18813e-10 0.0159958" rpy="0 0 0"/>
+      <mass value="0.263071"/>
+      <inertia ixx="0.000201716" ixy="-1.86838e-12" ixz="2.20115e-12" iyy="0.000201716" iyz="-4.02417e-13" izz="0.000349019"/>
+    </inertial>
+    <!-- Part wheel4_omniwheel_tyre_v1 -->
+    <visual>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="8.89489e-16 -0.508017 -0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="8.89489e-16 -0.508017 -0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1 -->
+    <visual>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 -4.22136e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 -4.22136e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_2 -->
+    <visual>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="9.44878e-16 -0.0501607 -1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_2_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="9.44878e-16 -0.0501607 -1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_3 -->
+    <visual>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="4.82651e-17 -0.990694 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_3_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="4.82651e-17 -0.990694 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_2 -->
+    <visual>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 -1.13345e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 -1.13345e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_4 -->
+    <visual>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="5.61038e-61 -0.210366 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_4_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="5.61038e-61 -0.210366 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_3 -->
+    <visual>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 2.6959e-18 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 2.6959e-18 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_4 -->
+    <visual>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 -1.13345e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 -1.13345e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_5 -->
+    <visual>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="1.22293e-15 -0.614515 -1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_5_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="1.22293e-15 -0.614515 -1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_holder_v2 -->
+    <visual>
+      <origin xyz="0 -2.02384e-18 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_holder_v2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -2.02384e-18 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_5 -->
+    <visual>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 4.6247e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_5_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 4.6247e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_6 -->
+    <visual>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="-1.5736e-60 -0.971379 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_6_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="-1.5736e-60 -0.971379 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_7 -->
+    <visual>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="1.70288e-16 -0.210366 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_7_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="1.70288e-16 -0.210366 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_6 -->
+    <visual>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 9.7094e-16 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_6_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 9.7094e-16 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_8 -->
+    <visual>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_8_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4 -->
+    <visual>
+      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_7 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -2.31112e-33 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_7_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -2.31112e-33 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_9 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_9_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_10 -->
+    <visual>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="-3.14159 -0.508017 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_10_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="-3.14159 -0.508017 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_11 -->
+    <visual>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="-3.14159 -0.0501607 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_11_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="-3.14159 -0.0501607 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_8 -->
+    <visual>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -1.08804e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_8_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -1.08804e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_9 -->
+    <visual>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 5.61969e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_9_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 5.61969e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_10 -->
+    <visual>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -1.06194e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_10_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -1.06194e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_11 -->
+    <visual>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 5.54815e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_11_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 5.54815e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_12 -->
+    <visual>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="6.98884e-16 -0.508017 -0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_12_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="6.98884e-16 -0.508017 -0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_13 -->
+    <visual>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="1.96792e-16 -0.971379 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_13_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="1.96792e-16 -0.971379 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4_2 -->
+    <visual>
+      <origin xyz="-1.73472e-17 1.87928e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-1.73472e-17 1.87928e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_12 -->
+    <visual>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 1.02974e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_12_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 1.02974e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_14 -->
+    <visual>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="-5.67625e-17 -0.210366 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_14_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="-5.67625e-17 -0.210366 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_13 -->
+    <visual>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 1.07471e-16 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_13_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 1.07471e-16 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_15 -->
+    <visual>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="-3.14159 -0.508017 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_15_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="-3.14159 -0.508017 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_14 -->
+    <visual>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 7.72707e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_14_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 7.72707e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_15 -->
+    <visual>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -5.23529e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_15_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -5.23529e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_16 -->
+    <visual>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -6.03454e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_16_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -6.03454e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_17 -->
+    <visual>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_17_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_16 -->
+    <visual>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="3.18719e-16 -6.10623e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_16_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="3.18719e-16 -6.10623e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_17 -->
+    <visual>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="9.83959e-17 -0.971379 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_17_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="9.83959e-17 -0.971379 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_18 -->
+    <visual>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 -2.01876e-31 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_18_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 -2.01876e-31 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_19 -->
+    <visual>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 5.61969e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_19_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 5.61969e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_18 -->
+    <visual>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="-3.14159 -0.0501607 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_18_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="-3.14159 -0.0501607 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_19 -->
+    <visual>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="4.2402e-16 -6.10623e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_19_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="4.2402e-16 -6.10623e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_20 -->
+    <visual>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="5.71555e-17 -0.240455 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_20_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="5.71555e-17 -0.240455 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_20 -->
+    <visual>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_20_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame motorC (dummy link + fixed joint) -->
+  <link name="motorC">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="motorC_frame" type="fixed">
+    <origin xyz="0 3.37024e-19 0" rpy="-2.36658e-30 1.63005e-32 -1.5708"/>
+    <parent link="wheel_4"/>
+    <child link="motorC"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from part_1 to wheel_4 -->
+  <joint name="wheel_motorC" type="continuous">
+    <origin xyz="4.91505e-18 -0.105 0.0125" rpy="1.5708 -1.5708 0"/>
+    <parent link="part_1"/>
+    <child link="wheel_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="5" velocity="10"/>
+    <joint_properties friction="0.1"/>
+  </joint>
+  <!-- Link wheel_4_2 -->
+  <link name="wheel_4_2">
+    <inertial>
+      <origin xyz="1.82709e-10 1.21157e-11 0.0159958" rpy="0 0 0"/>
+      <mass value="0.263071"/>
+      <inertia ixx="0.000201716" ixy="1.43726e-13" ixz="1.29715e-12" iyy="0.000201716" iyz="-5.22387e-13" izz="0.000349019"/>
+    </inertial>
+    <!-- Part wheel4_omniwheel_tyre_v1_21 -->
+    <visual>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="3.14159 -0.508017 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_21_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="3.14159 -0.508017 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_21 -->
+    <visual>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 1.49767e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_21_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 1.49767e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_22 -->
+    <visual>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="3.14159 -0.0501607 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_22_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="3.14159 -0.0501607 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_23 -->
+    <visual>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="-3.14159 -0.947246 2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_23_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="-3.14159 -0.947246 2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_22 -->
+    <visual>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 -4.3654e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_22_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 -4.3654e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_24 -->
+    <visual>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="3.14159 -0.210366 0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_24_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="3.14159 -0.210366 0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_23 -->
+    <visual>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 -7.48422e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_23_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 -7.48422e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_24 -->
+    <visual>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 -4.3654e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_24_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 -4.3654e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_25 -->
+    <visual>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="3.14159 0.514194 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_25_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="3.14159 0.514194 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_holder_v2_2 -->
+    <visual>
+      <origin xyz="-1.73472e-18 -2.02384e-17 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_holder_v2_2_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-1.73472e-18 -2.02384e-17 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_25 -->
+    <visual>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 -1.53739e-16 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_25_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 -1.53739e-16 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_26 -->
+    <visual>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="-3.14159 -0.971379 2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_26_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="-3.14159 -0.971379 2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_27 -->
+    <visual>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="-3.14159 -0.210366 2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_27_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="-3.14159 -0.210366 2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_26 -->
+    <visual>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 1.0366e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_26_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 1.0366e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_28 -->
+    <visual>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_28_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4_3 -->
+    <visual>
+      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_27 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -1.46371e-32 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_27_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -1.46371e-32 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_29 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_29_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="-3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_30 -->
+    <visual>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="-7.62419e-16 -0.508017 0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_30_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="-7.62419e-16 -0.508017 0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_31 -->
+    <visual>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="-1.05604e-15 -0.0501607 1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_31_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="-1.05604e-15 -0.0501607 1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_28 -->
+    <visual>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -1.02238e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_28_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -1.02238e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_29 -->
+    <visual>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 -2.36501e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_29_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 -2.36501e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_30 -->
+    <visual>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -1.07052e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_30_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -1.07052e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_31 -->
+    <visual>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 5.64989e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_31_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 5.64989e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_32 -->
+    <visual>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="3.14159 -0.508017 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_32_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="3.14159 -0.508017 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_33 -->
+    <visual>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="3.14159 -0.971379 0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_33_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="3.14159 -0.971379 0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4_4 -->
+    <visual>
+      <origin xyz="-2.25514e-17 -2.02384e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.25514e-17 -2.02384e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_32 -->
+    <visual>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 1.02974e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_32_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 1.02974e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_34 -->
+    <visual>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="-3.14159 -0.210366 2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_34_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="-3.14159 -0.210366 2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_33 -->
+    <visual>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 1.36184e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_33_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 1.36184e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_35 -->
+    <visual>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="-6.98884e-16 -0.508017 0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_35_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="-6.98884e-16 -0.508017 0.628319"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_34 -->
+    <visual>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 5.62548e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_34_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 5.62548e-16 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_35 -->
+    <visual>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -7.35795e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_35_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -7.35795e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_36 -->
+    <visual>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -6.46256e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_36_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -6.46256e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_37 -->
+    <visual>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_37_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_36 -->
+    <visual>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="-3.14159 6.10623e-16 1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_36_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="-3.14159 6.10623e-16 1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_37 -->
+    <visual>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="-3.14159 -0.971379 0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_37_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="-3.14159 -0.971379 0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_38 -->
+    <visual>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 1.92555e-31 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_38_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 1.92555e-31 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_39 -->
+    <visual>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 -2.36501e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_39_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 -2.36501e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_38 -->
+    <visual>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="-1.00046e-15 -0.0501607 1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_38_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="-1.00046e-15 -0.0501607 1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_39 -->
+    <visual>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="-3.14159 6.10623e-16 1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_39_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="-3.14159 6.10623e-16 1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_40 -->
+    <visual>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="-3.14159 -0.180277 0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_40_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="-3.14159 -0.180277 0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_40 -->
+    <visual>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_40_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame motorA (dummy link + fixed joint) -->
+  <link name="motorA">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="motorA_frame" type="fixed">
+    <origin xyz="0 3.37024e-19 0" rpy="3.14159 -1.12014e-59 -1.5708"/>
+    <parent link="wheel_4_2"/>
+    <child link="motorA"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from part_1 to wheel_4_2 -->
+  <joint name="wheel_motorA" type="continuous">
+    <origin xyz="6.36065e-18 0.105 0.0125" rpy="-1.5708 -1.5708 0"/>
+    <parent link="part_1"/>
+    <child link="wheel_4_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="5" velocity="10"/>
+    <joint_properties friction="0.1"/>
+  </joint>
+  <!-- Link wheel_4_3 -->
+  <link name="wheel_4_3">
+    <inertial>
+      <origin xyz="1.66269e-10 1.73107e-10 0.0159958" rpy="0 0 0"/>
+      <mass value="0.263071"/>
+      <inertia ixx="0.000201716" ixy="-3.63304e-13" ixz="-4.70194e-12" iyy="0.000201716" iyz="-5.6773e-12" izz="0.000349019"/>
+    </inertial>
+    <!-- Part wheel4_omniwheel_tyre_v1_41 -->
+    <visual>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_41_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_41 -->
+    <visual>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 2.41177e-31 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_41_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 2.41177e-31 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_42 -->
+    <visual>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="1.25664 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_42_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="1.25664 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_43 -->
+    <visual>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="-1.29669e-13 1.54666 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_43_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="-1.29669e-13 1.54666 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_42 -->
+    <visual>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 -3.07651e-15 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_42_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 -3.07651e-15 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_44 -->
+    <visual>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="2.19911 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_44_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="2.19911 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_43 -->
+    <visual>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 -1.53254e-31 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_43_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 -1.53254e-31 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_44 -->
+    <visual>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 -3.07651e-15 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_44_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 -3.07651e-15 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_45 -->
+    <visual>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="-3.64233e-17 1.00644 -1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_45_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="-3.64233e-17 1.00644 -1.25664"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_holder_v2_3 -->
+    <visual>
+      <origin xyz="-5.20417e-18 -3.75857e-18 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_holder_v2_3_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-5.20417e-18 -3.75857e-18 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_45 -->
+    <visual>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 -1.53254e-31 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_45_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 -1.53254e-31 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_46 -->
+    <visual>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="0.314159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_46_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="0.314159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_47 -->
+    <visual>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="0.942478 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_47_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="0.942478 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_46 -->
+    <visual>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 3.51971e-17 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_46_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 3.51971e-17 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_48 -->
+    <visual>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="-9.44784e-30 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_48_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="-9.44784e-30 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4_5 -->
+    <visual>
+      <origin xyz="0 2.46519e-32 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_5_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 2.46519e-32 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_47 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -2.77654e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_47_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -2.77654e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_49 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="-9.53412e-30 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_49_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="-9.53412e-30 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_50 -->
+    <visual>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="-0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_50_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="-0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_51 -->
+    <visual>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="-1.25664 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_51_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="-1.25664 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_48 -->
+    <visual>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -2.05018e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_48_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -2.05018e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_49 -->
+    <visual>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 3.07651e-15 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_49_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 3.07651e-15 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_50 -->
+    <visual>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -2.05018e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_50_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -2.05018e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_51 -->
+    <visual>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 -1.99323e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_51_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 -1.99323e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_52 -->
+    <visual>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_52_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_53 -->
+    <visual>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="2.82743 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_53_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="2.82743 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4_6 -->
+    <visual>
+      <origin xyz="-1.9082e-17 -6.97588e-18 0.032" rpy="-6.22065e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_6_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-1.9082e-17 -6.97588e-18 0.032" rpy="-6.22065e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_52 -->
+    <visual>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 3.51971e-17 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_52_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 3.51971e-17 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_54 -->
+    <visual>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="0.942478 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_54_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="0.942478 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_53 -->
+    <visual>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 4.39617e-32 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_53_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 4.39617e-32 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_55 -->
+    <visual>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="-0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_55_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="-0.628319 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_54 -->
+    <visual>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 -1.99323e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_54_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 -1.99323e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_55 -->
+    <visual>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -3.28206e-15 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_55_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -3.28206e-15 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_56 -->
+    <visual>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -3.28206e-15 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_56_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -3.28206e-15 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_57 -->
+    <visual>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_57_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_56 -->
+    <visual>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_56_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_57 -->
+    <visual>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="2.82743 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_57_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="2.82743 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_58 -->
+    <visual>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 -3.2603e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_58_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 -3.2603e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_59 -->
+    <visual>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 3.07651e-15 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_59_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 3.07651e-15 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_58 -->
+    <visual>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="-1.25664 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_58_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="-1.25664 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_59 -->
+    <visual>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_59_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_60 -->
+    <visual>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="-1.74807e-15 1.54071 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_60_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="-1.74807e-15 1.54071 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_60 -->
+    <visual>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_60_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame motorD (dummy link + fixed joint) -->
+  <link name="motorD">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="motorD_frame" type="fixed">
+    <origin xyz="0 -1.53081e-19 0" rpy="3.14159 -5.04871e-29 3.14159"/>
+    <parent link="wheel_4_3"/>
+    <child link="motorD"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from part_1 to wheel_4_3 -->
+  <joint name="wheel_motorD" type="continuous">
+    <origin xyz="-0.105 -1.74334e-17 0.0125" rpy="-1.63015e-15 -1.5708 0"/>
+    <parent link="part_1"/>
+    <child link="wheel_4_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="5" velocity="10"/>
+    <joint_properties friction="0.1"/>
+  </joint>
+  <!-- Link wheel_4_4 -->
+  <link name="wheel_4_4">
+    <inertial>
+      <origin xyz="1.8529e-10 1.58778e-10 0.0159958" rpy="0 0 0"/>
+      <mass value="0.263071"/>
+      <inertia ixx="0.000201716" ixy="-4.88696e-13" ixz="5.49741e-12" iyy="0.000201716" iyz="1.83733e-12" izz="0.000349019"/>
+    </inertial>
+    <!-- Part wheel4_omniwheel_tyre_v1_61 -->
+    <visual>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="-0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_61_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0231222 0.0368854 0.0255" rpy="-0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_61 -->
+    <visual>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 5.98862e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_61_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 -0.0254733 0.0065" rpy="-1.5708 5.98862e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_62 -->
+    <visual>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="-1.25664 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_62_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00297442 0.0434318 0.0255" rpy="-1.25664 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_63 -->
+    <visual>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="3.14159 -1.54666 2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_63_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 0.0279349 0.0065" rpy="3.14159 -1.54666 2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_62 -->
+    <visual>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 9.68979e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_62_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 0.0241307 0.0065" rpy="-1.5708 9.68979e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_64 -->
+    <visual>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="-2.19911 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_64_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 0.0231222 0.0065" rpy="-2.19911 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_63 -->
+    <visual>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 5.98862e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_63_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 0.0398741 0.0065" rpy="-1.5708 5.98862e-17 -2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_64 -->
+    <visual>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 9.68979e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_64_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 -0.000829804 0.0065" rpy="-1.5708 9.68979e-17 -1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_65 -->
+    <visual>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="3.14159 -1.00644 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_65_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0279349 -0.0333887 0.0255" rpy="3.14159 -1.00644 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_holder_v2_4 -->
+    <visual>
+      <origin xyz="5.20417e-18 3.61401e-20 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_holder_v2_4_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="5.20417e-18 3.61401e-20 0.013" rpy="1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_65 -->
+    <visual>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 -5.98862e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_65_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0336493 0.0254733 0.0065" rpy="-1.5708 -5.98862e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_66 -->
+    <visual>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="-0.314159 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_66_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 0.00297442 0.0065" rpy="-0.314159 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_67 -->
+    <visual>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="-0.942478 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_67_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 0.0422252 0.0065" rpy="-0.942478 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_66 -->
+    <visual>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 2.05389e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_66_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0241307 -0.0346248 0.0255" rpy="-1.5708 2.05389e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_68 -->
+    <visual>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_68_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01625 0.0255" rpy="3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4_7 -->
+    <visual>
+      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_7_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_67 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -1.01884e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_67_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01225 0.0255" rpy="-1.5708 -1.01884e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_69 -->
+    <visual>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_69_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0403869 0.01625 0.0255" rpy="3.14159 0.992087 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_70 -->
+    <visual>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_70_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0231222 0.0368854 0.0255" rpy="0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_71 -->
+    <visual>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="1.25664 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_71_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00297442 0.0434318 0.0255" rpy="1.25664 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_68 -->
+    <visual>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -2.11686e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_68_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0241307 -0.0346248 0.0255" rpy="-1.5708 -2.11686e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_69 -->
+    <visual>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 -9.68979e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_69_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0346248 -0.0241307 0.0065" rpy="-1.5708 -9.68979e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_70 -->
+    <visual>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -2.3308e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_70_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000829804 0.0421957 0.0255" rpy="-1.5708 -2.3308e-15 -0.314159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_71 -->
+    <visual>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 3.30934e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_71_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0398741 -0.0138284 0.0255" rpy="-1.5708 3.30934e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_72 -->
+    <visual>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="-0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_72_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0422252 -0.0105923 0.0255" rpy="-0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_73 -->
+    <visual>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="-2.82743 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_73_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0333887 -0.0279349 0.0065" rpy="-2.82743 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_body_omni_v4_8 -->
+    <visual>
+      <origin xyz="-2.94903e-17 1.9877e-18 0.032" rpy="-6.77576e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+      <material name="wheel4_body_omni_v4_8_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-2.94903e-17 1.9877e-18 0.032" rpy="-6.77576e-16 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_72 -->
+    <visual>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 3.55778e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_72_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000829804 0.0421957 0.0255" rpy="-1.5708 3.55778e-15 -2.82743"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_74 -->
+    <visual>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="-0.942478 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_74_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0368854 -0.0231222 0.0065" rpy="-0.942478 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_73 -->
+    <visual>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 -5.98862e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_73_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0138284 -0.0398741 0.0065" rpy="-1.5708 -5.98862e-17 2.51327"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_75 -->
+    <visual>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_75_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0422252 -0.0105923 0.0255" rpy="0.628319 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_74 -->
+    <visual>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 3.37427e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_74_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0254733 0.0336493 0.0255" rpy="-1.5708 3.37427e-15 -2.19911"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_75 -->
+    <visual>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -3.05966e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_75_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0254733 0.0336493 0.0255" rpy="-1.5708 -3.05966e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_76 -->
+    <visual>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -3.06246e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_76_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0398741 -0.0138284 0.0255" rpy="-1.5708 -3.06246e-16 -0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_77 -->
+    <visual>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_77_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 -0.0403869 0.0065" rpy="-1.5708 1.09635e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_76 -->
+    <visual>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_76_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 -0.0403869 0.0065" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_77 -->
+    <visual>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="-2.82743 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_77_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0434318 -0.00297442 0.0065" rpy="-2.82743 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_78 -->
+    <visual>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 1.82916e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_78_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0403869 0.01225 0.0255" rpy="-1.5708 1.82916e-15 -1.5708"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_79 -->
+    <visual>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 -9.68979e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_79_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0421957 0.000829804 0.0065" rpy="-1.5708 -9.68979e-17 1.88496"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_78 -->
+    <visual>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="1.25664 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_78_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0279349 -0.0333887 0.0255" rpy="1.25664 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_79 -->
+    <visual>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_79_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01625 0.0403869 0.0065" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_omniwheel_tyre_v1_80 -->
+    <visual>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="-3.14159 -1.54071 0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+      <material name="wheel4_omniwheel_tyre_v1_80_material">
+        <color rgba="0.152941 0.152941 0.152941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0105923 -0.0422252 0.0065" rpy="-3.14159 -1.54071 0.942478"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wheel4_shaft_omni_v1_80 -->
+    <visual>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+      <material name="wheel4_shaft_omni_v1_80_material">
+        <color rgba="0.627451 0.627451 0.627451 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.01225 0.0403869 0.0065" rpy="-1.5708 1.08137e-15 -3.14159"/>
+      <geometry>
+        <mesh filename="package://meshes/wheel4_shaft_omni_v1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame motorB (dummy link + fixed joint) -->
+  <link name="motorB">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="motorB_frame" type="fixed">
+    <origin xyz="-1.73472e-18 3.37024e-19 0" rpy="3.14159 -5.60071e-60 -1.5708"/>
+    <parent link="wheel_4_4"/>
+    <child link="motorB"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from part_1 to wheel_4_4 -->
+  <joint name="wheel_motorB" type="continuous">
+    <origin xyz="0.105 -6.36065e-18 0.0125" rpy="3.14159 -1.5708 0"/>
+    <parent link="part_1"/>
+    <child link="wheel_4_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="5" velocity="10"/>
+    <joint_properties friction="0.1"/>
+  </joint>
+</robot>
