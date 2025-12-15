@@ -45,11 +45,11 @@ def generate_launch_description():
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
-        launch_arguments={'gz_args': PathJoinSubstitution([
+        launch_arguments={'gz_args': {PathJoinSubstitution([
             pkg_project_gazebo,
             'worlds',
             'omni_drive.sdf',
-        ]), '--verbose' : '4'}.items(),
+        ]), ' -r -s --verbose 3 '},'on_exit_shutdown': 'true'}.items(),
     )
 
     # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links
