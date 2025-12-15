@@ -5,9 +5,9 @@
   <!-- Link part_1 -->
   <link name="part_1">
     <inertial>
-      <origin xyz="-0.00053136 -0.000526049 0.0125" rpy="0 0 0"/>
+      <origin xyz="-0.000747701 3.75549e-06 0.0125" rpy="0 0 0"/>
       <mass value="0.824729"/>
-      <inertia ixx="0.00212521" ixy="1.24365e-05" ixz="0" iyy="0.00212498" iyz="0" izz="0.00416427"/>
+      <inertia ixx="0.00213753" ixy="-1.14179e-07" ixz="0" iyy="0.00211266" iyz="0" izz="0.00416427"/>
     </inertial>
     <!-- Part part_1 -->
     <visual>
@@ -36,7 +36,7 @@
     </inertial>
   </link>
   <joint name="omni_drive_frame" type="fixed">
-    <origin xyz="-0.00053136 -0.000526049 0.025" rpy="0 -0 0.785398"/>
+    <origin xyz="-0.000747701 3.75549e-06 0.025" rpy="0 -0 0"/>
     <parent link="part_1"/>
     <child link="omni_drive"/>
     <axis xyz="0 0 0"/>
@@ -44,13 +44,13 @@
   <!-- Link wheel4_shaft_holder_v2 -->
   <link name="wheel4_shaft_holder_v2">
     <inertial>
-      <origin xyz="3.57044e-13 3.57055e-13 0.0159932" rpy="0 0 0"/>
+      <origin xyz="3.57042e-13 3.57062e-13 0.0159932" rpy="0 0 0"/>
       <mass value="0.162524"/>
-      <inertia ixx="0.000106018" ixy="-9.74088e-21" ixz="-4.58452e-15" iyy="0.000106018" iyz="-5.68705e-15" izz="0.000180425"/>
+      <inertia ixx="0.000106018" ixy="-1.3129e-20" ixz="-4.58452e-15" iyy="0.000106018" iyz="-5.68703e-15" izz="0.000180425"/>
     </inertial>
     <!-- Part wheel4_body_omni_v4 -->
     <visual>
-      <origin xyz="-1.73472e-17 1.87928e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
+      <origin xyz="-2.08167e-17 1.14967e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
       </geometry>
@@ -63,7 +63,7 @@
     <!-- Part wheel4_shaft_omni_v1_3 -->
     <!-- Part wheel4_shaft_holder_v2 -->
     <visual>
-      <origin xyz="0 -2.02384e-18 0.013" rpy="1.5708 -1.5708 0"/>
+      <origin xyz="0 1.84356e-17 0.013" rpy="1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
       </geometry>
@@ -85,7 +85,7 @@
     <!-- Part wheel4_shaft_omni_v1_15 -->
     <!-- Part wheel4_body_omni_v4_2 -->
     <visual>
-      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <origin xyz="0 1.84356e-17 0.013" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
       </geometry>
@@ -109,7 +109,7 @@
     </inertial>
   </link>
   <joint name="motorC_frame" type="fixed">
-    <origin xyz="0 3.37024e-19 0" rpy="-2.36658e-30 1.63005e-32 -1.5708"/>
+    <origin xyz="0 1.14967e-17 1.38778e-17" rpy="-2.36658e-30 -0 -1.5708"/>
     <parent link="wheel4_shaft_holder_v2"/>
     <child link="motorC"/>
     <axis xyz="0 0 0"/>
@@ -117,13 +117,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1 -->
   <link name="wheel4_omniwheel_tyre_v1">
     <inertial>
-      <origin xyz="-6.93633e-10 5.993e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 2.0154e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27418e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3587e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-5.0967e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-9.97056e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1 -->
     <visual>
-      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 5.20093e-17 -5.55112e-17"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 -1.16048e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -132,7 +132,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 5.20093e-17 -5.55112e-17"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 -1.16048e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -140,7 +140,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2 to wheel4_omniwheel_tyre_v1 -->
   <joint name="wheel_3k" type="continuous">
-    <origin xyz="-0.0403869 2.57317e-17 0.0255" rpy="1.5708 0.992087 -3.14159"/>
+    <origin xyz="-0.0403869 1.14967e-17 0.0255" rpy="1.5708 0.992087 -3.14159"/>
     <parent link="wheel4_shaft_holder_v2"/>
     <child link="wheel4_omniwheel_tyre_v1"/>
     <axis xyz="0 0 1"/>
@@ -150,13 +150,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_2 -->
   <link name="wheel4_omniwheel_tyre_v1_2">
     <inertial>
-      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 2.72954e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="6.37087e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-6.37074e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.27418e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.85772e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_2 -->
     <visual>
-      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 1.66533e-16"/>
+      <origin xyz="2.08167e-17 0 0.01625" rpy="1.5708 -0 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -165,7 +165,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 1.66533e-16"/>
+      <origin xyz="2.08167e-17 0 0.01625" rpy="1.5708 -0 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -183,13 +183,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_3 -->
   <link name="wheel4_omniwheel_tyre_v1_3">
     <inertial>
-      <origin xyz="-6.93633e-10 -2.72248e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 6.15344e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.59274e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="8.73362e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.05517e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-5.51405e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_3 -->
     <visual>
-      <origin xyz="3.46945e-18 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 8.67362e-19"/>
+      <origin xyz="-2.08167e-17 0 0.01625" rpy="1.5708 -0 -4.51028e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -198,7 +198,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="3.46945e-18 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 8.67362e-19"/>
+      <origin xyz="-2.08167e-17 0 0.01625" rpy="1.5708 -0 -4.51028e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -216,13 +216,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_4 -->
   <link name="wheel4_omniwheel_tyre_v1_4">
     <inertial>
-      <origin xyz="-6.93633e-10 -5.49804e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 2.20694e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.9907e-25" ixz="8.11134e-13" iyy="2.29535e-07" iyz="8.73359e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-4.24061e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.84537e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_4 -->
     <visual>
-      <origin xyz="0 -5.55112e-17 0.01625" rpy="1.5708 5.55112e-17 -2.60209e-18"/>
+      <origin xyz="-3.46945e-17 0 0.01625" rpy="1.5708 5.55112e-17 -6.85216e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -231,7 +231,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -5.55112e-17 0.01625" rpy="1.5708 5.55112e-17 -2.60209e-18"/>
+      <origin xyz="-3.46945e-17 0 0.01625" rpy="1.5708 5.55112e-17 -6.85216e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -249,13 +249,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_5 -->
   <link name="wheel4_omniwheel_tyre_v1_5">
     <inertial>
-      <origin xyz="-6.93633e-10 -4.27658e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-5.09669e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.63479e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27417e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_5 -->
     <visual>
-      <origin xyz="3.46945e-18 0 0.01625" rpy="1.5708 -5.55112e-17 -1.11022e-16"/>
+      <origin xyz="-1.04083e-17 0 0.01625" rpy="1.5708 5.55112e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -264,7 +264,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="3.46945e-18 0 0.01625" rpy="1.5708 -5.55112e-17 -1.11022e-16"/>
+      <origin xyz="-1.04083e-17 0 0.01625" rpy="1.5708 5.55112e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -282,13 +282,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_6 -->
   <link name="wheel4_omniwheel_tyre_v1_6">
     <inertial>
-      <origin xyz="-6.93633e-10 7.53819e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 8.95429e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27418e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3587e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-5.0967e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-9.97056e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_6 -->
     <visual>
-      <origin xyz="2.77556e-17 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -5.55112e-17"/>
+      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 -1.16048e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -297,7 +297,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="2.77556e-17 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -5.55112e-17"/>
+      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 -1.16048e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -305,7 +305,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2 to wheel4_omniwheel_tyre_v1_6 -->
   <joint name="wheel_3p" type="continuous">
-    <origin xyz="0.0403869 2.92012e-17 0.0255" rpy="1.5708 0.992087 -3.14159"/>
+    <origin xyz="0.0403869 2.53745e-17 0.0255" rpy="1.5708 0.992087 -3.14159"/>
     <parent link="wheel4_shaft_holder_v2"/>
     <child link="wheel4_omniwheel_tyre_v1_6"/>
     <axis xyz="0 0 1"/>
@@ -315,13 +315,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_7 -->
   <link name="wheel4_omniwheel_tyre_v1_7">
     <inertial>
-      <origin xyz="-6.93633e-10 2.823e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.38544e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27418e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.28297e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.27418e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.7605e-25" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_7 -->
     <visual>
-      <origin xyz="-1.38778e-17 2.77556e-17 0.01625" rpy="1.5708 -5.55112e-17 0"/>
+      <origin xyz="2.77556e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.55112e-17 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -330,7 +330,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 2.77556e-17 0.01625" rpy="1.5708 -5.55112e-17 0"/>
+      <origin xyz="2.77556e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.55112e-17 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -348,13 +348,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_8 -->
   <link name="wheel4_omniwheel_tyre_v1_8">
     <inertial>
-      <origin xyz="-6.93633e-10 -1.43054e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.25013e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.93766e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.59274e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-6.4589e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_8 -->
     <visual>
-      <origin xyz="-1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 6.93889e-18"/>
+      <origin xyz="0 -1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 -2.77556e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -363,7 +363,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 6.93889e-18"/>
+      <origin xyz="0 -1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 -2.77556e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -381,13 +381,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_9 -->
   <link name="wheel4_omniwheel_tyre_v1_9">
     <inertial>
-      <origin xyz="-6.93633e-10 -2.72248e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 2.84555e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-3.9816e-25" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.27154e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-9.75539e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-7.52355e-25" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_9 -->
     <visual>
-      <origin xyz="0 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 2.60209e-18"/>
+      <origin xyz="-6.93889e-18 2.77556e-17 0.01625" rpy="1.5708 -0 3.46945e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -396,7 +396,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 2.60209e-18"/>
+      <origin xyz="-6.93889e-18 2.77556e-17 0.01625" rpy="1.5708 -0 3.46945e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -414,13 +414,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_10 -->
   <link name="wheel4_omniwheel_tyre_v1_10">
     <inertial>
-      <origin xyz="-6.93633e-10 1.39012e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.57053e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.29178e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-6.54692e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_10 -->
     <visual>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 -0 0"/>
+      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -429,7 +429,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 -0 0"/>
+      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -447,13 +447,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_11 -->
   <link name="wheel4_omniwheel_tyre_v1_11">
     <inertial>
-      <origin xyz="-6.93633e-10 1.34034e-17 -1.46309e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.39012e-17 -1.46309e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27417e-23" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="-6.28292e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="2.54834e-23" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="3.20304e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_11 -->
     <visual>
-      <origin xyz="0 1.38778e-17 -0.01625" rpy="-1.5708 -0 5.55112e-17"/>
+      <origin xyz="0 -1.38778e-17 -0.01625" rpy="-1.5708 -0 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -462,7 +462,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 1.38778e-17 -0.01625" rpy="-1.5708 -0 5.55112e-17"/>
+      <origin xyz="0 -1.38778e-17 -0.01625" rpy="-1.5708 -0 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -480,13 +480,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_12 -->
   <link name="wheel4_omniwheel_tyre_v1_12">
     <inertial>
-      <origin xyz="-6.93633e-10 2.823e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.27268e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="6.3709e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="9.6443e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="3.18543e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="9.51237e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_12 -->
     <visual>
-      <origin xyz="-3.46945e-18 2.77556e-17 0.01625" rpy="1.5708 -1.11022e-16 -1.38778e-17"/>
+      <origin xyz="-6.93889e-18 -1.38778e-17 0.01625" rpy="1.5708 -0 6.93889e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -495,7 +495,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-3.46945e-18 2.77556e-17 0.01625" rpy="1.5708 -1.11022e-16 -1.38778e-17"/>
+      <origin xyz="-6.93889e-18 -1.38778e-17 0.01625" rpy="1.5708 -0 6.93889e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -513,13 +513,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_13 -->
   <link name="wheel4_omniwheel_tyre_v1_13">
     <inertial>
-      <origin xyz="-2.36344e-17 6.93633e-10 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-9.75657e-18 6.93633e-10 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-5.33202e-28" ixz="2.08372e-24" iyy="2.29535e-07" iyz="-8.11134e-13" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-5.33202e-28" ixz="2.08368e-24" iyy="2.29535e-07" iyz="-8.11134e-13" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_13 -->
     <visual>
-      <origin xyz="-1.38778e-17 -2.77556e-17 0.01625" rpy="1.5708 1.57747e-15 -1.5708"/>
+      <origin xyz="0 -3.46945e-17 0.01625" rpy="1.5708 1.57747e-15 -1.5708"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -528,7 +528,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 -2.77556e-17 0.01625" rpy="1.5708 1.57747e-15 -1.5708"/>
+      <origin xyz="0 -3.46945e-17 0.01625" rpy="1.5708 1.57747e-15 -1.5708"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -536,7 +536,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2 to wheel4_omniwheel_tyre_v1_13 -->
   <joint name="wheel_3h" type="continuous">
-    <origin xyz="0 0.0403869 0.0065" rpy="-4.44089e-16 1.5708 0"/>
+    <origin xyz="1.73472e-18 0.0403869 0.0065" rpy="-4.44089e-16 1.5708 0"/>
     <parent link="wheel4_shaft_holder_v2"/>
     <child link="wheel4_omniwheel_tyre_v1_13"/>
     <axis xyz="0 0 1"/>
@@ -546,13 +546,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_14 -->
   <link name="wheel4_omniwheel_tyre_v1_14">
     <inertial>
-      <origin xyz="-6.93633e-10 1.15094e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 2.95831e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="6.37086e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.2294e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="3.82252e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-6.54681e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_14 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 -0 4.16334e-17"/>
+      <origin xyz="0 2.77556e-17 0.01625" rpy="1.5708 -0 8.32667e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -561,7 +561,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 -0 4.16334e-17"/>
+      <origin xyz="0 2.77556e-17 0.01625" rpy="1.5708 -0 8.32667e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -579,13 +579,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_15 -->
   <link name="wheel4_omniwheel_tyre_v1_15">
     <inertial>
-      <origin xyz="-6.93633e-10 1.52542e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.29991e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.90245e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.27418e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.58355e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_15 -->
     <visual>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 -1.11022e-16"/>
+      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 2.77556e-17 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -594,7 +594,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 -1.11022e-16"/>
+      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 2.77556e-17 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -612,13 +612,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_16 -->
   <link name="wheel4_omniwheel_tyre_v1_16">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.91552e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -3.75833e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-2.54834e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.29178e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-6.37088e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.86654e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_16 -->
     <visual>
-      <origin xyz="2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 8.32667e-17 -1.66533e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -627,7 +627,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 8.32667e-17 -1.66533e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -647,11 +647,11 @@
     <inertial>
       <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-3.18544e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-6.37088e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.59272e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-6.37088e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_17 -->
     <visual>
-      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 -0 -1.38778e-17"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 -1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -660,7 +660,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 -0 -1.38778e-17"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 -1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -680,11 +680,11 @@
     <inertial>
       <origin xyz="-6.93633e-10 1.44771e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.62789e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_18 -->
     <visual>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.38162e-33"/>
+      <origin xyz="2.08167e-17 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 -3.89049e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -693,7 +693,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.38162e-33"/>
+      <origin xyz="2.08167e-17 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 -3.89049e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -701,7 +701,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2 to wheel4_omniwheel_tyre_v1_18 -->
   <joint name="wheel_3c" type="continuous">
-    <origin xyz="-3.46945e-18 -0.0403869 0.0065" rpy="-1.5708 -6.10623e-16 -1.5708"/>
+    <origin xyz="-1.73472e-18 -0.0403869 0.0065" rpy="-1.5708 -6.66134e-16 -1.5708"/>
     <parent link="wheel4_shaft_holder_v2"/>
     <child link="wheel4_omniwheel_tyre_v1_18"/>
     <axis xyz="0 0 1"/>
@@ -711,13 +711,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_19 -->
   <link name="wheel4_omniwheel_tyre_v1_19">
     <inertial>
-      <origin xyz="-6.93633e-10 1.48032e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.60197e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="6.37087e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.18541e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.59271e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.28737e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_19 -->
     <visual>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 1.11022e-16 2.77556e-17"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 -0 6.93889e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -726,7 +726,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 1.11022e-16 2.77556e-17"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 -0 6.93889e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -750,7 +750,7 @@
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_20 -->
     <visual>
-      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 1.38778e-16 -2.54218"/>
+      <origin xyz="5.55112e-17 6.93889e-18 0.01625" rpy="1.5708 5.55112e-17 -2.54218"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -759,7 +759,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 1.38778e-16 -2.54218"/>
+      <origin xyz="5.55112e-17 6.93889e-18 0.01625" rpy="1.5708 5.55112e-17 -2.54218"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -776,7 +776,7 @@
   </joint>
   <!-- Joint from part_1 to wheel4_shaft_holder_v2 -->
   <joint name="wheel_motorC" type="continuous">
-    <origin xyz="4.91505e-18 -0.105 0.0125" rpy="1.5708 -1.5708 0"/>
+    <origin xyz="-0.0742462 -0.0742462 0.0125" rpy="0.785398 -1.5708 0"/>
     <parent link="part_1"/>
     <child link="wheel4_shaft_holder_v2"/>
     <axis xyz="0 0 1"/>
@@ -786,9 +786,9 @@
   <!-- Link wheel4_shaft_holder_v2_2 -->
   <link name="wheel4_shaft_holder_v2_2">
     <inertial>
-      <origin xyz="3.57042e-13 3.57038e-13 0.0159932" rpy="0 0 0"/>
+      <origin xyz="3.57041e-13 3.57062e-13 0.0159932" rpy="0 0 0"/>
       <mass value="0.162524"/>
-      <inertia ixx="0.000106018" ixy="-1.52466e-20" ixz="-4.58451e-15" iyy="0.000106018" iyz="-5.68703e-15" izz="0.000180425"/>
+      <inertia ixx="0.000106018" ixy="-1.07997e-20" ixz="-4.58453e-15" iyy="0.000106018" iyz="-5.68704e-15" izz="0.000180425"/>
     </inertial>
     <!-- Part wheel4_shaft_omni_v1_21 -->
     <!-- Part wheel4_shaft_omni_v1_22 -->
@@ -800,7 +800,7 @@
     <!-- Part wheel4_shaft_omni_v1_28 -->
     <!-- Part wheel4_shaft_holder_v2_2 -->
     <visual>
-      <origin xyz="-1.73472e-18 -2.02384e-17 0.013" rpy="1.5708 -1.5708 0"/>
+      <origin xyz="0 1.26873e-17 0.013" rpy="1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
       </geometry>
@@ -810,7 +810,7 @@
     </visual>
     <!-- Part wheel4_body_omni_v4_3 -->
     <visual>
-      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <origin xyz="0 1.26873e-17 0.013" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
       </geometry>
@@ -827,7 +827,7 @@
     <!-- Part wheel4_shaft_omni_v1_35 -->
     <!-- Part wheel4_body_omni_v4_4 -->
     <visual>
-      <origin xyz="-2.25514e-17 -2.02384e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
+      <origin xyz="-2.08167e-17 1.96262e-17 0.032" rpy="-3.38788e-16 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
       </geometry>
@@ -851,7 +851,7 @@
     </inertial>
   </link>
   <joint name="motorA_frame" type="fixed">
-    <origin xyz="0 3.37024e-19 0" rpy="3.14159 -1.12014e-59 -1.5708"/>
+    <origin xyz="0 1.96262e-17 1.38778e-17" rpy="3.14159 -0 -1.5708"/>
     <parent link="wheel4_shaft_holder_v2_2"/>
     <child link="motorA"/>
     <axis xyz="0 0 0"/>
@@ -859,13 +859,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_21 -->
   <link name="wheel4_omniwheel_tyre_v1_21">
     <inertial>
-      <origin xyz="-6.93633e-10 1.44771e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.40891e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-5.0967e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="3.12324e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_21 -->
     <visual>
-      <origin xyz="1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 4.39063e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -874,7 +874,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 4.39063e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -882,7 +882,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_2 to wheel4_omniwheel_tyre_v1_21 -->
   <joint name="wheel_k" type="continuous">
-    <origin xyz="-0.0403869 -6.36065e-18 0.0255" rpy="1.5708 0.992087 -3.14159"/>
+    <origin xyz="-0.0403869 1.96262e-17 0.0255" rpy="1.5708 0.992087 -3.14159"/>
     <parent link="wheel4_shaft_holder_v2_2"/>
     <child link="wheel4_omniwheel_tyre_v1_21"/>
     <axis xyz="0 0 1"/>
@@ -892,13 +892,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_22 -->
   <link name="wheel4_omniwheel_tyre_v1_22">
     <inertial>
-      <origin xyz="-6.93633e-10 -1.47565e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.29524e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-3.82252e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.94646e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="5.0967e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.37096e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_22 -->
     <visual>
-      <origin xyz="-1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.55112e-17 -5.55112e-17"/>
+      <origin xyz="2.77556e-17 -1.38778e-17 0.01625" rpy="1.5708 -0 1.11022e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -907,7 +907,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.55112e-17 -5.55112e-17"/>
+      <origin xyz="2.77556e-17 -1.38778e-17 0.01625" rpy="1.5708 -0 1.11022e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -925,13 +925,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_23 -->
   <link name="wheel4_omniwheel_tyre_v1_23">
     <inertial>
-      <origin xyz="-6.93633e-10 5.87155e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.17913e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-2.38906e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.32186e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.21445e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.54316e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_23 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.55112e-17 -9.54098e-18"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 -0 -6.59195e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -940,7 +940,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.55112e-17 -9.54098e-18"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 -0 -6.59195e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -958,13 +958,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_24 -->
   <link name="wheel4_omniwheel_tyre_v1_24">
     <inertial>
-      <origin xyz="-6.93633e-10 6.43533e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -2.73094e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-4.57905e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.43184e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="5.19625e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="5.26987e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_24 -->
     <visual>
-      <origin xyz="-6.93889e-18 0 0.01625" rpy="1.5708 1.11022e-16 -7.80626e-18"/>
+      <origin xyz="-1.38778e-17 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 3.72966e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -973,7 +973,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-6.93889e-18 0 0.01625" rpy="1.5708 1.11022e-16 -7.80626e-18"/>
+      <origin xyz="-1.38778e-17 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 3.72966e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -991,13 +991,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_25 -->
   <link name="wheel4_omniwheel_tyre_v1_25">
     <inertial>
-      <origin xyz="-6.93633e-10 4.74398e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 3.63159e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="8.80474e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54836e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-2.60116e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_25 -->
     <visual>
-      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 5.55112e-17"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 5.55112e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1006,7 +1006,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 5.55112e-17"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 5.55112e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1024,13 +1024,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_26 -->
   <link name="wheel4_omniwheel_tyre_v1_26">
     <inertial>
-      <origin xyz="-6.93633e-10 7.53819e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 7.15018e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-5.0967e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="3.12324e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_26 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="-2.77556e-17 6.93889e-18 0.01625" rpy="1.5708 4.39063e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1039,7 +1039,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="-2.77556e-17 6.93889e-18 0.01625" rpy="1.5708 4.39063e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1047,7 +1047,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_2 to wheel4_omniwheel_tyre_v1_26 -->
   <joint name="wheel_p" type="continuous">
-    <origin xyz="0.0403869 -6.36065e-18 0.0255" rpy="1.5708 0.992087 -3.14159"/>
+    <origin xyz="0.0403869 3.35039e-17 0.0255" rpy="1.5708 0.992087 -3.14159"/>
     <parent link="wheel4_shaft_holder_v2_2"/>
     <child link="wheel4_omniwheel_tyre_v1_26"/>
     <axis xyz="0 0 1"/>
@@ -1057,13 +1057,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_27 -->
   <link name="wheel4_omniwheel_tyre_v1_27">
     <inertial>
-      <origin xyz="-6.93633e-10 -4.27659e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.32971e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-2.54834e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.93766e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.27419e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="5.1407e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_27 -->
     <visual>
-      <origin xyz="-1.04083e-17 0 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 -0 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1072,7 +1072,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.04083e-17 0 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 -0 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1090,13 +1090,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_28 -->
   <link name="wheel4_omniwheel_tyre_v1_28">
     <inertial>
-      <origin xyz="-6.93633e-10 1.43522e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 4.74398e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-3.02616e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="8.79573e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="3.18546e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="8.80136e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_28 -->
     <visual>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 1.11022e-16 -5.55112e-17"/>
+      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 5.55112e-17 1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1105,7 +1105,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 1.11022e-16 -5.55112e-17"/>
+      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 5.55112e-17 1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1123,13 +1123,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_29 -->
   <link name="wheel4_omniwheel_tyre_v1_29">
     <inertial>
-      <origin xyz="-6.93633e-10 2.83709e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 4.46208e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.19452e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.37674e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.75199e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="4.47354e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_29 -->
     <visual>
-      <origin xyz="6.93889e-18 2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 5.20417e-18"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 7.1991e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1138,7 +1138,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="6.93889e-18 2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 5.20417e-18"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 5.55112e-17 7.1991e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1156,13 +1156,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_30 -->
   <link name="wheel4_omniwheel_tyre_v1_30">
     <inertial>
-      <origin xyz="-6.93633e-10 -2.63791e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-6.45888e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.91127e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_30 -->
     <visual>
-      <origin xyz="1.38778e-17 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="6.93889e-18 0 0.01625" rpy="1.5708 -0 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1171,7 +1171,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 -2.77556e-17 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="6.93889e-18 0 0.01625" rpy="1.5708 -0 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1189,13 +1189,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_31 -->
   <link name="wheel4_omniwheel_tyre_v1_31">
     <inertial>
-      <origin xyz="-6.93633e-10 5.56244e-18 -1.46309e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -4.39487e-18 -1.46309e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27418e-23" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="-6.45888e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.27417e-23" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="0" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_31 -->
     <visual>
-      <origin xyz="2.77556e-17 6.93889e-18 -0.01625" rpy="-1.5708 -2.77556e-17 0"/>
+      <origin xyz="-1.38778e-17 -3.46945e-18 -0.01625" rpy="-1.5708 -2.77556e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1204,7 +1204,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="2.77556e-17 6.93889e-18 -0.01625" rpy="-1.5708 -2.77556e-17 0"/>
+      <origin xyz="-1.38778e-17 -3.46945e-18 -0.01625" rpy="-1.5708 -2.77556e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1222,13 +1222,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_32 -->
   <link name="wheel4_omniwheel_tyre_v1_32">
     <inertial>
-      <origin xyz="-6.93633e-10 2.48884e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.43522e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-6.37084e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.50289e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-6.37085e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.90246e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_32 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 -5.55112e-17 1.38778e-17"/>
+      <origin xyz="1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 -0 -1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1237,7 +1237,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 -5.55112e-17 1.38778e-17"/>
+      <origin xyz="1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 -0 -1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1257,11 +1257,11 @@
     <inertial>
       <origin xyz="-1.15103e-17 -6.93633e-10 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.22108e-27" ixz="4.77352e-24" iyy="2.29535e-07" iyz="8.11134e-13" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.22108e-27" ixz="4.77357e-24" iyy="2.29535e-07" iyz="8.11134e-13" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_33 -->
     <visual>
-      <origin xyz="1.38778e-17 2.77556e-17 0.01625" rpy="1.5708 6.89294e-16 1.5708"/>
+      <origin xyz="1.38778e-17 2.08167e-17 0.01625" rpy="1.5708 6.89294e-16 1.5708"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1270,7 +1270,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 2.77556e-17 0.01625" rpy="1.5708 6.89294e-16 1.5708"/>
+      <origin xyz="1.38778e-17 2.08167e-17 0.01625" rpy="1.5708 6.89294e-16 1.5708"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1288,13 +1288,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_34 -->
   <link name="wheel4_omniwheel_tyre_v1_34">
     <inertial>
-      <origin xyz="-6.93633e-10 -1.34034e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.15094e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="6.3709e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.45888e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.91126e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-2.23421e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_34 -->
     <visual>
-      <origin xyz="6.93889e-18 -1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="2.08167e-17 0 0.01625" rpy="1.5708 5.55112e-17 -2.77556e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1303,7 +1303,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="6.93889e-18 -1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 0"/>
+      <origin xyz="2.08167e-17 0 0.01625" rpy="1.5708 5.55112e-17 -2.77556e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1321,13 +1321,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_35 -->
   <link name="wheel4_omniwheel_tyre_v1_35">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.01347e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.52542e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27418e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="3.82252e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-2.55715e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_35 -->
     <visual>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 2.77556e-17 -5.55112e-17"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1336,7 +1336,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 2.77556e-17 -5.55112e-17"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1354,13 +1354,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_36 -->
   <link name="wheel4_omniwheel_tyre_v1_36">
     <inertial>
-      <origin xyz="-6.93633e-10 1.43522e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.57053e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="5.0967e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.45897e-24" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.29178e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_36 -->
     <visual>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 1.11022e-16"/>
+      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 2.77556e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1369,7 +1369,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 1.11022e-16"/>
+      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 2.77556e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1387,13 +1387,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_37 -->
   <link name="wheel4_omniwheel_tyre_v1_37">
     <inertial>
-      <origin xyz="-6.93633e-10 6.99912e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.36289e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.75199e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="4.39787e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-4.77812e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.28738e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_37 -->
     <visual>
-      <origin xyz="-3.46945e-18 0 0.01625" rpy="1.5708 -0 -2.77556e-17"/>
+      <origin xyz="-1.73472e-18 -1.38778e-17 0.01625" rpy="1.5708 -5.55112e-17 1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1402,7 +1402,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-3.46945e-18 0 0.01625" rpy="1.5708 -0 -2.77556e-17"/>
+      <origin xyz="-1.73472e-18 -1.38778e-17 0.01625" rpy="1.5708 -5.55112e-17 1.38778e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1420,13 +1420,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_38 -->
   <link name="wheel4_omniwheel_tyre_v1_38">
     <inertial>
-      <origin xyz="-6.93633e-10 1.44771e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.32785e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.62789e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_38 -->
     <visual>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.38162e-33"/>
+      <origin xyz="-2.08167e-17 -1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 -3.89049e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1435,7 +1435,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.38162e-33"/>
+      <origin xyz="-2.08167e-17 -1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 -3.89049e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1443,7 +1443,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_2 to wheel4_omniwheel_tyre_v1_38 -->
   <joint name="wheel_c" type="continuous">
-    <origin xyz="0 -0.0403869 0.0065" rpy="1.5708 6.10623e-16 1.5708"/>
+    <origin xyz="3.46945e-18 -0.0403869 0.0065" rpy="1.5708 6.66134e-16 1.5708"/>
     <parent link="wheel4_shaft_holder_v2_2"/>
     <child link="wheel4_omniwheel_tyre_v1_38"/>
     <axis xyz="0 0 1"/>
@@ -1453,13 +1453,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_39 -->
   <link name="wheel4_omniwheel_tyre_v1_39">
     <inertial>
-      <origin xyz="-6.93633e-10 1.45777e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 2.48884e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="3.18545e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="4.39899e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="6.37091e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="9.68831e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_39 -->
     <visual>
-      <origin xyz="-3.46945e-18 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 -1.38778e-17"/>
+      <origin xyz="-1.73472e-17 0 0.01625" rpy="1.5708 1.11022e-16 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1468,7 +1468,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-3.46945e-18 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 -1.38778e-17"/>
+      <origin xyz="-1.73472e-17 0 0.01625" rpy="1.5708 1.11022e-16 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1488,11 +1488,11 @@
     <inertial>
       <origin xyz="5.72708e-10 -3.91321e-10 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.0985e-21" ixz="-6.69724e-13" iyy="2.29535e-07" iyz="4.5761e-13" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.11173e-21" ixz="-6.69724e-13" iyy="2.29535e-07" iyz="4.5761e-13" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_40 -->
     <visual>
-      <origin xyz="-1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 2.54218"/>
+      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 8.32667e-17 2.54218"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1501,7 +1501,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 8.32667e-17 2.54218"/>
+      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 8.32667e-17 2.54218"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1518,7 +1518,7 @@
   </joint>
   <!-- Joint from part_1 to wheel4_shaft_holder_v2_2 -->
   <joint name="wheel_motorA" type="continuous">
-    <origin xyz="6.36065e-18 0.105 0.0125" rpy="-1.5708 -1.5708 0"/>
+    <origin xyz="0.0742462 0.0742462 0.0125" rpy="-2.35619 -1.5708 0"/>
     <parent link="part_1"/>
     <child link="wheel4_shaft_holder_v2_2"/>
     <axis xyz="0 0 1"/>
@@ -1528,9 +1528,9 @@
   <!-- Link wheel4_shaft_holder_v2_3 -->
   <link name="wheel4_shaft_holder_v2_3">
     <inertial>
-      <origin xyz="3.57042e-13 3.57045e-13 0.0159932" rpy="0 0 0"/>
+      <origin xyz="3.57044e-13 3.57057e-13 0.0159932" rpy="0 0 0"/>
       <mass value="0.162524"/>
-      <inertia ixx="0.000106018" ixy="-1.53476e-20" ixz="-4.58451e-15" iyy="0.000106018" iyz="-5.68706e-15" izz="0.000180425"/>
+      <inertia ixx="0.000106018" ixy="-9.91361e-21" ixz="-4.58451e-15" iyy="0.000106018" iyz="-5.68706e-15" izz="0.000180425"/>
     </inertial>
     <!-- Part wheel4_shaft_omni_v1_41 -->
     <!-- Part wheel4_shaft_omni_v1_42 -->
@@ -1544,7 +1544,7 @@
     <!-- Part wheel4_shaft_omni_v1_50 -->
     <!-- Part wheel4_body_omni_v4_5 -->
     <visual>
-      <origin xyz="0 2.46519e-32 0.013" rpy="1.5708 1.5708 0"/>
+      <origin xyz="1.73472e-18 6.93889e-18 0.013" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
       </geometry>
@@ -1563,7 +1563,7 @@
     <!-- Part wheel4_shaft_omni_v1_59 -->
     <!-- Part wheel4_shaft_holder_v2_3 -->
     <visual>
-      <origin xyz="-5.20417e-18 -3.75857e-18 0.013" rpy="1.5708 -1.5708 0"/>
+      <origin xyz="1.73472e-18 6.93889e-18 0.013" rpy="1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
       </geometry>
@@ -1574,7 +1574,7 @@
     <!-- Part wheel4_shaft_omni_v1_60 -->
     <!-- Part wheel4_body_omni_v4_6 -->
     <visual>
-      <origin xyz="-1.9082e-17 -6.97588e-18 0.032" rpy="-6.22065e-16 1.5708 0"/>
+      <origin xyz="-1.9082e-17 1.38778e-17 0.032" rpy="-6.22065e-16 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
       </geometry>
@@ -1593,7 +1593,7 @@
     </inertial>
   </link>
   <joint name="motorD_frame" type="fixed">
-    <origin xyz="0 -1.53081e-19 0" rpy="3.14159 -5.04871e-29 3.14159"/>
+    <origin xyz="1.73472e-18 6.93889e-18 -1.38778e-17" rpy="3.14159 -5.04871e-29 3.14159"/>
     <parent link="wheel4_shaft_holder_v2_3"/>
     <child link="motorD"/>
     <axis xyz="0 0 0"/>
@@ -1601,13 +1601,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_41 -->
   <link name="wheel4_omniwheel_tyre_v1_41">
     <inertial>
-      <origin xyz="-6.93633e-10 5.993e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 4.06875e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
       <inertia ixx="2.29535e-07" ixy="1.62789e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_41 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 -6.0505e-50"/>
+      <origin xyz="0 3.46945e-18 0.01625" rpy="1.5708 -2.5331e-46 1.54074e-33"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1616,7 +1616,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 -6.0505e-50"/>
+      <origin xyz="0 3.46945e-18 0.01625" rpy="1.5708 -2.5331e-46 1.54074e-33"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1624,7 +1624,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_3 to wheel4_omniwheel_tyre_v1_41 -->
   <joint name="wheel_4k" type="continuous">
-    <origin xyz="-0.0403869 1.74979e-17 0.0255" rpy="-1.5708 1.5708 0"/>
+    <origin xyz="-0.0403869 8.79956e-32 0.0255" rpy="-1.5708 1.5708 0"/>
     <parent link="wheel4_shaft_holder_v2_3"/>
     <child link="wheel4_omniwheel_tyre_v1_41"/>
     <axis xyz="0 0 1"/>
@@ -1634,13 +1634,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_42 -->
   <link name="wheel4_omniwheel_tyre_v1_42">
     <inertial>
-      <origin xyz="-6.93633e-10 3.49282e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -3.3073e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.56595e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="3.72506e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-2.60115e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_42 -->
     <visual>
-      <origin xyz="-2.77556e-17 3.46945e-18 0.01625" rpy="1.5708 5.20093e-17 -1.97215e-31"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 9.13499e-18 6.27564e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1649,7 +1649,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-2.77556e-17 3.46945e-18 0.01625" rpy="1.5708 5.20093e-17 -1.97215e-31"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 9.13499e-18 6.27564e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1667,13 +1667,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_43 -->
   <link name="wheel4_omniwheel_tyre_v1_43">
     <inertial>
-      <origin xyz="-6.93633e-10 -1.29524e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -6.91552e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-5.65847e-39" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.9996e-44" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.82951e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.56595e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_43 -->
     <visual>
-      <origin xyz="0 -1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 2.46519e-32"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 3.46944e-17 -4.00348e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1682,7 +1682,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 2.46519e-32"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 3.46944e-17 -4.00348e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1700,13 +1700,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_44 -->
   <link name="wheel4_omniwheel_tyre_v1_44">
     <inertial>
-      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.89892e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="0" ixz="8.11134e-13" iyy="2.29535e-07" iyz="0" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.76837e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.7594e-25" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_44 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="2.77556e-17 -2.08167e-17 0.01625" rpy="1.5708 5.13495e-17 7.98932e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1715,7 +1715,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="2.77556e-17 -2.08167e-17 0.01625" rpy="1.5708 5.13495e-17 7.98932e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1733,13 +1733,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_45 -->
   <link name="wheel4_omniwheel_tyre_v1_45">
     <inertial>
-      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.66073e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.81071e-37" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.27417e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-3.20461e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.30939e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_45 -->
     <visual>
-      <origin xyz="-2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 3.9443e-31"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 4.72048e-17 -1.36662e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1748,7 +1748,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 3.9443e-31"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 4.72048e-17 -1.36662e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1772,7 +1772,7 @@
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_46 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 -1.05199e-50"/>
+      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 -2.5331e-46 2.66247e-44"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1781,7 +1781,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 -1.05199e-50"/>
+      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 -2.5331e-46 2.66247e-44"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1789,7 +1789,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_3 to wheel4_omniwheel_tyre_v1_46 -->
   <joint name="wheel_4p" type="continuous">
-    <origin xyz="0.0403869 2.44368e-17 0.0255" rpy="-1.5708 1.5708 0"/>
+    <origin xyz="0.0403869 4.16334e-17 0.0255" rpy="-1.5708 1.5708 0"/>
     <parent link="wheel4_shaft_holder_v2_3"/>
     <child link="wheel4_omniwheel_tyre_v1_46"/>
     <axis xyz="0 0 1"/>
@@ -1799,13 +1799,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_47 -->
   <link name="wheel4_omniwheel_tyre_v1_47">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.01347e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -3.58486e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="2.26339e-38" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27417e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.19129e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.45888e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_47 -->
     <visual>
-      <origin xyz="-2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 7.19005e-18 3.85724e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1814,7 +1814,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 7.19005e-18 3.85724e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1832,13 +1832,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_48 -->
   <link name="wheel4_omniwheel_tyre_v1_48">
     <inertial>
-      <origin xyz="-6.93633e-10 1.39012e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.77816e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.76067e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="9.55631e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="0" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_48 -->
     <visual>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 2.77556e-17 7.63278e-17"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 2.77556e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1847,7 +1847,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 2.77556e-17 7.63278e-17"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 2.77556e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1865,13 +1865,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_49 -->
   <link name="wheel4_omniwheel_tyre_v1_49">
     <inertial>
-      <origin xyz="-6.93633e-10 7.86432e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -2.59281e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="0" ixz="8.11134e-13" iyy="2.29535e-07" iyz="0" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="5.78876e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.29177e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_49 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 -2.77556e-17 0.01625" rpy="1.5708 5.25748e-17 8.85134e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1880,7 +1880,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 -2.77556e-17 0.01625" rpy="1.5708 5.25748e-17 8.85134e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1898,13 +1898,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_50 -->
   <link name="wheel4_omniwheel_tyre_v1_50">
     <inertial>
-      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.39012e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="2.71607e-37" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.39872e-43" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.68568e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="3.84012e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_50 -->
     <visual>
-      <origin xyz="-2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 7.88861e-31"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 7.36155e-17 -9.00535e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1913,7 +1913,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 7.88861e-31"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 7.36155e-17 -9.00535e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1933,11 +1933,11 @@
     <inertial>
       <origin xyz="-6.93633e-10 -9.25426e-19 -1.46309e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="3.62142e-37" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="-1.27974e-42" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.10096e-23" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="-3.66667e-29" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_51 -->
     <visual>
-      <origin xyz="0 0 -0.01625" rpy="-1.5708 3.9443e-31 1.57772e-30"/>
+      <origin xyz="0 0 -0.01625" rpy="-1.5708 -1.69551e-17 4.52043e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1946,7 +1946,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 -0.01625" rpy="-1.5708 3.9443e-31 1.57772e-30"/>
+      <origin xyz="0 0 -0.01625" rpy="-1.5708 -1.69551e-17 4.52043e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1964,13 +1964,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_52 -->
   <link name="wheel4_omniwheel_tyre_v1_52">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.91552e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.29524e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.76005e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="8.79118e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-2.54835e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_52 -->
     <visual>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 -1.38778e-17 0.01625" rpy="1.5708 5.77454e-17 -2.06742e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1979,7 +1979,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 -1.38778e-17 0.01625" rpy="1.5708 5.77454e-17 -2.06742e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -1997,13 +1997,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_53 -->
   <link name="wheel4_omniwheel_tyre_v1_53">
     <inertial>
-      <origin xyz="-6.93633e-10 5.99299e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 7.53819e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.11657e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.4459e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.27417e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.43524e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_53 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 6.69808e-17 1.01953e-15"/>
+      <origin xyz="1.38778e-17 6.93889e-18 0.01625" rpy="1.5708 6.69808e-17 8.88178e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2012,7 +2012,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 6.69808e-17 1.01953e-15"/>
+      <origin xyz="1.38778e-17 6.93889e-18 0.01625" rpy="1.5708 6.69808e-17 8.88178e-16"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2020,7 +2020,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_3 to wheel4_omniwheel_tyre_v1_53 -->
   <joint name="wheel_4h" type="continuous">
-    <origin xyz="3.46945e-18 0.0403869 0.0065" rpy="-4.44089e-16 1.5708 0"/>
+    <origin xyz="1.21431e-17 0.0403869 0.0065" rpy="-4.44089e-16 1.5708 0"/>
     <parent link="wheel4_shaft_holder_v2_3"/>
     <child link="wheel4_omniwheel_tyre_v1_53"/>
     <axis xyz="0 0 1"/>
@@ -2030,13 +2030,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_54 -->
   <link name="wheel4_omniwheel_tyre_v1_54">
     <inertial>
-      <origin xyz="-6.93633e-10 6.06021e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.11482e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="9.00539e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.58355e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="2.32412e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-2.58354e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_54 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="2.77556e-17 -1.38778e-17 0.01625" rpy="1.5708 -1.44246e-17 7.10741e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2045,7 +2045,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="2.77556e-17 -1.38778e-17 0.01625" rpy="1.5708 -1.44246e-17 7.10741e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2063,13 +2063,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_55 -->
   <link name="wheel4_omniwheel_tyre_v1_55">
     <inertial>
-      <origin xyz="-6.93633e-10 -2.54402e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -8.78687e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-7.96359e-25" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.81419e-30" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.11491e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.58355e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_55 -->
     <visual>
-      <origin xyz="0 -3.46945e-18 0.01625" rpy="1.5708 5.20417e-17 3.46945e-18"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 1.47451e-17 6.93889e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2078,7 +2078,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -3.46945e-18 0.01625" rpy="1.5708 5.20417e-17 3.46945e-18"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 1.47451e-17 6.93889e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2096,13 +2096,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_56 -->
   <link name="wheel4_omniwheel_tyre_v1_56">
     <inertial>
-      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -2.54402e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-3.62142e-37" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27417e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.5236e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27418e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_56 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 -7.88861e-31"/>
+      <origin xyz="-1.38778e-17 -3.46945e-18 0.01625" rpy="1.5708 3.52703e-17 -1.58754e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2111,7 +2111,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 -7.88861e-31"/>
+      <origin xyz="-1.38778e-17 -3.46945e-18 0.01625" rpy="1.5708 3.52703e-17 -1.58754e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2129,13 +2129,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_57 -->
   <link name="wheel4_omniwheel_tyre_v1_57">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.91552e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 3.63159e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.76003e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.51307e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.87533e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_57 -->
     <visual>
-      <origin xyz="-1.38778e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20417e-17 -1.73472e-18"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 8.67362e-18 -2.08167e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2144,7 +2144,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20417e-17 -1.73472e-18"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 8.67362e-18 -2.08167e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2162,13 +2162,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_58 -->
   <link name="wheel4_omniwheel_tyre_v1_58">
     <inertial>
-      <origin xyz="-6.93633e-10 7.53819e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -6.33959e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.62789e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_58 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 4.06219e-32"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -3.53809e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2177,7 +2177,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 4.06219e-32"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -3.53809e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2185,7 +2185,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_3 to wheel4_omniwheel_tyre_v1_58 -->
   <joint name="wheel_4c" type="continuous">
-    <origin xyz="8.67362e-18 -0.0403869 0.0065" rpy="-3.38788e-16 1.5708 0"/>
+    <origin xyz="0 -0.0403869 0.0065" rpy="-3.38788e-16 1.5708 0"/>
     <parent link="wheel4_shaft_holder_v2_3"/>
     <child link="wheel4_omniwheel_tyre_v1_58"/>
     <axis xyz="0 0 1"/>
@@ -2195,13 +2195,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_59 -->
   <link name="wheel4_omniwheel_tyre_v1_59">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.01347e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.35803e-37" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27417e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.6633e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="5.88595e-29" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_59 -->
     <visual>
-      <origin xyz="-1.38778e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -3.9443e-31"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 1.50754e-17 7.25644e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2210,7 +2210,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -3.9443e-31"/>
+      <origin xyz="-1.38778e-17 0 0.01625" rpy="1.5708 1.50754e-17 7.25644e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2228,13 +2228,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_60 -->
   <link name="wheel4_omniwheel_tyre_v1_60">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.01346e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -8.78683e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="8.96137e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.27378e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.00904e-22" ixz="8.11134e-13" iyy="2.29535e-07" iyz="3.85733e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_60 -->
     <visual>
-      <origin xyz="-2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -4.90091e-15"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 7.91618e-18 -4.86172e-15"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2243,7 +2243,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -4.90091e-15"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 7.91618e-18 -4.86172e-15"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2260,7 +2260,7 @@
   </joint>
   <!-- Joint from part_1 to wheel4_shaft_holder_v2_3 -->
   <joint name="wheel_motorD" type="continuous">
-    <origin xyz="-0.105 -1.74334e-17 0.0125" rpy="-1.63015e-15 -1.5708 0"/>
+    <origin xyz="-0.0742462 0.0742462 0.0125" rpy="-0.785398 -1.5708 0"/>
     <parent link="part_1"/>
     <child link="wheel4_shaft_holder_v2_3"/>
     <axis xyz="0 0 1"/>
@@ -2270,15 +2270,15 @@
   <!-- Link wheel4_shaft_holder_v2_4 -->
   <link name="wheel4_shaft_holder_v2_4">
     <inertial>
-      <origin xyz="3.57043e-13 3.57048e-13 0.0159932" rpy="0 0 0"/>
+      <origin xyz="3.57038e-13 3.57055e-13 0.0159932" rpy="0 0 0"/>
       <mass value="0.162524"/>
-      <inertia ixx="0.000106018" ixy="-1.20702e-20" ixz="-4.58456e-15" iyy="0.000106018" iyz="-5.68704e-15" izz="0.000180425"/>
+      <inertia ixx="0.000106018" ixy="-1.927e-20" ixz="-4.58456e-15" iyy="0.000106018" iyz="-5.68703e-15" izz="0.000180425"/>
     </inertial>
     <!-- Part wheel4_shaft_omni_v1_61 -->
     <!-- Part wheel4_shaft_omni_v1_62 -->
     <!-- Part wheel4_shaft_holder_v2_4 -->
     <visual>
-      <origin xyz="5.20417e-18 3.61401e-20 0.013" rpy="1.5708 -1.5708 0"/>
+      <origin xyz="0 1.38778e-17 0.013" rpy="1.5708 -1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_shaft_holder_v2.stl"/>
       </geometry>
@@ -2294,7 +2294,7 @@
     <!-- Part wheel4_shaft_omni_v1_68 -->
     <!-- Part wheel4_body_omni_v4_7 -->
     <visual>
-      <origin xyz="0 0 0.013" rpy="1.5708 1.5708 0"/>
+      <origin xyz="0 1.38778e-17 0.013" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4__2.stl"/>
       </geometry>
@@ -2310,7 +2310,7 @@
     <!-- Part wheel4_shaft_omni_v1_74 -->
     <!-- Part wheel4_body_omni_v4_8 -->
     <visual>
-      <origin xyz="-2.94903e-17 1.9877e-18 0.032" rpy="-6.77576e-16 1.5708 0"/>
+      <origin xyz="-3.46945e-17 0 0.032" rpy="-6.77576e-16 1.5708 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_body_omni_v4.stl"/>
       </geometry>
@@ -2335,7 +2335,7 @@
     </inertial>
   </link>
   <joint name="motorB_frame" type="fixed">
-    <origin xyz="-1.73472e-18 3.37024e-19 0" rpy="3.14159 -5.60071e-60 -1.5708"/>
+    <origin xyz="0 1.38778e-17 1.38778e-17" rpy="3.14159 -0 -1.5708"/>
     <parent link="wheel4_shaft_holder_v2_4"/>
     <child link="motorB"/>
     <axis xyz="0 0 0"/>
@@ -2343,13 +2343,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_61 -->
   <link name="wheel4_omniwheel_tyre_v1_61">
     <inertial>
-      <origin xyz="-6.93633e-10 1.44771e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.39146e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3677e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="3.82253e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.26119e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_61 -->
     <visual>
-      <origin xyz="1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.55112e-17"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 -3.59461e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2358,7 +2358,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.55112e-17"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 -3.59461e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2366,7 +2366,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_4 to wheel4_omniwheel_tyre_v1_61 -->
   <joint name="wheel_2k" type="continuous">
-    <origin xyz="-0.0403869 -2.71773e-17 0.0255" rpy="1.5708 0.992087 3.14159"/>
+    <origin xyz="-0.0403869 -2.77556e-17 0.0255" rpy="1.5708 0.992087 3.14159"/>
     <parent link="wheel4_shaft_holder_v2_4"/>
     <child link="wheel4_omniwheel_tyre_v1_61"/>
     <axis xyz="0 0 1"/>
@@ -2376,13 +2376,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_62 -->
   <link name="wheel4_omniwheel_tyre_v1_62">
     <inertial>
-      <origin xyz="-6.93633e-10 6.96226e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 7.86648e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.56595e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-3.78873e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="5.1671e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_62 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 3.46945e-18 0.01625" rpy="1.5708 6.84936e-17 -4.96134e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2391,7 +2391,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="0 3.46945e-18 0.01625" rpy="1.5708 6.84936e-17 -4.96134e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2409,13 +2409,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_63 -->
   <link name="wheel4_omniwheel_tyre_v1_63">
     <inertial>
-      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 1.48032e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.52678e-38" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.59968e-43" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.45933e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="5.05241e-29" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_63 -->
     <visual>
-      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 -1.97215e-31"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 4.19451e-17 6.22882e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2424,7 +2424,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 -1.97215e-31"/>
+      <origin xyz="2.77556e-17 1.38778e-17 0.01625" rpy="1.5708 4.19451e-17 6.22882e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2442,13 +2442,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_64 -->
   <link name="wheel4_omniwheel_tyre_v1_64">
     <inertial>
-      <origin xyz="-6.93633e-10 7.86432e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -5.11141e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="2.26339e-38" ixz="8.11134e-13" iyy="2.29535e-07" iyz="7.9984e-44" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.09585e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.29177e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_64 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 9.86076e-32"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 3.70113e-17 2.26235e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2457,7 +2457,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 9.86076e-32"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 3.70113e-17 2.26235e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2475,13 +2475,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_65 -->
   <link name="wheel4_omniwheel_tyre_v1_65">
     <inertial>
-      <origin xyz="-6.93633e-10 1.48032e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.11482e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.67986e-38" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.27417e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="2.32797e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.85772e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_65 -->
     <visual>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.46964e-32"/>
+      <origin xyz="5.55112e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.08612e-17 6.19113e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2490,7 +2490,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 1.38778e-17 0.01625" rpy="1.5708 5.20093e-17 5.46964e-32"/>
+      <origin xyz="5.55112e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.08612e-17 6.19113e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2508,13 +2508,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_66 -->
   <link name="wheel4_omniwheel_tyre_v1_66">
     <inertial>
-      <origin xyz="-6.93633e-10 5.993e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.12304e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3677e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54834e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.64565e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_66 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 5.55112e-17"/>
+      <origin xyz="-2.77556e-17 -1.04083e-17 0.01625" rpy="1.5708 -3.48145e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2523,7 +2523,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 5.55112e-17"/>
+      <origin xyz="-2.77556e-17 -1.04083e-17 0.01625" rpy="1.5708 -3.48145e-17 0"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2531,7 +2531,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_4 to wheel4_omniwheel_tyre_v1_66 -->
   <joint name="wheel_2p" type="continuous">
-    <origin xyz="0.0403869 2.83338e-17 0.0255" rpy="1.5708 0.992087 3.14159"/>
+    <origin xyz="0.0403869 5.55112e-17 0.0255" rpy="1.5708 0.992087 3.14159"/>
     <parent link="wheel4_shaft_holder_v2_4"/>
     <child link="wheel4_omniwheel_tyre_v1_66"/>
     <axis xyz="0 0 1"/>
@@ -2541,13 +2541,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_67 -->
   <link name="wheel4_omniwheel_tyre_v1_67">
     <inertial>
-      <origin xyz="-6.93633e-10 6.96226e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -3.3073e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.56595e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="8.99261e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-2.60115e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_67 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -1.57772e-30"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 -7.50289e-18 1.25863e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2556,7 +2556,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -1.57772e-30"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 -7.50289e-18 1.25863e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2574,13 +2574,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_68 -->
   <link name="wheel4_omniwheel_tyre_v1_68">
     <inertial>
-      <origin xyz="-6.93633e-10 1.34501e-17 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 4.74398e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="2.38908e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.57476e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="6.3709e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.45889e-24" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_68 -->
     <visual>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 7.63278e-17"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 1.11022e-16 2.08167e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2589,7 +2589,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-1.38778e-17 1.38778e-17 0.01625" rpy="1.5708 5.55112e-17 7.63278e-17"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 1.11022e-16 2.08167e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2609,11 +2609,11 @@
     <inertial>
       <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.52678e-38" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.27417e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="1.64151e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.15606e-29" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_69 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 9.86076e-32"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 4.31657e-17 -1.42524e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2622,7 +2622,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 9.86076e-32"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 4.31657e-17 -1.42524e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2640,13 +2640,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_70 -->
   <link name="wheel4_omniwheel_tyre_v1_70">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.01347e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 2.33695e-20 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-3.39508e-38" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-7.9984e-44" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.43649e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.76003e-25" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_70 -->
     <visual>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -9.86076e-32"/>
+      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 8.91648e-17 -2.63554e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2655,7 +2655,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -9.86076e-32"/>
+      <origin xyz="2.77556e-17 0 0.01625" rpy="1.5708 8.91648e-17 -2.63554e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2675,11 +2675,11 @@
     <inertial>
       <origin xyz="-6.93633e-10 -2.33695e-20 -1.46309e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-4.5027e-29" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="1.29178e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-8.87053e-25" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="2.56595e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_71 -->
     <visual>
-      <origin xyz="0 0 -0.01625" rpy="-1.5708 -0 0"/>
+      <origin xyz="1.38778e-17 0 -0.01625" rpy="-1.5708 -3.1775e-19 -1.09355e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2688,7 +2688,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 -0.01625" rpy="-1.5708 -0 0"/>
+      <origin xyz="1.38778e-17 0 -0.01625" rpy="-1.5708 -3.1775e-19 -1.09355e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2706,13 +2706,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_72 -->
   <link name="wheel4_omniwheel_tyre_v1_72">
     <inertial>
-      <origin xyz="-6.93633e-10 6.06021e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -1.29524e-17 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="9.00539e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.58355e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="7.87228e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27417e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_72 -->
     <visual>
-      <origin xyz="1.38778e-17 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 1.97215e-31"/>
+      <origin xyz="1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.93356e-18 5.1646e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2721,7 +2721,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 1.97215e-31"/>
+      <origin xyz="1.38778e-17 -1.38778e-17 0.01625" rpy="1.5708 -5.93356e-18 5.1646e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2739,13 +2739,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_73 -->
   <link name="wheel4_omniwheel_tyre_v1_73">
     <inertial>
-      <origin xyz="6.93633e-10 -5.99301e-19 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="6.93633e-10 -7.53819e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.62789e-29" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="-6.32193e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.27417e-23" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="-6.32718e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_73 -->
     <visual>
-      <origin xyz="-2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 3.14159"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 3.14159"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2754,7 +2754,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-2.77556e-17 0 0.01625" rpy="1.5708 5.20093e-17 3.14159"/>
+      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 3.14159"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2772,13 +2772,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_74 -->
   <link name="wheel4_omniwheel_tyre_v1_74">
     <inertial>
-      <origin xyz="-6.93633e-10 8.76638e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.76005e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="2.10083e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="2.54835e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_74 -->
     <visual>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -4.93038e-32"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 3.0065e-17 -1.45499e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2787,7 +2787,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -4.93038e-32"/>
+      <origin xyz="0 0 0.01625" rpy="1.5708 3.0065e-17 -1.45499e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2805,13 +2805,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_75 -->
   <link name="wheel4_omniwheel_tyre_v1_75">
     <inertial>
-      <origin xyz="-6.93633e-10 -2.54402e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 5.29693e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="7.96359e-25" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27417e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.03527e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.29178e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_75 -->
     <visual>
-      <origin xyz="1.38778e-17 -3.46945e-18 0.01625" rpy="1.5708 5.11743e-17 0"/>
+      <origin xyz="0 3.46945e-18 0.01625" rpy="1.5708 4.59702e-17 -3.46945e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2820,7 +2820,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 -3.46945e-18 0.01625" rpy="1.5708 5.11743e-17 0"/>
+      <origin xyz="0 3.46945e-18 0.01625" rpy="1.5708 4.59702e-17 -3.46945e-18"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2840,11 +2840,11 @@
     <inertial>
       <origin xyz="-6.93633e-10 9.25426e-19 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="0" ixz="8.11134e-13" iyy="2.29535e-07" iyz="0" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.69642e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.27417e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_76 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 -8.06455e-18 1.53236e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2853,7 +2853,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 5.20093e-17 0"/>
+      <origin xyz="1.38778e-17 0 0.01625" rpy="1.5708 -8.06455e-18 1.53236e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2871,13 +2871,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_77 -->
   <link name="wheel4_omniwheel_tyre_v1_77">
     <inertial>
-      <origin xyz="-6.93633e-10 6.06021e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 -5.11141e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-1.99081e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.30938e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-4.34016e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-3.84013e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_77 -->
     <visual>
-      <origin xyz="1.38778e-17 6.93889e-18 0.01625" rpy="1.5708 5.37764e-17 -5.20417e-18"/>
+      <origin xyz="2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20417e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2886,7 +2886,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="1.38778e-17 6.93889e-18 0.01625" rpy="1.5708 5.37764e-17 -5.20417e-18"/>
+      <origin xyz="2.77556e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20417e-17 -5.55112e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2906,11 +2906,11 @@
     <inertial>
       <origin xyz="-6.93633e-10 -6.33959e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="1.62789e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-2.54835e-23" ixz="8.11134e-13" iyy="2.29535e-07" iyz="6.3632e-26" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_78 -->
     <visual>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 5.38162e-33"/>
+      <origin xyz="1.38778e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -3.89049e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2919,7 +2919,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 5.38162e-33"/>
+      <origin xyz="1.38778e-17 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 -3.89049e-31"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2927,7 +2927,7 @@
   </link>
   <!-- Joint from wheel4_shaft_holder_v2_4 to wheel4_omniwheel_tyre_v1_78 -->
   <joint name="wheel_2c" type="continuous">
-    <origin xyz="1.21431e-17 -0.0403869 0.0065" rpy="-3.14159 -1.5708 0"/>
+    <origin xyz="1.73472e-18 -0.0403869 0.0065" rpy="-3.14159 -1.5708 0"/>
     <parent link="wheel4_shaft_holder_v2_4"/>
     <child link="wheel4_omniwheel_tyre_v1_78"/>
     <axis xyz="0 0 1"/>
@@ -2937,13 +2937,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_79 -->
   <link name="wheel4_omniwheel_tyre_v1_79">
     <inertial>
-      <origin xyz="-6.93633e-10 -6.91552e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="-6.93633e-10 6.96226e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="4.5027e-29" ixz="8.11134e-13" iyy="2.29535e-07" iyz="1.29178e-23" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-8.32533e-24" ixz="8.11134e-13" iyy="2.29535e-07" iyz="-1.25657e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_79 -->
     <visual>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 9.86076e-32"/>
+      <origin xyz="2.77556e-17 6.93889e-18 0.01625" rpy="1.5708 6.92747e-17 4.59572e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2952,7 +2952,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 -6.93889e-18 0.01625" rpy="1.5708 5.20093e-17 9.86076e-32"/>
+      <origin xyz="2.77556e-17 6.93889e-18 0.01625" rpy="1.5708 6.92747e-17 4.59572e-17"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2970,13 +2970,13 @@
   <!-- Link wheel4_omniwheel_tyre_v1_80 -->
   <link name="wheel4_omniwheel_tyre_v1_80">
     <inertial>
-      <origin xyz="6.93633e-10 -2.72954e-18 1.35567e-09" rpy="0 0 0"/>
+      <origin xyz="6.93633e-10 3.3073e-18 1.35567e-09" rpy="0 0 0"/>
       <mass value="0.00502735"/>
-      <inertia ixx="2.29535e-07" ixy="-9.00539e-29" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="3.52823e-25" izz="2.32706e-07"/>
+      <inertia ixx="2.29535e-07" ixy="-1.12177e-23" ixz="-8.11134e-13" iyy="2.29535e-07" iyz="1.32706e-23" izz="2.32706e-07"/>
     </inertial>
     <!-- Part wheel4_omniwheel_tyre_v1_80 -->
     <visual>
-      <origin xyz="0 0 0.01625" rpy="1.5708 7.62337e-17 3.14159"/>
+      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 3.56128e-17 3.14159"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -2985,7 +2985,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0.01625" rpy="1.5708 7.62337e-17 3.14159"/>
+      <origin xyz="0 6.93889e-18 0.01625" rpy="1.5708 3.56128e-17 3.14159"/>
       <geometry>
         <mesh filename="package://meshes/wheel4_omniwheel_tyre_v1.stl"/>
       </geometry>
@@ -3002,7 +3002,7 @@
   </joint>
   <!-- Joint from part_1 to wheel4_shaft_holder_v2_4 -->
   <joint name="wheel_motorB" type="continuous">
-    <origin xyz="0.105 -6.36065e-18 0.0125" rpy="3.14159 -1.5708 0"/>
+    <origin xyz="0.0742462 -0.0742462 0.0125" rpy="2.35619 -1.5708 0"/>
     <parent link="part_1"/>
     <child link="wheel4_shaft_holder_v2_4"/>
     <axis xyz="0 0 1"/>

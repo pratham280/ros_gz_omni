@@ -6,9 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /TF1
         - /TF1/Frames1
         - /TF1/Tree1
+        - /Odometry1/Shape1
       Splitter Ratio: 0.5
     Tree Height: 725
   - Class: rviz_common/Selection
@@ -862,6 +862,45 @@ Visualization Manager:
               {}
       Update Interval: 0
       Value: true
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz_default_plugins/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Keep: 50
+      Name: Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 170; 0; 0
+        Head Length: 0.10000000149011612
+        Head Radius: 0.07999999821186066
+        Shaft Length: 1.5
+        Shaft Radius: 0.02500000037252903
+        Value: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /omni_drive/odometry
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -907,47 +946,57 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz_default_plugins/ThirdPersonFollower
-      Distance: 1.1605345010757446
+      Angle: -90
+      Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Focal Point:
-        X: -0.20348060131072998
-        Y: -0.2729651927947998
-        Z: 5.960464477539063e-08
-      Focal Shape Fixed Size: true
-      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.9403979182243347
+      Scale: 237.84567260742188
       Target Frame: omni_drive
-      Value: ThirdPersonFollower (rviz_default_plugins)
-      Yaw: 3.8553972244262695
+      Value: TopDownOrtho (rviz_default_plugins)
+      X: 0.1523190587759018
+      Y: -0.0037075469736009836
     Saved:
       - Class: rviz_default_plugins/ThirdPersonFollower
-        Distance: 1.1605345010757446
+        Distance: 1.0376152992248535
         Enable Stereo Rendering:
           Stereo Eye Separation: 0.05999999865889549
           Stereo Focal Distance: 1
           Swap Stereo Eyes: false
           Value: false
         Focal Point:
-          X: -0.20348060131072998
-          Y: -0.2729651927947998
+          X: -0.14017289876937866
+          Y: 0.030662953853607178
           Z: 5.960464477539063e-08
         Focal Shape Fixed Size: true
         Focal Shape Size: 0.05000000074505806
         Invert Z Axis: false
-        Name: ThirdPersonFollower
+        Name: follower
         Near Clip Distance: 0.009999999776482582
-        Pitch: 0.9403979182243347
+        Pitch: 0.12039820104837418
         Target Frame: omni_drive
         Value: ThirdPersonFollower (rviz_default_plugins)
-        Yaw: 3.8553972244262695
+        Yaw: 3.1703953742980957
+      - Angle: -90
+        Class: rviz_default_plugins/TopDownOrtho
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Invert Z Axis: false
+        Name: top view
+        Near Clip Distance: 0.009999999776482582
+        Scale: 237.84567260742188
+        Target Frame: omni_drive
+        Value: TopDownOrtho (rviz_default_plugins)
+        X: 0.1523190587759018
+        Y: -0.0037075469736009836
 Window Geometry:
   Displays:
     collapsed: false
@@ -964,5 +1013,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1846
-  X: -24
-  Y: 32
+  X: -32
+  Y: -22
