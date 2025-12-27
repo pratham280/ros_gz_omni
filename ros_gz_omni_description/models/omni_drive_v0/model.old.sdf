@@ -1,0 +1,4771 @@
+<?xml version="1.0" ?>
+<sdf version='1.11'>
+  <model name='omni_drive'>
+    <link name='part_1'>
+      <inertial>
+        <pose>-0.00074770100000000014 3.75549e-06 0.0125000000151565 0 0 0</pose>
+        <mass>0.82472900100000002</mass>
+        <inertia>
+          <ixx>0.0021375300001562499</ixx>
+          <ixy>-1.1417900000000001e-07</ixy>
+          <ixz>-1.6940658945086011e-21</ixz>
+          <iyy>0.0021126600001562502</iyy>
+          <iyz>6.6174449004242207e-24</iyz>
+          <izz>0.0041642700000000012</izz>
+        </inertia>
+      </inertial>
+      <collision name='part_1_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/part_1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='part_1_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/part_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.769607484 1 1 1</diffuse>
+          <ambient>0.769607484 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_motorA' type='revolute'>
+      <pose relative_to='part_1'>0.074246199999999998 0.074246199999999998 0.012500000000000001 0.78540265360716122 -1.5707926536057681 3.1415926535746808</pose>
+      <parent>part_1</parent>
+      <child>wheel4_shaft_holder_v2_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_shaft_holder_v2_2'>
+      <pose relative_to='wheel_motorA'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>3.570419978031429e-13 3.5706199780314061e-13 0.01599319990159484 0 0 0</pose>
+        <mass>0.162524001</mass>
+        <inertia>
+          <ixx>0.0001060180002557824</ixx>
+          <ixy>-1.122320000000013e-20</ixy>
+          <ixz>-4.584530005710245e-15</ixz>
+          <iyy>0.0001060180002557824</iyy>
+          <iyz>-5.6870400057102503e-15</iyz>
+          <izz>0.00018042500000000001</izz>
+        </inertia>
+      </inertial>
+      <visual name='wheel4_shaft_holder_v2_2_visual'>
+        <pose>0 1.26873e-17 0.012999999999999999 1.570796326794897 -1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_shaft_holder_v2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_2_visual_1'>
+        <pose>0 1.26873e-17 0.012999999999999999 1.570796326794897 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4__2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_2_visual_2'>
+        <pose>-2.0816700000000001e-17 1.9626200000000001e-17 0.032000000000000001 -3.3878675556447501e-16 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_a' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.038410199999999999 -0.0124802 0.0064999999999999997 1.8849526536143673 1.5707926535453185 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_40</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_40'>
+      <pose relative_to='wheel_a'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>5.7270799999999996e-10 -3.9132100000000001e-10 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.11173e-21</ixy>
+          <ixz>-6.6972399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>4.5761000000000001e-13</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_40_collision'>
+        <pose>0 6.9388900000000004e-18 0.016250000000000001 1.5708 5.5511151231257827e-17 2.5421800000000001</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_40_visual'>
+        <pose>0 6.9388900000000004e-18 0.016250000000000001 1.5708 5.5511151231257827e-17 2.5421800000000001</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_b' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.023738800000000001 -0.0326737 0.0064999999999999997 1.5708 -0.21036600000000014 2.1991100000000001</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_39</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_39'>
+      <pose relative_to='wheel_b'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 2.4888399999999999e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>6.3709099999999998e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>9.6883100000000005e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_39_collision'>
+        <pose>-1.73472e-17 0 0.016250000000000001 1.5708 1.1102200000000004e-16 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_39_visual'>
+        <pose>-1.73472e-17 0 0.016250000000000001 1.5708 1.1102200000000004e-16 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_c' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>3.4694499999999997e-18 -0.040386900000000003 0.0064999999999999997 1.5708 6.106226635438361e-16 1.5708</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_38</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_38'>
+      <pose relative_to='wheel_c'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.3278500000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483499999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.3632e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_38_collision'>
+        <pose>-2.0816700000000001e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.9134896469948624e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_38_visual'>
+        <pose>-2.0816700000000001e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.9134896469948624e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_d' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.023738800000000001 -0.0326737 0.0064999999999999997 1.5708 -0.18027700000000005 0.94247800000000004</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_37</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_37'>
+      <pose relative_to='wheel_d'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.36289e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-4.77812e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.28738e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_37_collision'>
+        <pose>-1.73472e-18 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.5511200000000019e-17 1.3877800000000002e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_37_visual'>
+        <pose>-1.73472e-18 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.5511200000000019e-17 1.3877800000000002e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_e' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.038410199999999999 -0.0124802 0.0064999999999999997 1.5707999999999998 -0.97137900000000044 0.31415900000000019</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_36</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_36'>
+      <pose relative_to='wheel_e'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.5705299999999999e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483499999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.29178e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_36_collision'>
+        <pose>-1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 2.7755600000000004e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_36_visual'>
+        <pose>-1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 2.7755600000000004e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_f' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.038410199999999999 0.0124802 0.0064999999999999997 1.5707999999999998 -0.94724600000000003 2.8274300000000001</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_35</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_35'>
+      <pose relative_to='wheel_f'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.52542e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>3.8225199999999997e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-2.55715e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_35_collision'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 8.3266700000000022e-17 5.5511199999999982e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_35_visual'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 8.3266700000000022e-17 5.5511199999999982e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_g' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.023738800000000001 0.0326737 0.0064999999999999997 1.5708 -0.21036600000000014 2.1991100000000001</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_34</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_34'>
+      <pose relative_to='wheel_g'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.1509400000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.9112599999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-2.2342099999999999e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_34_collision'>
+        <pose>2.0816700000000001e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -2.7755600000000004e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_34_visual'>
+        <pose>2.0816700000000001e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -2.7755600000000004e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_h' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-1.73472e-18 0.040386900000000003 0.0064999999999999997 3.1415926535897931 1.5707926536359933 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_33</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_33'>
+      <pose relative_to='wheel_h'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-1.15103e-17 -6.9363300000000004e-10 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.2210799999999999e-27</ixy>
+          <ixz>4.7735700000000001e-24</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>8.1113399999999998e-13</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_33_collision'>
+        <pose>1.3877799999999999e-17 2.0816700000000001e-17 0.016250000000000001 1.5708 6.6613381477509392e-16 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_33_visual'>
+        <pose>1.3877799999999999e-17 2.0816700000000001e-17 0.016250000000000001 1.5708 6.6613381477509392e-16 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_i' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.023738800000000001 0.0326737 0.0064999999999999997 1.5708 -0.21036599999999991 0.94247799999999993</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_32</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_32'>
+      <pose relative_to='wheel_i'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.43522e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-6.3708499999999998e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.90246e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_32_collision'>
+        <pose>1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 0 -1.3877799999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_32_visual'>
+        <pose>1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 0 -1.3877799999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_j' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.038410199999999999 0.0124802 0.0064999999999999997 -1.5708000000000002 -0.97137900000000044 0.31415900000000058</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_31</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_31'>
+      <pose relative_to='wheel_j'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -4.3948699999999996e-18 -1.46309e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.27417e-23</ixy>
+          <ixz>-8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>0</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_31_collision'>
+        <pose>-1.3877799999999999e-17 -3.4694499999999997e-18 -0.016250000000000001 -1.5708 -2.7755600000000004e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_31_visual'>
+        <pose>-1.3877799999999999e-17 -3.4694499999999997e-18 -0.016250000000000001 -1.5708 -2.7755600000000004e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_k' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.040386900000000003 1.9626200000000001e-17 0.025499999999999998 1.5708 0.99208700000000005 -3.1415899999999999</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_21</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_21'>
+      <pose relative_to='wheel_k'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.40891e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-5.0966999999999998e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>3.1232400000000001e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_21_collision'>
+        <pose>-1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 4.390630000000002e-17 3.0814879110195767e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_21_visual'>
+        <pose>-1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 4.390630000000002e-17 3.0814879110195767e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_l' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.0326737 0.023738800000000001 0.025499999999999998 1.5708 -0.50801700000000005 2.5132699999999999</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_22</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_22'>
+      <pose relative_to='wheel_l'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.2952400000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>5.0966999999999998e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.3709599999999997e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_22_collision'>
+        <pose>2.7755599999999997e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 0 1.1102200000000001e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_22_visual'>
+        <pose>2.7755599999999997e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 0 1.1102200000000001e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_m' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.0124802 0.038410199999999999 0.025499999999999998 1.5708000000000002 -0.050160700000000037 1.88496</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_23</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_23'>
+      <pose relative_to='wheel_m'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.1791299999999999e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.21445e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.5431599999999999e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_23_collision'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 0 -6.5919499999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_23_visual'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 0 -6.5919499999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_n' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.0124802 0.038410199999999999 0.025499999999999998 -1.5708000000000002 -0.050160699999999982 1.25664</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_24</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_24'>
+      <pose relative_to='wheel_n'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -2.73094e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>5.1962499999999997e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>5.2698700000000001e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_24_collision'>
+        <pose>-1.3877799999999999e-17 -2.7755599999999997e-17 0.016250000000000001 1.5708 5.5511200000000019e-17 3.7296600000000005e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_24_visual'>
+        <pose>-1.3877799999999999e-17 -2.7755599999999997e-17 0.016250000000000001 1.5708 5.5511200000000019e-17 3.7296600000000005e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_o' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.0326737 0.023738800000000001 0.025499999999999998 -1.5708 -0.50801700000000038 0.62831899999999974</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_25</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_25'>
+      <pose relative_to='wheel_o'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 3.6315900000000003e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483599999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-2.60116e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_25_collision'>
+        <pose>0 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_25_visual'>
+        <pose>0 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_p' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.040386900000000003 3.3503900000000002e-17 0.025499999999999998 1.5708 0.99208700000000005 -3.1415899999999999</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_26</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_26'>
+      <pose relative_to='wheel_p'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 7.1501799999999997e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-5.0966999999999998e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>3.1232400000000001e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_26_collision'>
+        <pose>-2.7755599999999997e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 4.390630000000002e-17 3.0814879110195767e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_26_visual'>
+        <pose>-2.7755599999999997e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 4.390630000000002e-17 3.0814879110195767e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_q' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.0326737 -0.023738800000000001 0.025499999999999998 1.5708 -0.50801700000000005 2.5132699999999999</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_27</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_27'>
+      <pose relative_to='wheel_q'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.3297100000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.2741900000000001e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>5.1407000000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_27_collision'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 0 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_27_visual'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 0 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_r' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>0.0124802 -0.038410199999999999 0.025499999999999998 1.5708 0.51419400000000004 1.8849599999999997</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_28</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_28'>
+      <pose relative_to='wheel_r'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 4.7439799999999997e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>3.18546e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>8.8013600000000004e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_28_collision'>
+        <pose>2.7755599999999997e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 1.3877799999999986e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_28_visual'>
+        <pose>2.7755599999999997e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 1.3877799999999986e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_s' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.0124802 -0.038410199999999999 0.025499999999999998 -1.5708000000000002 -0.050160699999999982 1.25664</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_29</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_29'>
+      <pose relative_to='wheel_s'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 4.4620800000000003e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.7519900000000001e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>4.4735399999999998e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_29_collision'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 5.5511200000000007e-17 7.1991000000000005e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_29_visual'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 5.5511200000000007e-17 7.1991000000000005e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_t' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_2'>-0.0326737 -0.023738800000000001 0.025499999999999998 -1.5708 -0.50801700000000038 0.62831899999999974</pose>
+      <parent>wheel4_shaft_holder_v2_2</parent>
+      <child>wheel4_omniwheel_tyre_v1_30</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_30'>
+      <pose relative_to='wheel_t'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483499999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.9112700000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_30_collision'>
+        <pose>6.9388900000000004e-18 0 0.016250000000000001 1.5708 0 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_30_visual'>
+        <pose>6.9388900000000004e-18 0 0.016250000000000001 1.5708 0 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_motorB' type='revolute'>
+      <pose relative_to='part_1'>0.074246199999999998 -0.074246199999999998 0.012500000000000001 -0.7854026535964751 -1.5707926536662187 -3.1415926535746808</pose>
+      <parent>part_1</parent>
+      <child>wheel4_shaft_holder_v2_4</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_shaft_holder_v2_4'>
+      <pose relative_to='wheel_motorB'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>3.5703899780316141e-13 3.5705399780315462e-13 0.01599319990159484 0 0 0</pose>
+        <mass>0.162524001</mass>
+        <inertia>
+          <ixx>0.0001060180002557824</ixx>
+          <ixy>-2.0117000000000129e-20</ixy>
+          <ixz>-4.5845600057101962e-15</ixz>
+          <iyy>0.0001060180002557824</iyy>
+          <iyz>-5.6870300057102127e-15</iyz>
+          <izz>0.00018042500000000001</izz>
+        </inertia>
+      </inertial>
+      <visual name='wheel4_shaft_holder_v2_4_visual'>
+        <pose>0 1.3877799999999999e-17 0.012999999999999999 1.570796326794897 -1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_shaft_holder_v2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_4_visual_1'>
+        <pose>0 1.3877799999999999e-17 0.012999999999999999 1.570796326794897 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4__2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_4_visual_2'>
+        <pose>-3.46945e-17 0 0.032000000000000001 -6.7757351112895003e-16 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2a' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.038410199999999999 -0.0124802 0.0064999999999999997 1.8849526536143673 1.5707926535453185 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_80</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_80'>
+      <pose relative_to='wheel_2a'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.9363300000000004e-10 3.3073000000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.12177e-23</ixy>
+          <ixz>-8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.32706e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_80_collision'>
+        <pose>0 6.9388900000000004e-18 0.016250000000000001 1.5708 3.5612653234359803e-17 3.1415899999999999</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_80_visual'>
+        <pose>0 6.9388900000000004e-18 0.016250000000000001 1.5708 3.5612653234359803e-17 3.1415899999999999</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2b' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.023738800000000001 -0.0326737 0.0064999999999999997 0.62832265359716999 -1.5707926536057681 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_79</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_79'>
+      <pose relative_to='wheel_2b'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 6.9622599999999998e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-8.3253299999999997e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.25657e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_79_collision'>
+        <pose>2.7755599999999997e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 6.9274700000000031e-17 4.5957199999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_79_visual'>
+        <pose>2.7755599999999997e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 6.9274700000000031e-17 4.5957199999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2c' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>1.73472e-18 -0.040386900000000003 0.0064999999999999997 2.6535897933403332e-06 -1.5707926536359933 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_78</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_78'>
+      <pose relative_to='wheel_2c'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -6.33959e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483499999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.3632e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_78_collision'>
+        <pose>1.3877799999999999e-17 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.9134896469948624e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_78_visual'>
+        <pose>1.3877799999999999e-17 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.9134896469948624e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2d' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.023738800000000001 -0.0326737 0.0064999999999999997 1.570799999999992 -1.5407100000000038 0.94247800000001003</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_77</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_77'>
+      <pose relative_to='wheel_2d'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -5.1114100000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-4.3401599999999998e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-3.8401299999999999e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_77_collision'>
+        <pose>2.7755599999999997e-17 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2041699999999999e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_77_visual'>
+        <pose>2.7755599999999997e-17 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2041699999999999e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2e' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.038410199999999999 -0.0124802 0.0064999999999999997 -1.2566326536144823 -1.5707926535453185 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_76</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_76'>
+      <pose relative_to='wheel_2e'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.6964199999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.27417e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_76_collision'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 -8.0645500000000038e-18 1.5323600000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_76_visual'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 -8.0645500000000038e-18 1.5323600000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2f' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.038410199999999999 0.0124802 0.0064999999999999997 1.5707999999999958 -1.5466600000000172 2.8274300000000068</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_75</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_75'>
+      <pose relative_to='wheel_2f'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 5.2969299999999999e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.03527e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.29178e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_75_collision'>
+        <pose>0 3.4694499999999997e-18 0.016250000000000001 1.5708 4.5970200000000024e-17 -3.4694499999999974e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_75_visual'>
+        <pose>0 3.4694499999999997e-18 0.016250000000000001 1.5708 4.5970200000000024e-17 -3.4694499999999974e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2g' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.023738800000000001 0.0326737 0.0064999999999999997 0.62832265359716999 -1.5707926536057681 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_74</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_74'>
+      <pose relative_to='wheel_2g'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>2.1008300000000001e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>2.5483499999999999e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_74_collision'>
+        <pose>0 0 0.016250000000000001 1.5708 3.0065000000000014e-17 -1.4549899999999987e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_74_visual'>
+        <pose>0 0 0.016250000000000001 1.5708 3.0065000000000014e-17 -1.4549899999999987e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2h' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>1.73472e-18 0.040386900000000003 0.0064999999999999997 3.1415926535897931 1.5707926536359933 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_73</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_73'>
+      <pose relative_to='wheel_2h'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.9363300000000004e-10 -7.5381900000000007e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.27417e-23</ixy>
+          <ixz>-8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-6.32718e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_73_collision'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2009305269071736e-17 3.1415899999999999</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_73_visual'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2009305269071736e-17 3.1415899999999999</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2i' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.023738800000000001 0.0326737 0.0064999999999999997 -0.62832265358828709 -1.5707926536359933 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_72</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_72'>
+      <pose relative_to='wheel_2i'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.2952400000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>7.8722800000000002e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.27417e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_72_collision'>
+        <pose>1.3877799999999999e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.9335599999999923e-18 5.1645999999999992e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_72_visual'>
+        <pose>1.3877799999999999e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.9335599999999923e-18 5.1645999999999992e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2j' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.038410199999999999 0.0124802 0.0064999999999999997 1.8849526536143673 -1.5707926536057681 3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_71</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_71'>
+      <pose relative_to='wheel_2j'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -2.33695e-20 -1.46309e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-8.8705300000000007e-25</ixy>
+          <ixz>-8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>2.5659500000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_71_collision'>
+        <pose>1.3877799999999999e-17 0 -0.016250000000000001 -1.5708 -3.1775000000000126e-19 -1.09355e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_71_visual'>
+        <pose>1.3877799999999999e-17 0 -0.016250000000000001 -1.5708 -3.1775000000000126e-19 -1.09355e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2k' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.040386900000000003 -2.7755599999999997e-17 0.025499999999999998 1.5708000000000002 0.99208700000000072 3.1415899999999999</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_61</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_61'>
+      <pose relative_to='wheel_2k'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.3914600000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>3.8225300000000003e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.2611900000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_61_collision'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 -3.5946100000000022e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_61_visual'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 -3.5946100000000022e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2l' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.0326737 0.023738800000000001 0.025499999999999998 0.94248265360217431 -1.5707926536359933 3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_62</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_62'>
+      <pose relative_to='wheel_2l'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 7.8664799999999998e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-3.78873e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>5.1671000000000002e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_62_collision'>
+        <pose>0 3.4694499999999997e-18 0.016250000000000001 1.5708 6.8493600000000034e-17 -4.9613399999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_62_visual'>
+        <pose>0 3.4694499999999997e-18 0.016250000000000001 1.5708 6.8493600000000034e-17 -4.9613399999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2m' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.0124802 0.038410199999999999 0.025499999999999998 0.3141626535872048 -1.5707926536057681 -3.1415926535822369</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_63</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_63'>
+      <pose relative_to='wheel_2m'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.4803200000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.4593299999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>5.0524099999999997e-29</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_63_collision'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 4.1945100000000003e-17 6.2288200000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_63_visual'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 4.1945100000000003e-17 6.2288200000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2n' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.0124802 0.038410199999999999 0.025499999999999998 2.8274336535823554 -1.5707926536662187 3.1415926535822369</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_64</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_64'>
+      <pose relative_to='wheel_2n'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -5.1114100000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.09585e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.2917700000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_64_collision'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 3.7011300000000034e-17 2.26235e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_64_visual'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 3.7011300000000034e-17 2.26235e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2o' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.0326737 0.023738800000000001 0.025499999999999998 2.1991146535585386 -1.5707926537266703 -3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_65</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_65'>
+      <pose relative_to='wheel_2o'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.1148200000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>2.32797e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-3.8577200000000002e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_65_collision'>
+        <pose>5.5511199999999995e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.0861200000000014e-17 6.1911299999999992e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_65_visual'>
+        <pose>5.5511199999999995e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.0861200000000014e-17 6.1911299999999992e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2p' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.040386900000000003 5.5511199999999995e-17 0.025499999999999998 1.5708000000000002 0.99208700000000072 3.1415899999999999</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_66</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_66'>
+      <pose relative_to='wheel_2p'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.12304e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483399999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.6456500000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_66_collision'>
+        <pose>-2.7755599999999997e-17 -1.04083e-17 0.016250000000000001 1.5708 -3.4814500000000015e-17 -3.0814879110195767e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_66_visual'>
+        <pose>-2.7755599999999997e-17 -1.04083e-17 0.016250000000000001 1.5708 -3.4814500000000015e-17 -3.0814879110195767e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2q' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.0326737 -0.023738800000000001 0.025499999999999998 0.94248265360217431 -1.5707926536359933 3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_67</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_67'>
+      <pose relative_to='wheel_2q'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -3.3073000000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>8.9926100000000002e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-2.60115e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_67_collision'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 -7.5028900000000068e-18 1.2586299999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_67_visual'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 -7.5028900000000068e-18 1.2586299999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2r' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>0.0124802 -0.038410199999999999 0.025499999999999998 1.5708 -1.0064400000000002 1.88496</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_68</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_68'>
+      <pose relative_to='wheel_2r'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 4.7439799999999997e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>6.3708999999999997e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.4588900000000001e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_68_collision'>
+        <pose>0 0 0.016250000000000001 1.5708 1.1102200000000001e-16 2.0816700000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_68_visual'>
+        <pose>0 0 0.016250000000000001 1.5708 1.1102200000000001e-16 2.0816700000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2s' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.0124802 -0.038410199999999999 0.025499999999999998 2.8274336535823554 -1.5707926536662187 3.1415926535822369</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_69</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_69'>
+      <pose relative_to='wheel_2s'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.64151e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.15606e-29</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_69_collision'>
+        <pose>0 0 0.016250000000000001 1.5708 4.3165700000000004e-17 -1.42524e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_69_visual'>
+        <pose>0 0 0.016250000000000001 1.5708 4.3165700000000004e-17 -1.42524e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_2t' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_4'>-0.0326737 -0.023738800000000001 0.025499999999999998 2.1991146535585386 -1.5707926537266703 -3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_4</parent>
+      <child>wheel4_omniwheel_tyre_v1_70</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_70'>
+      <pose relative_to='wheel_2t'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 2.33695e-20 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.4364900000000001e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.7600299999999999e-25</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_70_collision'>
+        <pose>2.7755599999999997e-17 0 0.016250000000000001 1.5708 8.9164800000000051e-17 -2.6355399999999993e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_70_visual'>
+        <pose>2.7755599999999997e-17 0 0.016250000000000001 1.5708 8.9164800000000051e-17 -2.6355399999999993e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_motorC' type='revolute'>
+      <pose relative_to='part_1'>-0.074246199999999998 -0.074246199999999998 0.012500000000000001 -2.3561946535437781 -1.5707926537266703 3.1415926535293424</pose>
+      <parent>part_1</parent>
+      <child>wheel4_shaft_holder_v2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_shaft_holder_v2'>
+      <pose relative_to='wheel_motorC'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>3.5704299780313681e-13 3.5706099780309681e-13 0.01599319990159484 0 0 0</pose>
+        <mass>0.162524001</mass>
+        <inertia>
+          <ixx>0.0001060180002557824</ixx>
+          <ixy>-1.4187800000000131e-20</ixy>
+          <ixz>-4.5845300057102607e-15</ixz>
+          <iyy>0.0001060180002557824</iyy>
+          <iyz>-5.6870300057103642e-15</iyz>
+          <izz>0.00018042500000000001</izz>
+        </inertia>
+      </inertial>
+      <visual name='wheel4_shaft_holder_v2_visual'>
+        <pose>-2.0816700000000001e-17 1.14967e-17 0.032000000000000001 -3.3878675556447501e-16 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_visual_1'>
+        <pose>0 1.8435600000000001e-17 0.012999999999999999 1.570796326794897 -1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_shaft_holder_v2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_visual_2'>
+        <pose>0 1.8435600000000001e-17 0.012999999999999999 1.570796326794897 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4__2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3a' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.038410199999999999 -0.0124802 0.0064999999999999997 1.8849526536143673 1.5707926535453185 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_20</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_20'>
+      <pose relative_to='wheel_3a'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>5.7270799999999996e-10 3.9132100000000001e-10 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.0587899999999999e-21</ixy>
+          <ixz>-6.6972399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-4.5761000000000001e-13</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_20_collision'>
+        <pose>5.5511199999999995e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 5.5511151231257827e-17 -2.5421800000000001</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_20_visual'>
+        <pose>5.5511199999999995e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 5.5511151231257827e-17 -2.5421800000000001</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3b' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.023738800000000001 -0.0326737 0.0064999999999999997 -1.5708 -0.21036599999999991 -0.94247799999999993</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_19</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_19'>
+      <pose relative_to='wheel_3b'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.60197e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.59271e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.28737e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_19_collision'>
+        <pose>0 0 0.016250000000000001 1.5708 0 6.9388900000000018e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_19_visual'>
+        <pose>0 0 0.016250000000000001 1.5708 0 6.9388900000000018e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3c' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-1.73472e-18 -0.040386900000000003 0.0064999999999999997 -1.5708000000000002 -6.106226635438361e-16 -1.5708</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_18</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_18'>
+      <pose relative_to='wheel_3c'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.4477100000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483499999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.3632e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_18_collision'>
+        <pose>2.0816700000000001e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.9134896469948624e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_18_visual'>
+        <pose>2.0816700000000001e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.9134896469948624e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3d' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.023738800000000001 -0.0326737 0.0064999999999999997 -1.5708 -0.24045500000000003 -2.1991100000000001</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_17</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_17'>
+      <pose relative_to='wheel_3d'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.59272e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-6.3708800000000002e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_17_collision'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -1.3877800000000002e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_17_visual'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -1.3877800000000002e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3e' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.038410199999999999 -0.0124802 0.0064999999999999997 -1.5708000000000002 -0.97137900000000033 -2.8274300000000001</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_16</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_16'>
+      <pose relative_to='wheel_3e'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -3.7583300000000002e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-6.3708799999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-3.86654e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_16_collision'>
+        <pose>2.7755599999999997e-17 -6.9388900000000004e-18 0.016250000000000001 1.5708 8.3266700000000047e-17 -1.6653299999999999e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_16_visual'>
+        <pose>2.7755599999999997e-17 -6.9388900000000004e-18 0.016250000000000001 1.5708 8.3266700000000047e-17 -1.6653299999999999e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3f' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.038410199999999999 0.0124802 0.0064999999999999997 -1.5708 -0.9906940000000003 -0.31415900000000024</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_15</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_15'>
+      <pose relative_to='wheel_3f'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.29991e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.2741799999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>2.5835500000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_15_collision'>
+        <pose>0 1.3877799999999999e-17 0.016250000000000001 1.5708 2.7755600000000022e-17 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_15_visual'>
+        <pose>0 1.3877799999999999e-17 0.016250000000000001 1.5708 2.7755600000000022e-17 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3g' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.023738800000000001 0.0326737 0.0064999999999999997 -1.5708 -0.21036599999999991 -0.94247799999999993</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_14</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_14'>
+      <pose relative_to='wheel_3g'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 2.9583100000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>3.8225199999999997e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-6.5468100000000003e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_14_collision'>
+        <pose>0 2.7755599999999997e-17 0.016250000000000001 1.5708 0 8.326670000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_14_visual'>
+        <pose>0 2.7755599999999997e-17 0.016250000000000001 1.5708 0 8.326670000000001e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3h' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>1.73472e-18 0.040386900000000003 0.0064999999999999997 3.1415926535897931 1.5707926536359933 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_13</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_13'>
+      <pose relative_to='wheel_3h'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-9.7565700000000002e-18 6.9363300000000004e-10 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-5.3320200000000003e-28</ixy>
+          <ixz>2.0836799999999998e-24</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-8.1113399999999998e-13</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_13_collision'>
+        <pose>0 -3.46945e-17 0.016250000000000001 1.5708 1.609823385706477e-15 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_13_visual'>
+        <pose>0 -3.46945e-17 0.016250000000000001 1.5708 1.609823385706477e-15 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3i' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.023738800000000001 0.0326737 0.0064999999999999997 -1.5708 -0.21036600000000014 -2.1991100000000001</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_12</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_12'>
+      <pose relative_to='wheel_3i'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.2726800000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>3.18543e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>9.5123700000000003e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_12_collision'>
+        <pose>-6.9388900000000004e-18 -1.3877799999999999e-17 0.016250000000000001 1.5708 0 6.9388900000000018e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_12_visual'>
+        <pose>-6.9388900000000004e-18 -1.3877799999999999e-17 0.016250000000000001 1.5708 0 6.9388900000000018e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3j' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.038410199999999999 0.0124802 0.0064999999999999997 1.5708 -0.97137900000000044 -2.8274300000000001</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_11</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_11'>
+      <pose relative_to='wheel_3j'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.3901200000000001e-17 -1.46309e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>2.5483399999999999e-23</ixy>
+          <ixz>-8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>3.2030400000000002e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_11_collision'>
+        <pose>0 -1.3877799999999999e-17 -0.016250000000000001 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_11_visual'>
+        <pose>0 -1.3877799999999999e-17 -0.016250000000000001 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3k' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.040386900000000003 1.14967e-17 0.025499999999999998 1.5708 0.99208700000000005 -3.1415899999999999</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1'>
+      <pose relative_to='wheel_3k'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 2.0154000000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-5.0966999999999998e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-9.9705599999999994e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_collision'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 -1.1604800000000011e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_visual'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 -1.1604800000000011e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3l' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.0326737 0.023738800000000001 0.025499999999999998 -1.5708 -0.50801700000000005 -0.62831899999999985</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_2'>
+      <pose relative_to='wheel_3l'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 2.7295400000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.2741799999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-3.8577200000000002e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_2_collision'>
+        <pose>2.0816700000000001e-17 0 0.016250000000000001 1.5708 0 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_2_visual'>
+        <pose>2.0816700000000001e-17 0 0.016250000000000001 1.5708 0 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3m' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.0124802 0.038410199999999999 0.025499999999999998 -1.5708000000000002 -0.050160699999999815 -1.25664</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_3'>
+      <pose relative_to='wheel_3m'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 6.1534400000000001e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.05517e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-5.51405e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_3_collision'>
+        <pose>-2.0816700000000001e-17 0 0.016250000000000001 1.5708 0 -4.5102799999999997e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_3_visual'>
+        <pose>-2.0816700000000001e-17 0 0.016250000000000001 1.5708 0 -4.5102799999999997e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3n' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.0124802 0.038410199999999999 0.025499999999999998 1.5708 -0.050160699999999982 -1.88496</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_4</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_4'>
+      <pose relative_to='wheel_3n'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 2.20694e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-4.2406099999999998e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.84537e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_4_collision'>
+        <pose>-3.46945e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -6.8521599999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_4_visual'>
+        <pose>-3.46945e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 -6.8521599999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3o' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.0326737 0.023738800000000001 0.025499999999999998 1.5707999999999998 -0.50801700000000005 -2.5132699999999999</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_5</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_5'>
+      <pose relative_to='wheel_3o'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.27417e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.27417e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_5_collision'>
+        <pose>-1.04083e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_5_visual'>
+        <pose>-1.04083e-17 0 0.016250000000000001 1.5708 5.5511200000000019e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3p' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.040386900000000003 2.53745e-17 0.025499999999999998 1.5708 0.99208700000000005 -3.1415899999999999</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_6</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_6'>
+      <pose relative_to='wheel_3p'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 8.9542900000000004e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-5.0966999999999998e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-9.9705599999999994e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_6_collision'>
+        <pose>0 6.9388900000000004e-18 0.016250000000000001 1.5708 -1.1604800000000011e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_6_visual'>
+        <pose>0 6.9388900000000004e-18 0.016250000000000001 1.5708 -1.1604800000000011e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3q' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.0326737 -0.023738800000000001 0.025499999999999998 -1.5708 -0.50801700000000005 -0.62831899999999985</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_7</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_7'>
+      <pose relative_to='wheel_3q'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.3854399999999999e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.2741799999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>1.7605000000000001e-25</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_7_collision'>
+        <pose>2.7755599999999997e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.5511200000000019e-17 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_7_visual'>
+        <pose>2.7755599999999997e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -5.5511200000000019e-17 5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3r' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>0.0124802 -0.038410199999999999 0.025499999999999998 -1.5707999999999998 -0.61451499999999992 -1.2566400000000002</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_8</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_8'>
+      <pose relative_to='wheel_3r'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.25013e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.5927399999999999e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-6.4589000000000002e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_8_collision'>
+        <pose>0 -1.3877799999999999e-17 0.016250000000000001 1.5708 8.3266700000000022e-17 -2.7755599999999997e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_8_visual'>
+        <pose>0 -1.3877799999999999e-17 0.016250000000000001 1.5708 8.3266700000000022e-17 -2.7755599999999997e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3s' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.0124802 -0.038410199999999999 0.025499999999999998 1.5708 -0.050160699999999982 -1.88496</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_9</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_9'>
+      <pose relative_to='wheel_3s'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 2.8455500000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-9.7553900000000004e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-7.52355e-25</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_9_collision'>
+        <pose>-6.9388900000000004e-18 2.7755599999999997e-17 0.016250000000000001 1.5708 0 3.4694499999999997e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_9_visual'>
+        <pose>-6.9388900000000004e-18 2.7755599999999997e-17 0.016250000000000001 1.5708 0 3.4694499999999997e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_3t' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2'>-0.0326737 -0.023738800000000001 0.025499999999999998 1.5707999999999998 -0.50801700000000005 -2.5132699999999999</pose>
+      <parent>wheel4_shaft_holder_v2</parent>
+      <child>wheel4_omniwheel_tyre_v1_10</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_10'>
+      <pose relative_to='wheel_3t'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.5705299999999999e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.5483499999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-6.5469200000000002e-24</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_10_collision'>
+        <pose>-1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 5.5511200000000019e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_10_visual'>
+        <pose>-1.3877799999999999e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 5.5511200000000019e-17 -5.5511199999999995e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_motorD' type='revolute'>
+      <pose relative_to='part_1'>-0.074246199999999998 0.074246199999999998 0.012500000000000001 2.3561946535437781 -1.5707926537266703 -3.1415926535293424</pose>
+      <parent>part_1</parent>
+      <child>wheel4_shaft_holder_v2_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_shaft_holder_v2_3'>
+      <pose relative_to='wheel_motorD'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>3.5704499780313509e-13 3.5705599780309948e-13 0.01599319990159484 0 0 0</pose>
+        <mass>0.162524001</mass>
+        <inertia>
+          <ixx>0.0001060180002557824</ixx>
+          <ixy>-1.011960000000013e-20</ixy>
+          <ixz>-4.5845100057102651e-15</ixz>
+          <iyy>0.0001060180002557824</iyy>
+          <iyz>-5.6870600057103564e-15</iyz>
+          <izz>0.00018042500000000001</izz>
+        </inertia>
+      </inertial>
+      <visual name='wheel4_shaft_holder_v2_3_visual'>
+        <pose>1.73472e-18 6.9388900000000004e-18 0.012999999999999999 1.570796326794897 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4__2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_3_visual_1'>
+        <pose>1.73472e-18 6.9388900000000004e-18 0.012999999999999999 1.570796326794897 -1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_shaft_holder_v2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+      <visual name='wheel4_shaft_holder_v2_3_visual_2'>
+        <pose>-1.9082000000000001e-17 1.3877799999999999e-17 0.032000000000000001 -6.2206271503186387e-16 1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_body_omni_v4.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784313738 0.784313738 0.784313738 1</diffuse>
+          <ambient>0.784313738 0.784313738 0.784313738 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4a' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.038410199999999999 -0.0124802 0.0064999999999999997 1.8849526536143673 1.5707926535453185 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_60</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_60'>
+      <pose relative_to='wheel_4a'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -8.7868300000000001e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.00904e-22</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>3.8573300000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_60_collision'>
+        <pose>0 0 0.016250000000000001 1.5708 7.9161800000002327e-18 -4.8617199999999996e-15</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_60_visual'>
+        <pose>0 0 0.016250000000000001 1.5708 7.9161800000002327e-18 -4.8617199999999996e-15</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4b' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.023738800000000001 -0.0326737 0.0064999999999999997 2.5132736535905642 1.5707926535755432 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_59</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_59'>
+      <pose relative_to='wheel_4b'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.6632999999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>5.8859500000000002e-29</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_59_collision'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 1.5075399999999999e-17 7.2564399999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_59_visual'>
+        <pose>-1.3877799999999999e-17 0 0.016250000000000001 1.5708 1.5075399999999999e-17 7.2564399999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4c' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0 -0.040386900000000003 0.0064999999999999997 3.1415926535897931 1.5707926536359933 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_58</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_58'>
+      <pose relative_to='wheel_4c'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -6.33959e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>2.5483499999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.3632e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_58_collision'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.5437110976725131e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_58_visual'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 5.2009300000000021e-17 -3.5437110976725131e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4d' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.023738800000000001 -0.0326737 0.0064999999999999997 -1.570800000000006 1.5407099999999965 -2.1991100000000054</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_57</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_57'>
+      <pose relative_to='wheel_4d'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 3.6315900000000003e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.5130700000000001e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-3.8753299999999998e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_57_collision'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 8.6736199999999962e-18 -2.0816699999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_57_visual'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 8.6736199999999962e-18 -2.0816699999999998e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4e' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.038410199999999999 -0.0124802 0.0064999999999999997 -1.8849526536143673 1.5707926536057681 3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_56</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_56'>
+      <pose relative_to='wheel_4e'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -2.54402e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.5235999999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.2741799999999999e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_56_collision'>
+        <pose>-1.3877799999999999e-17 -3.4694499999999997e-18 0.016250000000000001 1.5708 3.5270300000000018e-17 -1.5875400000000004e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_56_visual'>
+        <pose>-1.3877799999999999e-17 -3.4694499999999997e-18 0.016250000000000001 1.5708 3.5270300000000018e-17 -1.5875400000000004e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4f' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.038410199999999999 0.0124802 0.0064999999999999997 -1.5707999999999946 1.5466599999999988 -0.31415899999999686</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_55</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_55'>
+      <pose relative_to='wheel_4f'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -8.7868699999999998e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.11491e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>2.5835500000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_55_collision'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 1.4745100000000003e-17 6.9388900000000004e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_55_visual'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 1.4745100000000003e-17 6.9388900000000004e-18</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4g' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.023738800000000001 0.0326737 0.0064999999999999997 2.5132736535905642 1.5707926535755432 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_54</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_54'>
+      <pose relative_to='wheel_4g'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.1148200000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>2.32412e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-2.5835400000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_54_collision'>
+        <pose>2.7755599999999997e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -1.4424599999999999e-17 7.1074100000000003e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_54_visual'>
+        <pose>2.7755599999999997e-17 -1.3877799999999999e-17 0.016250000000000001 1.5708 -1.4424599999999999e-17 7.1074100000000003e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4h' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>1.21431e-17 0.040386900000000003 0.0064999999999999997 3.1415926535897931 1.5707926536359933 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_53</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_53'>
+      <pose relative_to='wheel_4h'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 7.5381900000000007e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.27417e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.4352399999999999e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_53_collision'>
+        <pose>1.3877799999999999e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 6.6980800000000157e-17 8.8817799999999993e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_53_visual'>
+        <pose>1.3877799999999999e-17 6.9388900000000004e-18 0.016250000000000001 1.5708 6.6980800000000157e-17 8.8817799999999993e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4i' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.023738800000000001 0.0326737 0.0064999999999999997 -2.5132736536072318 1.5707926536057681 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_52</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_52'>
+      <pose relative_to='wheel_4i'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.2952400000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>8.7911800000000006e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-2.5483499999999999e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_52_collision'>
+        <pose>0 -1.3877799999999999e-17 0.016250000000000001 1.5708 5.7745400000000029e-17 -2.0674200000000004e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_52_visual'>
+        <pose>0 -1.3877799999999999e-17 0.016250000000000001 1.5708 5.7745400000000029e-17 -2.0674200000000004e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4j' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.038410199999999999 0.0124802 0.0064999999999999997 1.2566326536144823 1.5707926535453185 3.1415926535897931</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_51</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_51'>
+      <pose relative_to='wheel_4j'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -9.2542599999999992e-19 -1.46309e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.10096e-23</ixy>
+          <ixz>-8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-3.6666699999999998e-29</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_51_collision'>
+        <pose>0 0 -0.016250000000000001 -1.5708 -1.6955100000000012e-17 4.520429999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_51_visual'>
+        <pose>0 0 -0.016250000000000001 -1.5708 -1.6955100000000012e-17 4.520429999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4k' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.040386900000000003 8.7995599999999999e-32 0.025499999999999998 1.5707926536057684 1.5707926536057681 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_41</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_41'>
+      <pose relative_to='wheel_4k'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 4.06875e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.6278900000000001e-29</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.3632e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_41_collision'>
+        <pose>0 3.4694499999999997e-18 0.016250000000000001 1.5708 -2.5333533028137867e-46 1.5407400000000001e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_41_visual'>
+        <pose>0 3.4694499999999997e-18 0.016250000000000001 1.5708 -2.5333533028137867e-46 1.5407400000000001e-33</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4l' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.0326737 0.023738800000000001 0.025499999999999998 2.1991146535585386 1.5707926537266703 3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_42</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_42'>
+      <pose relative_to='wheel_4l'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -3.3073000000000001e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>3.7250599999999999e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-2.60115e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_42_collision'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 9.1349899999999983e-18 6.2756400000000003e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_42_visual'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 9.1349899999999983e-18 6.2756400000000003e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4m' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.0124802 0.038410199999999999 0.025499999999999998 2.8274336535823554 1.5707926536662187 -3.1415926535822369</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_43</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_43'>
+      <pose relative_to='wheel_4m'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -6.9155200000000002e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-1.8295099999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>2.5659500000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_43_collision'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 3.4694400000000012e-17 -4.0034800000000011e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_43_visual'>
+        <pose>0 -6.9388900000000004e-18 0.016250000000000001 1.5708 3.4694400000000012e-17 -4.0034800000000011e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4n' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.0124802 0.038410199999999999 0.025499999999999998 0.31416265358001838 1.5707926536359933 3.1415926535822369</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_44</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_44'>
+      <pose relative_to='wheel_4n'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -1.8989200000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.7683700000000001e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.7594e-25</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_44_collision'>
+        <pose>2.7755599999999997e-17 -2.0816700000000001e-17 0.016250000000000001 1.5708 5.1349500000000027e-17 7.989320000000003e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_44_visual'>
+        <pose>2.7755599999999997e-17 -2.0816700000000001e-17 0.016250000000000001 1.5708 5.1349500000000027e-17 7.989320000000003e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4o' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.0326737 0.023738800000000001 0.025499999999999998 0.94248265360217431 1.5707926536359933 -3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_45</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_45'>
+      <pose relative_to='wheel_4o'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.6607299999999999e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-3.20461e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.30939e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_45_collision'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 4.7204800000000019e-17 -1.36662e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_45_visual'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 4.7204800000000019e-17 -1.36662e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4p' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.040386900000000003 4.1633400000000002e-17 0.025499999999999998 1.5707926536057684 1.5707926536057681 -3.1415926535746808</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_46</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_46'>
+      <pose relative_to='wheel_4p'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 5.9929999999999996e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>1.6278900000000001e-29</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.3632e-26</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_46_collision'>
+        <pose>2.7755599999999997e-17 0 0.016250000000000001 1.5708 -2.5330999999999949e-46 2.6624700000000003e-44</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_46_visual'>
+        <pose>2.7755599999999997e-17 0 0.016250000000000001 1.5708 -2.5330999999999949e-46 2.6624700000000003e-44</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4q' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.0326737 -0.023738800000000001 0.025499999999999998 2.1991146535585386 1.5707926537266703 3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_47</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_47'>
+      <pose relative_to='wheel_4q'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -3.5848600000000004e-18 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.1912899999999999e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>6.4588800000000005e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_47_collision'>
+        <pose>0 0 0.016250000000000001 1.5708 7.1900500000000059e-18 3.8572400000000009e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_47_visual'>
+        <pose>0 0 0.016250000000000001 1.5708 7.1900500000000059e-18 3.8572400000000009e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4r' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>0.0124802 -0.038410199999999999 0.025499999999999998 -1.5707999999999998 1.0064400000000002 -1.2566399999999995</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_48</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_48'>
+      <pose relative_to='wheel_4r'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 9.2542599999999992e-19 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>9.5563100000000002e-24</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>0</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_48_collision'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 2.7755600000000004e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_48_visual'>
+        <pose>1.3877799999999999e-17 0 0.016250000000000001 1.5708 2.7755600000000004e-17 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4s' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.0124802 -0.038410199999999999 0.025499999999999998 0.31416265358001838 1.5707926536359933 3.1415926535822369</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_49</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_49'>
+      <pose relative_to='wheel_4s'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 -2.59281e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>5.7887599999999996e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>-1.2917700000000001e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_49_collision'>
+        <pose>0 -2.7755599999999997e-17 0.016250000000000001 1.5708 5.2574800000000039e-17 8.8513399999999975e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_49_visual'>
+        <pose>0 -2.7755599999999997e-17 0.016250000000000001 1.5708 5.2574800000000039e-17 8.8513399999999975e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='wheel_4t' type='revolute'>
+      <pose relative_to='wheel4_shaft_holder_v2_3'>-0.0326737 -0.023738800000000001 0.025499999999999998 0.94248265360217431 1.5707926536359933 -3.1415926535746803</pose>
+      <parent>wheel4_shaft_holder_v2_3</parent>
+      <child>wheel4_omniwheel_tyre_v1_50</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>5</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4_omniwheel_tyre_v1_50'>
+      <pose relative_to='wheel_4t'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.9363300000000004e-10 1.3901200000000001e-17 1.3556699999999999e-09 0 0 0</pose>
+        <mass>0.0050273499999999999</mass>
+        <inertia>
+          <ixx>2.29535e-07</ixx>
+          <ixy>-2.68568e-23</ixy>
+          <ixz>8.1113399999999998e-13</ixz>
+          <iyy>2.29535e-07</iyy>
+          <iyz>3.84012e-23</iyz>
+          <izz>2.3270599999999999e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_omniwheel_tyre_v1_50_collision'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 7.3615500000000035e-17 -9.005349999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_omniwheel_tyre_v1_50_visual'>
+        <pose>2.7755599999999997e-17 1.3877799999999999e-17 0.016250000000000001 1.5708 7.3615500000000035e-17 -9.005349999999999e-17</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/wheel4_omniwheel_tyre_v1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.191176251 0.191176251 0.191176251 1</diffuse>
+          <ambient>0.191176251 0.191176251 0.191176251 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <frame name='omni_drive_frame' attached_to='part_1'>
+      <pose>-0.00074770100000000003 3.75549e-06 0.025000000000000001 0 0 0</pose>
+    </frame>
+    <frame name='omni_drive' attached_to='omni_drive_frame'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='motorA_frame' attached_to='wheel4_shaft_holder_v2_2'>
+      <pose>0 1.9626200000000001e-17 1.3877799999999999e-17 3.1415899999999999 0 -1.5708</pose>
+    </frame>
+    <frame name='motorA' attached_to='motorA_frame'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='motorB_frame' attached_to='wheel4_shaft_holder_v2_4'>
+      <pose>0 1.3877799999999999e-17 1.3877799999999999e-17 3.1415899999999999 0 -1.5708</pose>
+    </frame>
+    <frame name='motorB' attached_to='motorB_frame'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='motorC_frame' attached_to='wheel4_shaft_holder_v2'>
+      <pose>0 1.14967e-17 1.3877799999999999e-17 -2.3665800000000014e-30 0 -1.5708</pose>
+    </frame>
+    <frame name='motorC' attached_to='motorC_frame'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='motorD_frame' attached_to='wheel4_shaft_holder_v2_3'>
+      <pose>1.73472e-18 6.9388900000000004e-18 -1.3877799999999999e-17 3.1415899999999999 0 3.1415899999999999</pose>
+    </frame>
+    <frame name='motorD' attached_to='motorD_frame'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <plugin filename="OmniDrive"
+      name="ros_gz_omni_gazebo::OmniDrive">
+      <front_left_joint>wheel_motorA</front_left_joint>
+      <front_right_joint>wheel_motorB</front_right_joint>
+      <back_left_joint>wheel_motorD</back_left_joint>
+      <back_right_joint>wheel_motorC</back_right_joint>
+      <wheel_separation>1</wheel_separation>
+      <wheelbase>1</wheelbase>
+      <wheel_radius>0.5</wheel_radius>
+      <min_acceleration>-5</min_acceleration>
+      <max_acceleration>5</max_acceleration>
+    </plugin>
+  </model>
+</sdf>

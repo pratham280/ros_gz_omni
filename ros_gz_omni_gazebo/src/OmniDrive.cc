@@ -675,11 +675,11 @@ void OmniDrivePrivate::UpdateVelocity(
   this->last0Cmd.ang = angVel;
   
   // constant used in computing target velocities
-  const double angularLength = std::sqrt(
-        std::pow(this->wheelSeparation / 2.0, 2) + 
-        std::pow(this->wheelbase / 2.0, 2)
-    );
-  // const double angularLength = 0.5 * (this->wheelSeparation + this->wheelbase);
+  // const double angularLength = std::sqrt(
+  //       std::pow(this->wheelSeparation / 2.0, 2) + 
+  //       std::pow(this->wheelbase / 2.0, 2)
+  //   );
+  const double angularLength = 0.5 * (this->wheelSeparation + this->wheelbase);
   const double invWheelRadius = 1 / this->wheelRadius;
   
 

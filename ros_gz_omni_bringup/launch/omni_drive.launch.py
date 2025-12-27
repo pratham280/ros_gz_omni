@@ -83,11 +83,53 @@ def generate_launch_description():
         output='screen'
     )
 
+    joy_node = Node(
+        package='joy',
+        executable='joy_node',
+        name='joy_node',
+        parameters=[{
+            'dev': '/dev/input/js0',
+            'deadzone': 0.05,
+            'autorepeat_rate': 20.0,
+        }],
+        condition=IfCondition(LaunchConfiguration('teleop')),
+        output='screen'
+    )
+
+    teleop_twist_joy = Node(
+        package='teleop_twist_joy',
+        executable='teleop_node',
+        name='teleop_twist_joy',
+        parameters=[
+            os.path.join(
+                pkg_project_bringup,
+                'config',
+                'teleop_twist_joy.yaml'
+            ),
+            {
+                'use_sim_time': True,
+                'cmd_vel': '/omni_drive/cmd_vel'
+            }
+        ],
+        remappings=[
+            ('cmd_vel', '/omni_drive/cmd_vel')
+        ],
+        condition=IfCondition(LaunchConfiguration('teleop')),
+        output='screen'
+    )
+
     return LaunchDescription([
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
                                   description='Open RViz.'),
+        DeclareLaunchArgument(
+        'teleop',
+        default_value='true',
+        description='Enable joystick teleoperation'
+        ),
         bridge,
+        teleop_twist_joy,
+        joy_node,
         robot_state_publisher,
         rviz
     ])

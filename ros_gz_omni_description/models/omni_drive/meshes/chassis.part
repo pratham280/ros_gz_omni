@@ -1,12 +1,12 @@
 {
     "configuration": "default",
     "documentId": "93e40c2054094fd18d479553",
-    "documentMicroversion": "d1c1d162a350beb8aa2665be",
+    "documentMicroversion": "d594c9532d882ae8ccf32e09",
     "elementId": "91cc88b8b1a2d00243cac938",
     "fullConfiguration": "default",
-    "id": "M3XLNhPyV1hVvPB0+",
+    "id": "M5JfrmEvkR90Ds7zy",
     "isStandardContent": false,
-    "name": "Part 1 <1>",
+    "name": "Chassis <1>",
     "partId": "JHD",
     "suppressed": false,
     "type": "Part"

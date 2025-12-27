@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "93e40c2054094fd18d479553",
-    "documentMicroversion": "077213e79a7d7ad61609d82b",
+    "documentMicroversion": "2e077d797be29a5d834cadbd",
     "elementId": "c7658e503cfe1eca70b8a992",
     "fullConfiguration": "default",
-    "id": "M7cWlFqtg3wJm1VER",
+    "id": "MzK+HYiMl6a+bFZdT",
     "isStandardContent": false,
-    "name": "wheel4 omniwheel tyre v1 <18>",
-    "partId": "JFL",
+    "name": "wheel4 Shaft omni v1 <16>",
+    "partId": "JFH",
     "suppressed": false,
     "type": "Part"
 }

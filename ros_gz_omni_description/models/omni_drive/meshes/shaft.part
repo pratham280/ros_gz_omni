@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "93e40c2054094fd18d479553",
-    "documentMicroversion": "d1c1d162a350beb8aa2665be",
-    "elementId": "91cc88b8b1a2d00243cac938",
+    "documentMicroversion": "2b198c864d1b59de43cac9ae",
+    "elementId": "c7658e503cfe1eca70b8a992",
     "fullConfiguration": "default",
-    "id": "M3XLNhPyV1hVvPB0+",
+    "id": "MrmnLumFOMy3gcc6A",
     "isStandardContent": false,
-    "name": "Part 1 <1>",
-    "partId": "JHD",
+    "name": "Shaft <3>",
+    "partId": "JFH",
     "suppressed": false,
     "type": "Part"
 }
