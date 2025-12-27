@@ -42,6 +42,8 @@ def generate_launch_description():
         robot_desc = infp.read()
 
     # Setup to launch the simulator and Gazebo world
+    gz_args = LaunchConfiguration('gz_args')
+
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
@@ -49,7 +51,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'omni_drive.sdf',
-        ]), ' -r -s --verbose 3 '},'on_exit_shutdown': 'true'}.items(),
+        ]), ' -r ', ' ', gz_args, ' '},'on_exit_shutdown': 'true'}.items(),
     )
 
     # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links
@@ -119,14 +121,11 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        DeclareLaunchArgument('gz_args', default_value=' ', description='Pass Gazebo arguments'),
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
                                   description='Open RViz.'),
-        DeclareLaunchArgument(
-        'teleop',
-        default_value='true',
-        description='Enable joystick teleoperation'
-        ),
+        DeclareLaunchArgument('teleop', default_value='true', description='Enable joystick teleoperation'),
         bridge,
         teleop_twist_joy,
         joy_node,
