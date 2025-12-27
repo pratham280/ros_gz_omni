@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "93e40c2054094fd18d479553",
-    "documentMicroversion": "75aca9e260de4e83ccf1baaf",
-    "elementId": "0ac783ede5f0c29a0870dc26",
+    "documentMicroversion": "d594c9532d882ae8ccf32e09",
+    "elementId": "91cc88b8b1a2d00243cac938",
     "fullConfiguration": "default",
-    "id": "MrMbRZwjN4ppVbOc3",
+    "id": "M5JfrmEvkR90Ds7zy",
     "isStandardContent": false,
-    "name": "Couple <1>",
-    "partId": "JFD",
+    "name": "Chassis <1>",
+    "partId": "JHD",
     "suppressed": false,
     "type": "Part"
 }

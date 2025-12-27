@@ -654,11 +654,11 @@ void OmniDrivePrivate::UpdateVelocity(
   }
 
 
-  if ((std::abs(linVel) > 0.0 && std::abs(angVel) > 0.0)) {
-    linVel = 0.0;
-    latVel = 0.0;
-    angVel = 0.0;
-  }
+  // if ((std::abs(linVel) > 0.0 && std::abs(angVel) > 0.0)) {
+  //   linVel = 0.0;
+  //   latVel = 0.0;
+  //   angVel = 0.0;
+  // }
 
   // Limit the target velocity if needed.
   this->limiterLin->Limit(

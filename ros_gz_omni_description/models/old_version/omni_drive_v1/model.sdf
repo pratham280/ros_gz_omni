@@ -1,0 +1,2210 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/93e40c2054094fd18d479553/w/e3a23b7dc09673b21c44fc8d/e/bbedd1d9fa8c1b003a67af45 -->
+<sdf version="1.7">
+  <model name="omni_drive">
+    <!-- Link chassis -->
+    <link name="chassis">
+      <inertial>
+        <pose>-0.000747701 3.75549e-06 0.0125 0 0 0</pose>
+        <mass>0.824729</mass>
+        <inertia>
+          <ixx>0.00213753</ixx>
+          <ixy>-1.14179e-07</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00211266</iyy>
+          <iyz>0</iyz>
+          <izz>0.00416427</izz>
+        </inertia>
+      </inertial>
+      <pose>0 0 0 0 -0 0</pose>
+      <!-- Part chassis -->
+      <visual name="chassis_visual_mesh_1">
+        <pose relative_to="chassis">0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/chassis.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.929412 1</ambient>
+          <diffuse>0.615686 0.811765 0.929412 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <!-- Link wheel_fl -->
+    <link name="wheel_fl">
+      <inertial>
+        <pose>5.3688e-10 -5.68598e-11 0.0210052 0 0 0</pose>
+        <mass>0.214734</mass>
+        <inertia>
+          <ixx>0.000156651</ixx>
+          <ixy>1.31885e-12</ixy>
+          <ixz>7.77919e-12</ixz>
+          <iyy>0.000156651</iyy>
+          <iyz>-9.03764e-13</iyz>
+          <izz>0.000267711</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="wheel_FL">0 0 0 0 -0 0</pose>
+      <!-- Part tyre -->
+      <visual name="tyre_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.00297442 0.0434318 0.0305 3.14159 -1.31618 1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.00297442 0.0434318 0.0305 3.14159 -1.31618 1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_2 -->
+      <visual name="tyre_2_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.01625 0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_2_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.01625 0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_3 -->
+      <visual name="tyre_3_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0403869 -0.01625 0.0305 6.12323e-17 -0.785398 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_3_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0403869 -0.01625 0.0305 6.12323e-17 -0.785398 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1 -->
+      <visual name="body_1_visual_mesh_1">
+        <pose relative_to="wheel_fl">2.77556e-17 0 0.037 3.14159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_4 -->
+      <visual name="tyre_4_visual_mesh_1">
+        <pose relative_to="wheel_fl">-0.0105923 -0.0422252 0.0115 2.41516e-16 -1.09315 -2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_4_collision_mesh_2">
+        <pose relative_to="wheel_fl">-0.0105923 -0.0422252 0.0115 2.41516e-16 -1.09315 -2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_5 -->
+      <visual name="tyre_5_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0368854 -0.0231222 0.0115 3.14159 -1.09315 2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_5_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0368854 -0.0231222 0.0115 3.14159 -1.09315 2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_6 -->
+      <visual name="tyre_6_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0422252 0.0105923 0.0305 9.21274e-17 -0.924106 -2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_6_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0422252 0.0105923 0.0305 9.21274e-17 -0.924106 -2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_7 -->
+      <visual name="tyre_7_visual_mesh_1">
+        <pose relative_to="wheel_fl">-0.0333887 -0.0279349 0.0115 0 -0.820253 -2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_7_collision_mesh_2">
+        <pose relative_to="wheel_fl">-0.0333887 -0.0279349 0.0115 0 -0.820253 -2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_8 -->
+      <visual name="tyre_8_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0279349 0.0333887 0.0305 0 -1.31618 -1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_8_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0279349 0.0333887 0.0305 0 -1.31618 -1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_9 -->
+      <visual name="tyre_9_visual_mesh_1">
+        <pose relative_to="wheel_fl">-0.0105923 0.0422252 0.0115 -3.14159 -1.09315 2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_9_collision_mesh_2">
+        <pose relative_to="wheel_fl">-0.0105923 0.0422252 0.0115 -3.14159 -1.09315 2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_10 -->
+      <visual name="tyre_10_visual_mesh_1">
+        <pose relative_to="wheel_fl">-0.0333887 0.0279349 0.0115 -3.14159 -0.820253 2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_10_collision_mesh_2">
+        <pose relative_to="wheel_fl">-0.0333887 0.0279349 0.0115 -3.14159 -0.820253 2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_11 -->
+      <visual name="tyre_11_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0434318 0.00297442 0.0115 -3.14159 -0.820253 2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_11_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0434318 0.00297442 0.0115 -3.14159 -0.820253 2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_12 -->
+      <visual name="tyre_12_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.00297442 -0.0434318 0.0305 0 -1.31618 -1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_12_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.00297442 -0.0434318 0.0305 0 -1.31618 -1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_13 -->
+      <visual name="tyre_13_visual_mesh_1">
+        <pose relative_to="wheel_fl">-0.0231222 0.0368854 0.0305 3.14159 -0.924106 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_13_collision_mesh_2">
+        <pose relative_to="wheel_fl">-0.0231222 0.0368854 0.0305 3.14159 -0.924106 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1_2 -->
+      <visual name="body_1_2_visual_mesh_1">
+        <pose relative_to="wheel_fl">0 0 0.005 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_14 -->
+      <visual name="tyre_14_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0434318 -0.00297442 0.0115 0 0.750544 -2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_14_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0434318 -0.00297442 0.0115 0 0.750544 -2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_15 -->
+      <visual name="tyre_15_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0422252 -0.0105923 0.0305 8.95172e-17 0.901905 -0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_15_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0422252 -0.0105923 0.0305 8.95172e-17 0.901905 -0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_16 -->
+      <visual name="tyre_16_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.01625 -0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_16_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.01625 -0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_17 -->
+      <visual name="tyre_17_visual_mesh_1">
+        <pose relative_to="wheel_fl">-0.0403869 -0.01625 0.0305 6.12323e-17 -0.785398 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_17_collision_mesh_2">
+        <pose relative_to="wheel_fl">-0.0403869 -0.01625 0.0305 6.12323e-17 -0.785398 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_18 -->
+      <visual name="tyre_18_visual_mesh_1">
+        <pose relative_to="wheel_fl">-0.0231222 -0.0368854 0.0305 9.21274e-17 -0.924106 -2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_18_collision_mesh_2">
+        <pose relative_to="wheel_fl">-0.0231222 -0.0368854 0.0305 9.21274e-17 -0.924106 -2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_19 -->
+      <visual name="tyre_19_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0279349 -0.0333887 0.0305 3.14159 -1.31618 1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_19_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0279349 -0.0333887 0.0305 3.14159 -1.31618 1.88496</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_20 -->
+      <visual name="tyre_20_visual_mesh_1">
+        <pose relative_to="wheel_fl">0.0368854 0.0231222 0.0115 0 -1.09315 -2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_20_collision_mesh_2">
+        <pose relative_to="wheel_fl">0.0368854 0.0231222 0.0115 0 -1.09315 -2.19911</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part couple -->
+      <visual name="couple_visual_mesh_1">
+        <pose relative_to="wheel_fl">4.85723e-17 0 0.024 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/couple.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <!-- Joint from chassis to wheel_fl -->
+    <joint name="wheel_FL" type="revolute">
+      <pose relative_to="chassis">0.0707107 0.0707107 0.0125 1.5708 -0 2.35619</pose>
+      <parent>chassis</parent>
+      <child>wheel_fl</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+        <dynamics>
+          <friction>0.0</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Link wheel_fr -->
+    <link name="wheel_fr">
+      <inertial>
+        <pose>3.50863e-10 -7.30176e-11 0.0210052 0 0 0</pose>
+        <mass>0.214734</mass>
+        <inertia>
+          <ixx>0.000156651</ixx>
+          <ixy>-4.74434e-13</ixy>
+          <ixz>8.26619e-12</ixz>
+          <iyy>0.000156651</iyy>
+          <iyz>-1.85116e-12</iyz>
+          <izz>0.000267711</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="wheel_FR">0 0 0 0 -0 0</pose>
+      <!-- Part tyre_21 -->
+      <visual name="tyre_21_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.00297442 0.0434318 0.0305 0 -1.31618 -1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_21_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.00297442 0.0434318 0.0305 0 -1.31618 -1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_22 -->
+      <visual name="tyre_22_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.01625 0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_22_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.01625 0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_23 -->
+      <visual name="tyre_23_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0403869 -0.01625 0.0305 -3.14159 -0.785398 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_23_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0403869 -0.01625 0.0305 -3.14159 -0.785398 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1_3 -->
+      <visual name="body_1_3_visual_mesh_1">
+        <pose relative_to="wheel_fr">3.35039e-17 0 0.037 3.14159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_24 -->
+      <visual name="tyre_24_visual_mesh_1">
+        <pose relative_to="wheel_fr">-0.0105923 -0.0422252 0.0115 3.14159 -1.09315 0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_24_collision_mesh_2">
+        <pose relative_to="wheel_fr">-0.0105923 -0.0422252 0.0115 3.14159 -1.09315 0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_25 -->
+      <visual name="tyre_25_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0368854 -0.0231222 0.0115 0 -1.09315 -0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_25_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0368854 -0.0231222 0.0115 0 -1.09315 -0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_26 -->
+      <visual name="tyre_26_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0422252 0.0105923 0.0305 -3.14159 -0.924106 0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_26_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0422252 0.0105923 0.0305 -3.14159 -0.924106 0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_27 -->
+      <visual name="tyre_27_visual_mesh_1">
+        <pose relative_to="wheel_fr">-0.0333887 -0.0279349 0.0115 3.14159 -0.820253 0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_27_collision_mesh_2">
+        <pose relative_to="wheel_fr">-0.0333887 -0.0279349 0.0115 3.14159 -0.820253 0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_28 -->
+      <visual name="tyre_28_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0279349 0.0333887 0.0305 3.14159 -1.31618 1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_28_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0279349 0.0333887 0.0305 3.14159 -1.31618 1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_29 -->
+      <visual name="tyre_29_visual_mesh_1">
+        <pose relative_to="wheel_fr">-0.0105923 0.0422252 0.0115 -2.41516e-16 -1.09315 -0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_29_collision_mesh_2">
+        <pose relative_to="wheel_fr">-0.0105923 0.0422252 0.0115 -2.41516e-16 -1.09315 -0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_30 -->
+      <visual name="tyre_30_visual_mesh_1">
+        <pose relative_to="wheel_fr">-0.0333887 0.0279349 0.0115 0 -0.820253 -0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_30_collision_mesh_2">
+        <pose relative_to="wheel_fr">-0.0333887 0.0279349 0.0115 0 -0.820253 -0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_31 -->
+      <visual name="tyre_31_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0434318 0.00297442 0.0115 0 -0.820253 -0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_31_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0434318 0.00297442 0.0115 0 -0.820253 -0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_32 -->
+      <visual name="tyre_32_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.00297442 -0.0434318 0.0305 3.14159 -1.31618 1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_32_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.00297442 -0.0434318 0.0305 3.14159 -1.31618 1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_33 -->
+      <visual name="tyre_33_visual_mesh_1">
+        <pose relative_to="wheel_fr">-0.0231222 0.0368854 0.0305 9.21274e-17 -0.924106 -0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_33_collision_mesh_2">
+        <pose relative_to="wheel_fr">-0.0231222 0.0368854 0.0305 9.21274e-17 -0.924106 -0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1_4 -->
+      <visual name="body_1_4_visual_mesh_1">
+        <pose relative_to="wheel_fr">-8.12942e-18 0 0.005 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_34 -->
+      <visual name="tyre_34_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0434318 -0.00297442 0.0115 0 -0.750544 -2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_34_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0434318 -0.00297442 0.0115 0 -0.750544 -2.82743</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_35 -->
+      <visual name="tyre_35_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0422252 -0.0105923 0.0305 3.14159 0.946308 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_35_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0422252 -0.0105923 0.0305 3.14159 0.946308 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_36 -->
+      <visual name="tyre_36_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.01625 -0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_36_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.01625 -0.0403869 0.0115 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_37 -->
+      <visual name="tyre_37_visual_mesh_1">
+        <pose relative_to="wheel_fr">-0.0403869 -0.01625 0.0305 -3.14159 -0.785398 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_37_collision_mesh_2">
+        <pose relative_to="wheel_fr">-0.0403869 -0.01625 0.0305 -3.14159 -0.785398 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_38 -->
+      <visual name="tyre_38_visual_mesh_1">
+        <pose relative_to="wheel_fr">-0.0231222 -0.0368854 0.0305 -3.14159 -0.924106 0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_38_collision_mesh_2">
+        <pose relative_to="wheel_fr">-0.0231222 -0.0368854 0.0305 -3.14159 -0.924106 0.628319</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_39 -->
+      <visual name="tyre_39_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0279349 -0.0333887 0.0305 0 -1.31618 -1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_39_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0279349 -0.0333887 0.0305 0 -1.31618 -1.25664</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_40 -->
+      <visual name="tyre_40_visual_mesh_1">
+        <pose relative_to="wheel_fr">0.0368854 0.0231222 0.0115 3.14159 -1.09315 0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_40_collision_mesh_2">
+        <pose relative_to="wheel_fr">0.0368854 0.0231222 0.0115 3.14159 -1.09315 0.942478</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part couple_2 -->
+      <visual name="couple_2_visual_mesh_1">
+        <pose relative_to="wheel_fr">1.96262e-17 0 0.024 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/couple.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <!-- Joint from chassis to wheel_fr -->
+    <joint name="wheel_FR" type="revolute">
+      <pose relative_to="chassis">0.0707107 -0.0707107 0.0125 1.5708 -0 0.785398</pose>
+      <parent>chassis</parent>
+      <child>wheel_fr</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+        <dynamics>
+          <friction>0.0</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Link wheel_br -->
+    <link name="wheel_br">
+      <inertial>
+        <pose>4.05239e-10 -7.40078e-11 0.0210052 0 0 0</pose>
+        <mass>0.214734</mass>
+        <inertia>
+          <ixx>0.000156651</ixx>
+          <ixy>-1.19548e-12</ixy>
+          <ixz>-8.65522e-12</ixz>
+          <iyy>0.000156651</iyy>
+          <iyz>-9.44646e-13</iyz>
+          <izz>0.000267711</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="wheel_BR">0 0 0 0 -0 0</pose>
+      <!-- Part tyre_41 -->
+      <visual name="tyre_41_visual_mesh_1">
+        <pose relative_to="wheel_br">0.00297442 0.0434318 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_41_collision_mesh_2">
+        <pose relative_to="wheel_br">0.00297442 0.0434318 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_42 -->
+      <visual name="tyre_42_visual_mesh_1">
+        <pose relative_to="wheel_br">0.01625 0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_42_collision_mesh_2">
+        <pose relative_to="wheel_br">0.01625 0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_43 -->
+      <visual name="tyre_43_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0403869 -0.01625 0.0305 3.14159 -1.17849 6.13495e-17</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_43_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0403869 -0.01625 0.0305 3.14159 -1.17849 6.13495e-17</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1_5 -->
+      <visual name="body_1_5_visual_mesh_1">
+        <pose relative_to="wheel_br">3.92523e-17 0 0.037 -3.14159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_44 -->
+      <visual name="tyre_44_visual_mesh_1">
+        <pose relative_to="wheel_br">-0.0105923 -0.0422252 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_44_collision_mesh_2">
+        <pose relative_to="wheel_br">-0.0105923 -0.0422252 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_45 -->
+      <visual name="tyre_45_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0368854 -0.0231222 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_45_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0368854 -0.0231222 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_46 -->
+      <visual name="tyre_46_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0422252 0.0105923 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_46_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0422252 0.0105923 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_47 -->
+      <visual name="tyre_47_visual_mesh_1">
+        <pose relative_to="wheel_br">-0.0333887 -0.0279349 0.0115 2.82743 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_47_collision_mesh_2">
+        <pose relative_to="wheel_br">-0.0333887 -0.0279349 0.0115 2.82743 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_48 -->
+      <visual name="tyre_48_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0279349 0.0333887 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_48_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0279349 0.0333887 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_49 -->
+      <visual name="tyre_49_visual_mesh_1">
+        <pose relative_to="wheel_br">-0.0105923 0.0422252 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_49_collision_mesh_2">
+        <pose relative_to="wheel_br">-0.0105923 0.0422252 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_50 -->
+      <visual name="tyre_50_visual_mesh_1">
+        <pose relative_to="wheel_br">-0.0333887 0.0279349 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_50_collision_mesh_2">
+        <pose relative_to="wheel_br">-0.0333887 0.0279349 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_51 -->
+      <visual name="tyre_51_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0434318 0.00297442 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_51_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0434318 0.00297442 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_52 -->
+      <visual name="tyre_52_visual_mesh_1">
+        <pose relative_to="wheel_br">0.00297442 -0.0434318 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_52_collision_mesh_2">
+        <pose relative_to="wheel_br">0.00297442 -0.0434318 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_53 -->
+      <visual name="tyre_53_visual_mesh_1">
+        <pose relative_to="wheel_br">-0.0231222 0.0368854 0.0305 0.628319 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_53_collision_mesh_2">
+        <pose relative_to="wheel_br">-0.0231222 0.0368854 0.0305 0.628319 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1_6 -->
+      <visual name="body_1_6_visual_mesh_1">
+        <pose relative_to="wheel_br">4.55784e-18 0 0.005 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_54 -->
+      <visual name="tyre_54_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0434318 -0.00297442 0.0115 3.14159 1.11022e-16 0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_54_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0434318 -0.00297442 0.0115 3.14159 1.11022e-16 0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_55 -->
+      <visual name="tyre_55_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0422252 -0.0105923 0.0305 3.14159 -1.54859 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_55_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0422252 -0.0105923 0.0305 3.14159 -1.54859 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_56 -->
+      <visual name="tyre_56_visual_mesh_1">
+        <pose relative_to="wheel_br">0.01625 -0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_56_collision_mesh_2">
+        <pose relative_to="wheel_br">0.01625 -0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_57 -->
+      <visual name="tyre_57_visual_mesh_1">
+        <pose relative_to="wheel_br">-0.0403869 -0.01625 0.0305 3.14159 -1.17849 6.13495e-17</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_57_collision_mesh_2">
+        <pose relative_to="wheel_br">-0.0403869 -0.01625 0.0305 3.14159 -1.17849 6.13495e-17</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_58 -->
+      <visual name="tyre_58_visual_mesh_1">
+        <pose relative_to="wheel_br">-0.0231222 -0.0368854 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_58_collision_mesh_2">
+        <pose relative_to="wheel_br">-0.0231222 -0.0368854 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_59 -->
+      <visual name="tyre_59_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0279349 -0.0333887 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_59_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0279349 -0.0333887 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_60 -->
+      <visual name="tyre_60_visual_mesh_1">
+        <pose relative_to="wheel_br">0.0368854 0.0231222 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_60_collision_mesh_2">
+        <pose relative_to="wheel_br">0.0368854 0.0231222 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part couple_3 -->
+      <visual name="couple_3_visual_mesh_1">
+        <pose relative_to="wheel_br">1.84356e-17 0 0.024 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/couple.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <!-- Joint from chassis to wheel_br -->
+    <joint name="wheel_BR" type="revolute">
+      <pose relative_to="chassis">-0.0707107 -0.0707107 0.0125 -1.5708 -0 2.35619</pose>
+      <parent>chassis</parent>
+      <child>wheel_br</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+        <dynamics>
+          <friction>0.0</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <!-- Link wheel_bl -->
+    <link name="wheel_bl">
+      <inertial>
+        <pose>4.47668e-10 -7.40078e-11 0.0210052 0 0 0</pose>
+        <mass>0.214734</mass>
+        <inertia>
+          <ixx>0.000156651</ixx>
+          <ixy>9.23765e-13</ixy>
+          <ixz>-8.74173e-12</ixz>
+          <iyy>0.000156651</iyy>
+          <iyz>-6.58428e-14</iyz>
+          <izz>0.000267711</izz>
+        </inertia>
+      </inertial>
+      <pose relative_to="wheel_BL">0 0 0 0 -0 0</pose>
+      <!-- Part tyre_61 -->
+      <visual name="tyre_61_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.00297442 0.0434318 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_61_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.00297442 0.0434318 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_62 -->
+      <visual name="tyre_62_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.01625 0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_62_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.01625 0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_63 -->
+      <visual name="tyre_63_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0403869 -0.01625 0.0305 -4.68575e-17 -0.392303 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_63_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0403869 -0.01625 0.0305 -4.68575e-17 -0.392303 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1_7 -->
+      <visual name="body_1_7_visual_mesh_1">
+        <pose relative_to="wheel_bl">-1.38778e-17 2.08167e-17 0.037 -3.14159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_64 -->
+      <visual name="tyre_64_visual_mesh_1">
+        <pose relative_to="wheel_bl">-0.0105923 -0.0422252 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_64_collision_mesh_2">
+        <pose relative_to="wheel_bl">-0.0105923 -0.0422252 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_65 -->
+      <visual name="tyre_65_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0368854 -0.0231222 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_65_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0368854 -0.0231222 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_66 -->
+      <visual name="tyre_66_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0422252 0.0105923 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_66_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0422252 0.0105923 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_67 -->
+      <visual name="tyre_67_visual_mesh_1">
+        <pose relative_to="wheel_bl">-0.0333887 -0.0279349 0.0115 2.82743 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_67_collision_mesh_2">
+        <pose relative_to="wheel_bl">-0.0333887 -0.0279349 0.0115 2.82743 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_68 -->
+      <visual name="tyre_68_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0279349 0.0333887 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_68_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0279349 0.0333887 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_69 -->
+      <visual name="tyre_69_visual_mesh_1">
+        <pose relative_to="wheel_bl">-0.0105923 0.0422252 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_69_collision_mesh_2">
+        <pose relative_to="wheel_bl">-0.0105923 0.0422252 0.0115 0.942478 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_70 -->
+      <visual name="tyre_70_visual_mesh_1">
+        <pose relative_to="wheel_bl">-0.0333887 0.0279349 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_70_collision_mesh_2">
+        <pose relative_to="wheel_bl">-0.0333887 0.0279349 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_71 -->
+      <visual name="tyre_71_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0434318 0.00297442 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_71_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0434318 0.00297442 0.0115 0.314159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_72 -->
+      <visual name="tyre_72_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.00297442 -0.0434318 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_72_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.00297442 -0.0434318 0.0305 1.88496 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_73 -->
+      <visual name="tyre_73_visual_mesh_1">
+        <pose relative_to="wheel_bl">-0.0231222 0.0368854 0.0305 0.628319 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_73_collision_mesh_2">
+        <pose relative_to="wheel_bl">-0.0231222 0.0368854 0.0305 0.628319 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part body_1_8 -->
+      <visual name="body_1_8_visual_mesh_1">
+        <pose relative_to="wheel_bl">-1.38778e-17 0 0.005 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <!-- Part tyre_74 -->
+      <visual name="tyre_74_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0434318 -0.00297442 0.0115 3.14159 5.55112e-17 0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_74_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0434318 -0.00297442 0.0115 3.14159 5.55112e-17 0.314159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_75 -->
+      <visual name="tyre_75_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0422252 -0.0105923 0.0305 -3.14159 -1.54859 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_75_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0422252 -0.0105923 0.0305 -3.14159 -1.54859 2.51327</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_76 -->
+      <visual name="tyre_76_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.01625 -0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_76_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.01625 -0.0403869 0.0115 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_77 -->
+      <visual name="tyre_77_visual_mesh_1">
+        <pose relative_to="wheel_bl">-0.0403869 -0.01625 0.0305 -4.68575e-17 -0.392303 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_77_collision_mesh_2">
+        <pose relative_to="wheel_bl">-0.0403869 -0.01625 0.0305 -4.68575e-17 -0.392303 3.14159</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_78 -->
+      <visual name="tyre_78_visual_mesh_1">
+        <pose relative_to="wheel_bl">-0.0231222 -0.0368854 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_78_collision_mesh_2">
+        <pose relative_to="wheel_bl">-0.0231222 -0.0368854 0.0305 2.51327 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_79 -->
+      <visual name="tyre_79_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0279349 -0.0333887 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_79_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0279349 -0.0333887 0.0305 1.25664 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part tyre_80 -->
+      <visual name="tyre_80_visual_mesh_1">
+        <pose relative_to="wheel_bl">0.0368854 0.0231222 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.152941 0.152941 0.152941 1</ambient>
+          <diffuse>0.152941 0.152941 0.152941 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="tyre_80_collision_mesh_2">
+        <pose relative_to="wheel_bl">0.0368854 0.0231222 0.0115 2.19911 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/tyre.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- Part couple_4 -->
+      <visual name="couple_4_visual_mesh_1">
+        <pose relative_to="wheel_bl">-2.77556e-17 -6.93889e-18 0.024 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <uri>package://ros_gz_omni_description/models/omni_drive/meshes/couple.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.627451 0.627451 0.627451 1</ambient>
+          <diffuse>0.627451 0.627451 0.627451 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <!-- Joint from chassis to wheel_bl -->
+    <joint name="wheel_BL" type="revolute">
+      <pose relative_to="chassis">-0.0707107 0.0707107 0.0125 -1.5708 -0 0.785398</pose>
+      <parent>chassis</parent>
+      <child>wheel_bl</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+        <dynamics>
+          <friction>0.0</friction>
+          <damping>0.0</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <plugin filename="OmniDrive"
+      name="ros_gz_omni_gazebo::OmniDrive">
+      <front_left_joint>wheel_FL</front_left_joint>
+      <front_right_joint>wheel_FR</front_right_joint>
+      <back_left_joint>wheel_BL</back_left_joint>
+      <back_right_joint>wheel_BR</back_right_joint>
+      <wheel_separation>1</wheel_separation>
+      <wheelbase>1</wheelbase>
+      <wheel_radius>0.5</wheel_radius>
+      <min_acceleration>-5</min_acceleration>
+      <max_acceleration>5</max_acceleration>
+    </plugin>
+  </model>
+</sdf>

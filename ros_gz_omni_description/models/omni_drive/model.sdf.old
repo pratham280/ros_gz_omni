@@ -34,15 +34,15 @@
         </material>
       </visual>
     </link>
-    <!-- Link assembly_4 FR -->
+    <!-- Link assembly_4 -->
     <link name="assembly_4">
       <inertial>
-        <pose>2.2358e-10 -2.2358e-10 0.0159948 0 0 0</pose>
+        <pose>2.2358e-10 2.2358e-10 -0.0159948 0 0 0</pose>
         <mass>0.214734</mass>
         <inertia>
           <ixx>0.000156651</ixx>
-          <ixy>-3.45182e-14</ixy>
-          <ixz>5.70099e-12</ixz>
+          <ixy>3.45182e-14</ixy>
+          <ixz>-5.70099e-12</ixz>
           <iyy>0.000156651</iyy>
           <iyz>5.70149e-12</iyz>
           <izz>0.000267711</izz>
@@ -51,7 +51,7 @@
       <pose relative_to="wheel_FR">0 0 0 0 -0 0</pose>
       <!-- Part assembly_4_parts -->
       <collision name="assembly_4_parts_collision_shapes_1">
-        <pose relative_to="assembly_4">0 1.47451e-17 0.008 0 -0 0</pose>
+        <pose relative_to="assembly_4">0 -2.1684e-17 -0.008 3.14159 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -69,7 +69,7 @@
         </surface>
       </collision>
       <collision name="assembly_4_parts_collision_shapes_2">
-        <pose relative_to="assembly_4">0 1.12757e-17 0.024 3.14159 -0 -1.5708</pose>
+        <pose relative_to="assembly_4">0 -1.73472e-17 -0.024 0 -0 1.5708</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -87,7 +87,7 @@
         </surface>
       </collision>
       <visual name="assembly_4_parts_visual_mesh_1">
-        <pose relative_to="assembly_4">2.2358e-10 -2.2358e-10 0.0159948 -1.5708 -0.785398 -1.5708</pose>
+        <pose relative_to="assembly_4">2.2358e-10 2.2358e-10 -0.0159948 1.5708 0.785398 1.5708</pose>
         <geometry>
           <mesh>
             <uri>package://ros_gz_omni_description/models/omni_drive/meshes/merged/assembly_4_visual.stl</uri>
@@ -103,7 +103,7 @@
     </link>
     <!-- Joint from chassis to assembly_4 -->
     <joint name="wheel_FR" type="revolute">
-      <pose relative_to="chassis">0.0742462 -0.0742462 0.0125 2.35619 -1.5708 0</pose>
+      <pose relative_to="chassis">0.0742462 -0.0742462 0.0125 -0.785398 -1.5708 0</pose>
       <parent>chassis</parent>
       <child>assembly_4</child>
       <axis>
@@ -120,15 +120,15 @@
         </dynamics>
       </axis>
     </joint>
-    <!-- Link assembly_4_2 FL-->
+    <!-- Link assembly_4_2 -->
     <link name="assembly_4_2">
       <inertial>
-        <pose>2.2358e-10 -2.2358e-10 0.0159948 0 0 0</pose>
+        <pose>2.2358e-10 2.2358e-10 -0.0159948 0 0 0</pose>
         <mass>0.214734</mass>
         <inertia>
           <ixx>0.000156651</ixx>
-          <ixy>-3.45182e-14</ixy>
-          <ixz>5.70099e-12</ixz>
+          <ixy>3.45182e-14</ixy>
+          <ixz>-5.70099e-12</ixz>
           <iyy>0.000156651</iyy>
           <iyz>5.70149e-12</iyz>
           <izz>0.000267711</izz>
@@ -137,7 +137,7 @@
       <pose relative_to="wheel_FL">0 0 0 0 -0 0</pose>
       <!-- Part assembly_4_2_parts -->
       <collision name="assembly_4_2_parts_collision_shapes_1">
-        <pose relative_to="assembly_4_2">0 1.52893e-17 0.008 0 -0 0</pose>
+        <pose relative_to="assembly_4_2">0 -2.48303e-17 -0.008 3.14159 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -155,7 +155,7 @@
         </surface>
       </collision>
       <collision name="assembly_4_2_parts_collision_shapes_2">
-        <pose relative_to="assembly_4_2">0 1.09525e-17 0.024 3.14159 -0 -1.5708</pose>
+        <pose relative_to="assembly_4_2">0 -2.04935e-17 -0.024 0 -0 1.5708</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -173,7 +173,7 @@
         </surface>
       </collision>
       <visual name="assembly_4_2_parts_visual_mesh_1">
-        <pose relative_to="assembly_4_2">2.2358e-10 -2.2358e-10 0.0159948 1.5708 -0.785398 1.5708</pose>
+        <pose relative_to="assembly_4_2">2.2358e-10 2.2358e-10 -0.0159948 -1.5708 0.785398 -1.5708</pose>
         <geometry>
           <mesh>
             <uri>package://ros_gz_omni_description/models/omni_drive/meshes/merged/assembly_4_2_visual.stl</uri>
@@ -189,7 +189,7 @@
     </link>
     <!-- Joint from chassis to assembly_4_2 -->
     <joint name="wheel_FL" type="revolute">
-      <pose relative_to="chassis">0.0742462 0.0742462 0.0125 -2.35619 -1.5708 0</pose>
+      <pose relative_to="chassis">0.0742462 0.0742462 0.0125 0.785398 -1.5708 0</pose>
       <parent>chassis</parent>
       <child>assembly_4_2</child>
       <axis>
@@ -206,15 +206,15 @@
         </dynamics>
       </axis>
     </joint>
-    <!-- Link assembly_4_3 BR -->
+    <!-- Link assembly_4_3 -->
     <link name="assembly_4_3">
       <inertial>
-        <pose>2.2358e-10 -2.2358e-10 0.0159948 0 0 0</pose>
+        <pose>2.2358e-10 2.2358e-10 -0.0159948 0 0 0</pose>
         <mass>0.214734</mass>
         <inertia>
           <ixx>0.000156651</ixx>
-          <ixy>-3.45182e-14</ixy>
-          <ixz>5.70099e-12</ixz>
+          <ixy>3.45182e-14</ixy>
+          <ixz>-5.70099e-12</ixz>
           <iyy>0.000156651</iyy>
           <iyz>5.70149e-12</iyz>
           <izz>0.000267711</izz>
@@ -223,7 +223,7 @@
       <pose relative_to="wheel_BR">0 0 0 0 -0 0</pose>
       <!-- Part assembly_4_3_parts -->
       <collision name="assembly_4_3_parts_collision_shapes_1">
-        <pose relative_to="assembly_4_3">0 1.09525e-17 0.008 0 -0 0</pose>
+        <pose relative_to="assembly_4_3">0 -1.00852e-17 -0.008 3.14159 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -241,7 +241,7 @@
         </surface>
       </collision>
       <collision name="assembly_4_3_parts_collision_shapes_2">
-        <pose relative_to="assembly_4_3">0 -2.92525e-18 0.024 3.14159 -0 -1.5708</pose>
+        <pose relative_to="assembly_4_3">0 4.65997e-18 -0.024 0 -0 1.5708</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -259,7 +259,7 @@
         </surface>
       </collision>
       <visual name="assembly_4_3_parts_visual_mesh_1">
-        <pose relative_to="assembly_4_3">2.2358e-10 -2.2358e-10 0.0159948 -1.5708 0.785398 -1.5708</pose>
+        <pose relative_to="assembly_4_3">2.2358e-10 2.2358e-10 -0.0159948 1.5708 -0.785398 1.5708</pose>
         <geometry>
           <mesh>
             <uri>package://ros_gz_omni_description/models/omni_drive/meshes/merged/assembly_4_3_visual.stl</uri>
@@ -275,7 +275,7 @@
     </link>
     <!-- Joint from chassis to assembly_4_3 -->
     <joint name="wheel_BR" type="revolute">
-      <pose relative_to="chassis">-0.0742462 -0.0742462 0.0125 0.785398 -1.5708 0</pose>
+      <pose relative_to="chassis">-0.0742462 -0.0742462 0.0125 -2.35619 -1.5708 0</pose>
       <parent>chassis</parent>
       <child>assembly_4_3</child>
       <axis>
@@ -292,15 +292,15 @@
         </dynamics>
       </axis>
     </joint>
-    <!-- Link assembly_4_4 BL-->
+    <!-- Link assembly_4_4 -->
     <link name="assembly_4_4">
       <inertial>
-        <pose>2.2358e-10 -2.2358e-10 0.0159948 0 0 0</pose>
+        <pose>2.2358e-10 2.2358e-10 -0.0159948 0 0 0</pose>
         <mass>0.214734</mass>
         <inertia>
           <ixx>0.000156651</ixx>
-          <ixy>-3.45182e-14</ixy>
-          <ixz>5.70099e-12</ixz>
+          <ixy>3.45182e-14</ixy>
+          <ixz>-5.70099e-12</ixz>
           <iyy>0.000156651</iyy>
           <iyz>5.70149e-12</iyz>
           <izz>0.000267711</izz>
@@ -309,7 +309,7 @@
       <pose relative_to="wheel_BL">0 0 0 0 -0 0</pose>
       <!-- Part assembly_4_4_parts -->
       <collision name="assembly_4_4_parts_collision_shapes_1">
-        <pose relative_to="assembly_4_4">0 1.04083e-17 0.008 0 -0 0</pose>
+        <pose relative_to="assembly_4_4">0 -7.80626e-18 -0.008 3.14159 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -327,7 +327,7 @@
         </surface>
       </collision>
       <collision name="assembly_4_4_parts_collision_shapes_2">
-        <pose relative_to="assembly_4_4">0 -3.46945e-18 0.024 3.14159 -0 -1.5708</pose>
+        <pose relative_to="assembly_4_4">0 6.07153e-18 -0.024 0 -0 1.5708</pose>
         <geometry>
           <cylinder>
             <length>0.01</length>
@@ -345,7 +345,7 @@
         </surface>
       </collision>
       <visual name="assembly_4_4_parts_visual_mesh_1">
-        <pose relative_to="assembly_4_4">2.2358e-10 -2.2358e-10 0.0159948 1.5708 0.785398 1.5708</pose>
+        <pose relative_to="assembly_4_4">2.2358e-10 2.2358e-10 -0.0159948 -1.5708 -0.785398 -1.5708</pose>
         <geometry>
           <mesh>
             <uri>package://ros_gz_omni_description/models/omni_drive/meshes/merged/assembly_4_4_visual.stl</uri>
@@ -361,7 +361,7 @@
     </link>
     <!-- Joint from chassis to assembly_4_4 -->
     <joint name="wheel_BL" type="revolute">
-      <pose relative_to="chassis">-0.0742462 0.0742462 0.0125 -0.785398 -1.5708 0</pose>
+      <pose relative_to="chassis">-0.0742462 0.0742462 0.0125 2.35619 -1.5708 0</pose>
       <parent>chassis</parent>
       <child>assembly_4_4</child>
       <axis>
