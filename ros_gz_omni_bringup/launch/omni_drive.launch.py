@@ -19,7 +19,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.actions import IncludeLaunchDescription
-from launch.conditions import IfCondition
+from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 
@@ -34,6 +34,9 @@ def generate_launch_description():
     pkg_project_gazebo = get_package_share_directory('ros_gz_omni_gazebo')
     pkg_project_description = get_package_share_directory('ros_gz_omni_description')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
+    # Setup to launch the simulator and Gazebo world
+    gz_args = LaunchConfiguration('gz_args')
+    headless = LaunchConfiguration('headless')
 
     # Load the SDF file from "description" package
     sdf_file  =  os.path.join(pkg_project_description, 'models', 'omni_drive', 'model.sdf')
@@ -41,8 +44,17 @@ def generate_launch_description():
     with open(sdf_file, 'r') as infp:
         robot_desc = infp.read()
 
-    # Setup to launch the simulator and Gazebo world
-    gz_args = LaunchConfiguration('gz_args')
+
+    gz_sim_headless = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
+        launch_arguments={'gz_args': {PathJoinSubstitution([
+            pkg_project_gazebo,
+            'worlds',
+            'omni_drive.sdf',
+        ]), ' -r ', gz_args, " ", "-s -v 4 "},'on_exit_shutdown': 'true'}.items(),
+        condition=IfCondition(headless)
+    )
 
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -51,7 +63,8 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'omni_drive.sdf',
-        ]), ' -r ', ' ', gz_args, ' '},'on_exit_shutdown': 'true'}.items(),
+        ]), ' -r ', gz_args, " "},'on_exit_shutdown': 'true'}.items(),
+        condition=UnlessCondition(headless)
     )
 
     # Takes the description and joint angles as inputs and publishes the 3D poses of the robot links
@@ -70,7 +83,7 @@ def generate_launch_description():
     rviz = Node(
        package='rviz2',
        executable='rviz2',
-       arguments=['-d', os.path.join(pkg_project_bringup, 'config', 'omni_drive.rviz'),],
+       arguments=['-d', os.path.join(pkg_project_bringup, 'config', 'omni_drive.rviz'), "-t", "ros_gz_omni"],
        condition=IfCondition(LaunchConfiguration('rviz'))
     )
 
@@ -122,10 +135,11 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('gz_args', default_value=' ', description='Pass Gazebo arguments'),
-        gz_sim,
-        DeclareLaunchArgument('rviz', default_value='true',
-                                  description='Open RViz.'),
+        DeclareLaunchArgument('headless', default_value='true', description='Run gz sim headless'),
+        DeclareLaunchArgument('rviz', default_value='true', description='Open RViz.'),
         DeclareLaunchArgument('teleop', default_value='true', description='Enable joystick teleoperation'),
+        gz_sim_headless,
+        gz_sim,
         bridge,
         teleop_twist_joy,
         joy_node,
