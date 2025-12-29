@@ -26,6 +26,8 @@ A comprehensive robotics simulation project featuring omnidirectional (omni) whe
 
 This project provides a complete simulation environment for testing omnidirectional mobile robots using ROS 2 and Gazebo. The primary focus is on the **OmniDrive** system, which uses four omnidirectional wheels capable of simultaneous linear and angular motion. The project also includes support for mecanum-drive and differential-drive robots for comparative studies.
 
+![RViz Visualization](resources/Rviz_visualization.gif)
+
 ### Key Features
 
 - **Custom Gazebo Plugin System**: OmniDrive, BasicSystem, and FullSystem plugins
@@ -222,6 +224,8 @@ ros2 pkg list | grep ros_gz_omni
 
 | Argument | Type | Default | Description |
 |----------|------|---------|-------------|
+| `gz_args` | string | `' '` | Pass Gazebo arguments |
+| `headless` | bool | `true` | Run gz sim headless (no GUI) |
 | `rviz` | bool | `true` | Launch RViz visualization |
 | `teleop` | bool | `true` | Enable joystick teleoperation |
 

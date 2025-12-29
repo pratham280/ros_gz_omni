@@ -52,7 +52,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'omni_drive.sdf',
-        ]), ' -r ', gz_args, " ", "-s -v 4 "},'on_exit_shutdown': 'true'}.items(),
+        ]), ' -r ', gz_args, " ", "-s -v 4"},'on_exit_shutdown': 'true'}.items(),
         condition=IfCondition(headless)
     )
 
@@ -63,7 +63,7 @@ def generate_launch_description():
             pkg_project_gazebo,
             'worlds',
             'omni_drive.sdf',
-        ]), ' -r ', gz_args, " "},'on_exit_shutdown': 'true'}.items(),
+        ]), ' -r ', gz_args},'on_exit_shutdown': 'true'}.items(),
         condition=UnlessCondition(headless)
     )
 
@@ -84,7 +84,8 @@ def generate_launch_description():
        package='rviz2',
        executable='rviz2',
        arguments=['-d', os.path.join(pkg_project_bringup, 'config', 'omni_drive.rviz'), "-t", "ros_gz_omni"],
-       condition=IfCondition(LaunchConfiguration('rviz'))
+       condition=IfCondition(LaunchConfiguration('rviz')),
+    #    output='screen'
     )
 
     # Bridge ROS topics and Gazebo messages for establishing communication
