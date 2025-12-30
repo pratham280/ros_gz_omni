@@ -17,8 +17,9 @@ A comprehensive robotics simulation project featuring omnidirectional (omni) whe
 9. [Running the Simulation](#running-the-simulation)
 10. [Visualization with RViz](#visualization-with-rviz)
 11. [Joystick Teleoperation](#joystick-teleoperation)
-12. [Troubleshooting](#troubleshooting)
-13. [Miscellaneous Models](#miscellaneous-models)
+12. [Resources](#resources)
+13. [Troubleshooting](#troubleshooting)
+14. [Miscellaneous Models](#miscellaneous-models)
 
 ---
 
@@ -26,7 +27,14 @@ A comprehensive robotics simulation project featuring omnidirectional (omni) whe
 
 This project provides a complete simulation environment for testing omnidirectional mobile robots using ROS 2 and Gazebo. The primary focus is on the **OmniDrive** system, which uses four omnidirectional wheels capable of simultaneous linear and angular motion. The project also includes support for mecanum-drive and differential-drive robots for comparative studies.
 
-![RViz Visualization](resources/Rviz_visualization.gif)
+#### Demo Videos
+
+| Motion | Video |
+|--------|-------|
+| **Straight Motion** | ![Straight Motion](resources/rviz_straight.mp4) |
+| **Circle Motion** | ![Circle Motion](resources/rviz_circle.mp4) |
+| **Diagonal Motion** | ![Diagonal Motion](resources/rviz_diagonal.mp4) |
+| **RViz Visualization** | ![RViz Visualization](resources/Rviz_visualization.gif) |
 
 ### Key Features
 
@@ -267,9 +275,9 @@ Node: teleop_twist_joy (if teleop:=true)
 ros2 launch ros_gz_omni_bringup omni_drive.launch.py
 ```
 
-**Headless simulation (no RViz)**:
+**Headless simulation (no GUI)**:
 ```bash
-ros2 launch ros_gz_omni_bringup omni_drive.launch.py rviz:=false
+ros2 launch ros_gz_omni_bringup omni_drive.launch.py headless:=true rviz:=false teleop:=false
 ```
 
 **No joystick control**:
@@ -848,6 +856,23 @@ Higher values = faster motion per stick input
 
 ---
 
+## Resources
+
+This project includes the following resource assets:
+
+### External References
+
+- [Omni Drive concept](https://people.idsia.ch/~foerster/2006/1/omnidrive_kiart_preprint.pdf)
+- [Omni Drive Kinematics](https://www.servomagazine.com/magazine/article/get-rolling-with-omni-directional-wheels#:~:text=In%20a%20four%2Dwheeled%20configuration%20(refer%20to%20Figure%207)%2C%20simple%20control%20is%20sacrificed%20for%20higher%20traction.)
+
+### Community & Support
+
+- [Gazebo Community Discord](https://discord.gg/gazebosim)
+- [ROS Discourse](https://discourse.ros.org/)
+- [Project GitHub Issues](https://github.com/gazebosim/ros_gz_omni/issues)
+
+---
+
 ## Troubleshooting
 
 For comprehensive troubleshooting guidance, including 9+ common issues and solutions, please refer to the [TROUBLESHOOTING.md](TROUBLESHOOTING.md) file.
@@ -889,35 +914,6 @@ Common topics covered:
 ros2 launch ros_gz_omni_bringup rrbot_setup.launch.py
 ```
 
-#### Model Versioning Archive
-
-**Location**: `models/old_version/`
-
-**Contents**:
-
-| Directory | Version | Status | Notes |
-|-----------|---------|--------|-------|
-| `omni_drive_old/` | v0 (initial) | Deprecated | Prototype, basic geometry |
-| `omni_drive_v0/` | v0.1 | Archived | Includes robot.urdf conversion |
-| `omni_drive_v1/` | v1 | Previous stable | Improved inertia, better meshes |
-| `omni_drive/` | **v2 (current)** | **Active** | Onshape-generated, production |
-
-**Mesh Assets by Version**:
-
-- `v0`:
-  - Frame, wheels, basic parts
-  - Low-poly meshes
-
-- `v1`:
-  - Separate body sections (body_1, body_2)
-  - Wheel components (shaft, holder, tyre)
-  - Higher fidelity than v0
-
-- **`v2` (current)**:
-  - Optimized merged geometries
-  - Config-driven mesh selection
-  - Production-quality parts
-
 ---
 
 ## Summary
@@ -935,6 +931,6 @@ For questions or contributions, refer to the official [ROS-Gazebo integration gu
 
 ---
 
-**Last Updated**: 2025-12-28  
+**Last Updated**: 2025-12-30  
 **Gazebo Version**: Harmonic (gz-sim8)  
 **ROS 2 Distribution**: Jazzy
