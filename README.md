@@ -30,13 +30,22 @@ This project provides a complete simulation environment for testing omnidirectio
 ### Demo Videos
 
 **Straight Motion**
- <video src="./resources/rviz_straight.mp4" controls preload></video>
+
+https://github.com/user-attachments/assets/6c622aca-0781-4e06-b0dc-c867f4e005a0
+
+
 
 **Circle Motion** 
-<video src="./resources/rviz_circle.mp4" controls preload></video>
+
+https://github.com/user-attachments/assets/da4df041-7e9c-451b-999a-b9134b04a22c
+
+
 
 **Diagonal Motion**
-<video src="./resources/rviz_diagonal.mp4" controls preload></video>
+
+https://github.com/user-attachments/assets/f3f9073b-463a-4766-84df-4729f4919f06
+
+
 
 **RViz Visualization**
 ![RViz Visualization](resources/Rviz_visualization.gif)
