@@ -27,14 +27,19 @@ A comprehensive robotics simulation project featuring omnidirectional (omni) whe
 
 This project provides a complete simulation environment for testing omnidirectional mobile robots using ROS 2 and Gazebo. The primary focus is on the **OmniDrive** system, which uses four omnidirectional wheels capable of simultaneous linear and angular motion. The project also includes support for mecanum-drive and differential-drive robots for comparative studies.
 
-#### Demo Videos
+### Demo Videos
 
-| Motion | Video |
-|--------|-------|
-| **Straight Motion** | ![Straight Motion](resources/rviz_straight.mp4) |
-| **Circle Motion** | ![Circle Motion](resources/rviz_circle.mp4) |
-| **Diagonal Motion** | ![Diagonal Motion](resources/rviz_diagonal.mp4) |
-| **RViz Visualization** | ![RViz Visualization](resources/Rviz_visualization.gif) |
+**Straight Motion**
+ <video src="./resources/rviz_straight.mp4" controls preload></video>
+
+**Circle Motion** 
+<video src="./resources/rviz_circle.mp4" controls preload></video>
+
+**Diagonal Motion**
+<video src="./resources/rviz_diagonal.mp4" controls preload></video>
+
+**RViz Visualization**
+![RViz Visualization](resources/Rviz_visualization.gif)
 
 ### Key Features
 
